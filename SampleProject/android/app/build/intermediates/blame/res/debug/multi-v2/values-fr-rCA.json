@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/priyankagupta/Desktop/ReactNative/SampleProject/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml",
+            "outputFile": "/home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml",
             "map": [
                 {
                     "source": "/home/priyankagupta/.gradle/caches/transforms-2/files-2.1/9ac331d8cca09ef36206db91455480af/res/values-fr-rCA/values-fr-rCA.xml",

@@ -1,25 +1,22 @@
 import React, { Component } from 'react'
-import { Text, View, TouchableOpacity, Image, StyleSheet,KeyboardAvoidingView } from 'react-native'
+import { Text, View, TouchableOpacity, Image, StyleSheet, KeyboardAvoidingView } from 'react-native'
 import LoginPage from './LoginPage';
-import AppNavigator from './AppNavigator';
 
 export default class SplashScreen extends Component {
-    componentDidMount () {
+    componentDidMount() {
         setTimeout(() => {
-    
-            //this.props.navigation.navigate('loginscreen')
-
-            
+            const {navigate} = this.props.navigation;
+            this.props.navigation.navigate('LoginPage')
         }, 2000)
-      }
+    }
     render() {
         return (
             <View style={styles.container}>
                 <View style={styles.logoContainer}>
-                    <Image style={styles.logo} source={require('../../images/sun5.png')} />
+                    <Image style={styles.logo} source={require('../../images/splash.jpg')} />
                 </View>
-                <View>
-                <Text style={styles.subtitle}>Made by React Native</Text>
+                <View style={styles.intro}>
+                    <Text style={styles.subtitle}>Made with React Native</Text>
 
                 </View>
             </View>
@@ -32,21 +29,27 @@ export default class SplashScreen extends Component {
 const styles = StyleSheet.create({
 
     container: {
-        backgroundColor: "#D58AEA",
         flex: 1
     },
-    logoContainer:{
+    logoContainer: {
+        alignItems: 'center',
+        flex: 0.9,
+        justifyContent: 'center'
+    },
+    logo: {
+        height: '100%',
+        width: '100%'
+    },
+    subtitle: {
+        color: '#FFF',
+        textAlign: 'center',
+        paddingBottom: 10
+
+    },
+    intro: {
+        flex: 0.1,
+        backgroundColor: '#000000',
         alignItems:'center',
-        flex: 1,
         justifyContent:'center'
-    },
-    logo:{
-        height: 100,
-        width: 100
-    },
-    subtitle:{
-            color:'#FFF',
-            textAlign:'center',
-            paddingBottom:10
     }
 })
