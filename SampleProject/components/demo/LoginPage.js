@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { KeyboardAvoidingView, Text, TextInput, View, Image, StyleSheet, TouchableOpacity, StatusBar, Alert, ImageBackground } from 'react-native'
-import { AsyncStorage } from '@react-native-community/async-storage'
+import  AsyncStorage  from '@react-native-community/async-storage'
 import * as constant from './Constants';
 export default class LoginPage extends Component {
     constructor() {
