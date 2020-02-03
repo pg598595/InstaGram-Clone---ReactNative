@@ -7,6 +7,8 @@ import Fontisto from "react-native-vector-icons/Fontisto";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 import PostDemo from './PostDemo';
+import FavoriteScreen from './FavoriteScreen';
+
 
 export default class MainScreen extends Component {
     render() {
@@ -16,13 +18,7 @@ export default class MainScreen extends Component {
     }
 }
 
-class HomeScreen extends Component {
-    render() {
-        return (
-            <PostDemo/>
-        );
-    }
-}
+
 class AddNewRecipeScreen extends Component {
     render() {
         return (
@@ -51,21 +47,10 @@ class SearchScreen extends Component {
     }
 }
 
-class FavoritesScreen extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-              <Text>Favorites Screen</Text>
-            </View>
-        );
-    }
-}
-
-
 const bottomTabNavigator = createBottomTabNavigator(
     {
         Home: {
-            screen: HomeScreen,
+            screen: PostDemo,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
                     <Fontisto name="home" size={22} color={tintColor} />
@@ -93,7 +78,7 @@ const bottomTabNavigator = createBottomTabNavigator(
             }
         },
         Favorites:{
-            screen: FavoritesScreen,
+            screen: FavoriteScreen,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
                     <FontAwesome name="heart" size={22} color={tintColor} />

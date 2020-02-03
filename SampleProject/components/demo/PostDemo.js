@@ -7,7 +7,7 @@ import * as constant from './Constants';
 import LoadingIndicator from './LoadingIndicatior';
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import CheckBox from 'react-native-modest-checkbox'
-import ToolBar from './ToolBar';
+import HomePageToolBar from './HomePageToolBar';
 
 
 export default class PostDemo extends Component {
@@ -63,7 +63,7 @@ export default class PostDemo extends Component {
         return <View>
 
             <SafeAreaView>
-               <ToolBar></ToolBar>
+               <HomePageToolBar></HomePageToolBar>
                 <LoadingIndicator isLoading={this.state.isLoading}></LoadingIndicator>
                 {/* <Text>Test</Text> */}
                 <FlatList
@@ -145,7 +145,7 @@ export default class PostDemo extends Component {
     );
 
     getListfromApi = () => {
-        fetch('http://35.160.197.175:3006/api/v1/recipe/feeds',
+        fetch(constant.API_FOR_FEED_LIST,
         {
             method: 'GET',
             headers: {
