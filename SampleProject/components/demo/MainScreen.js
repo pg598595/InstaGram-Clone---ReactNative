@@ -8,6 +8,7 @@ import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 import PostDemo from './PostDemo';
 import FavoriteScreen from './FavoriteScreen';
+import ProfileScreen from './ProfileScreen';
 
 
 export default class MainScreen extends Component {
@@ -28,15 +29,7 @@ class AddNewRecipeScreen extends Component {
         );
     }
 }
-class ProfileScreen extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-              <Text>Profile Screen</Text>
-            </View>
-        );
-    }
-}
+
 class SearchScreen extends Component {
     render() {
         return (

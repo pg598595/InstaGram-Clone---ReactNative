@@ -117,13 +117,14 @@ export default class LoginPage extends Component {
     }
 
     storeData = async (responseJSON) => {
-        console.log('called store data ' + responseJSON.email);
+        
         try {
             let userId = '';
-            userId = responseJSON.email;
-            console.log('called try block ' + userId);
-
-            await AsyncStorage.setItem('named', userId)
+            userId = responseJSON.firstName+responseJSON.lastName;
+            
+            await AsyncStorage.setItem(constant.NAME, userId)
+            await AsyncStorage.setItem(constant.API_TOKEN, responseJSON.token)
+            
         } catch (e) {
             console.log('called catch block----e --------' + e);
         }

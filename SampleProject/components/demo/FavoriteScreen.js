@@ -16,7 +16,7 @@ export default class FavoriteScreen extends Component {
 
     componentDidMount() {
         this.setState({ isLoading: true });
-        console.log("called home comopent")
+        console.log("called favorite comopent")
         console.log("===========================")
        
        this.getListfromApi()
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
         textAlign:"center"
     },
     toolBar: {
-        padding: 5,
+        padding: 2,
 
         flexDirection: 'row',
         alignItems:'center'

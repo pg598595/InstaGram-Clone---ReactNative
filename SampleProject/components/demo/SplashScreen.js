@@ -1,14 +1,28 @@
 import React, { Component } from 'react'
 import { Text, View, TouchableOpacity, Image, StyleSheet, KeyboardAvoidingView } from 'react-native'
 import LoginPage from './LoginPage';
+import AsyncStorage from '@react-native-community/async-storage'
+import * as constant from './Constants';
 
 
 
 export default class SplashScreen extends Component {
+    constructor() {
+        super()
+        this.state = { name: '' }
+
+    }
     componentDidMount() {
+        this.retrieveData()
         setTimeout(() => {
-            const {navigate} = this.props.navigation;
-            this.props.navigation.navigate('LoginPage')
+            if(this.state.name === ''){
+                const {navigate} = this.props.navigation;
+                this.props.navigation.navigate('LoginPage')
+            }else{
+                const {navigate} = this.props.navigation;
+                this.props.navigation.navigate('MainScreen')
+            }
+           
         }, 2000)
     }
     render() {
@@ -25,6 +39,19 @@ export default class SplashScreen extends Component {
             </View>
         )
     }
+    retrieveData = async () => {
+        try {
+          const value = await AsyncStorage.getItem(constant.NAME);
+          if (value !== null) {
+            // We have data!!
+            console.log(value);
+            this.setState({name:value})
+          }
+        } catch (error) {
+          // Error retrieving data
+          console.log(error);
+        }
+      };
 }
 
 //export default SplashScreen

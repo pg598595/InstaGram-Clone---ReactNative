@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         textAlign:"center"
     },
     toolBar: {
-        padding: 5,
+        padding: 2,
 
         flexDirection: 'row',
         alignItems:'center'

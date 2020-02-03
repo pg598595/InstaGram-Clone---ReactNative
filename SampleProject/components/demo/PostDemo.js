@@ -156,10 +156,10 @@ export default class PostDemo extends Component {
         }).then((response) => {
             if (response.status == 200) {
                 return response.json().then((responseJSON) => {
-                    console.log(responseJSON);
+                    //console.log(responseJSON);
                     this.setState({ recipesList: responseJSON });
                     //DATA = responseJSON
-                    console.log(this.state.recipesList);
+                    //console.log(this.state.recipesList);
                     this.setState({ isLoading: false });
 
 
