@@ -7,6 +7,7 @@ import * as constant from './Constants';
 import LoadingIndicator from './LoadingIndicatior';
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import CheckBox from 'react-native-modest-checkbox'
+import ToolBar from './ToolBar';
 
 
 export default class PostDemo extends Component {
@@ -62,14 +63,7 @@ export default class PostDemo extends Component {
         return <View>
 
             <SafeAreaView>
-                <View style={styles.toolBar}>
-                    <Image style={styles.iconcamera} source={require('../../images/Camera-1.jpg')} />
-                    <Text style={styles.titleToolbar}>Foodogram</Text>
-                    <View style={{ flex: 1, alignItems: 'flex-end' }}>
-                        <Image style={styles.icon} source={require('../../images/Send-1.jpg')} />
-
-                    </View>
-                </View>
+               <ToolBar></ToolBar>
                 <LoadingIndicator isLoading={this.state.isLoading}></LoadingIndicator>
                 {/* <Text>Test</Text> */}
                 <FlatList

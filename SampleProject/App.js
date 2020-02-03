@@ -1,8 +1,6 @@
 import React from 'react';
-import FlexDemo from './components/demo/FlexDemo'
-import List from './components/demo/List';
+
 import LoginPage from './components/demo/LoginPage';
-import HomePage from './components/demo/HomePage';
 
 import SplashScreen from './components/demo/SplashScreen';
 import { createAppContainer } from 'react-navigation';

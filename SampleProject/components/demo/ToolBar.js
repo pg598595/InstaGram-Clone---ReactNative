@@ -5,18 +5,47 @@ export default class ToolBar extends Component {
    
     render() {
         return (
-            <View style={{backgroundColor:'yellow'}}>
-            <ToolbarAndroid
             
-            style={{height:150,backgroundColor:'pink'}}
-            logo={require('../../images/splash.jpg')}
-            title="Instagram"
-            actions={[{title: 'Settings', icon: require('../../images/splash.jpg'), show: 'always'}]}
-            onActionSelected={this.onActionSelected} />
-            </View>
+            <View style={styles.toolBar}>
+                    <Image style={styles.iconcamera} source={require('../../images/Camera-1.jpg')} />
+                    <Text style={styles.titleToolbar}>Foodogram</Text>
+                    <View style={{ flex: 1, alignItems: 'flex-end' }}>
+                        <Image style={styles.icon} source={require('../../images/Send-1.jpg')} />
+
+                    </View>
+                </View>
+            
         )
     }
-    onActionSelected = () => {
-        console.log("called onActionSelected")
-    }
+   
 }
+
+const styles = StyleSheet.create({
+
+    iconcamera: {
+        height: 22,
+        width: 25,
+        marginStart: 10
+    },
+    titleToolbar: {
+        marginTop:5,
+        fontSize: 20,
+        marginStart: 15,
+        fontFamily: 'Blessed',
+        textAlign:"center"
+    },
+    toolBar: {
+        padding: 5,
+
+        flexDirection: 'row',
+        alignItems:'center'
+    },
+   
+    icon: {
+        height: 19,
+        width: 25,
+        marginStart: 20
+    },
+   
+
+})
