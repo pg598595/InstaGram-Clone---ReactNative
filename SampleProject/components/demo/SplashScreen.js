@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Text, View, TouchableOpacity, Image, StyleSheet, KeyboardAvoidingView } from 'react-native'
 import LoginPage from './LoginPage';
 
+
+
 export default class SplashScreen extends Component {
     componentDidMount() {
         setTimeout(() => {
@@ -13,11 +15,12 @@ export default class SplashScreen extends Component {
         return (
             <View style={styles.container}>
                 <View style={styles.logoContainer}>
-                    <Image style={styles.logo} source={require('../../images/splash.jpg')} />
+                    <Image style={styles.logo} source={require('../../images/instagram.png')} />
                 </View>
                 <View style={styles.intro}>
-                    <Text style={styles.subtitle}>Made with React Native</Text>
-
+                    <Text style={styles.subtitleFrom}>from</Text>
+                    <Text style={styles.subtitleFb}>FACEBOOK</Text>
+                    
                 </View>
             </View>
         )
@@ -37,19 +40,22 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     logo: {
-        height: '100%',
-        width: '100%'
+        height: 70,
+        width: 70
     },
-    subtitle: {
-        color: '#FFF',
+    subtitleFrom: {
+        color: '#C1C1C1',
         textAlign: 'center',
-        paddingBottom: 10
-
+    },
+    subtitleFb: {
+        textAlign:'center',
+        fontWeight:'bold',
+        fontSize:15
     },
     intro: {
         flex: 0.1,
-        backgroundColor: '#000000',
-        alignItems:'center',
-        justifyContent:'center'
+        paddingBottom: 40,
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 })

@@ -20,6 +20,8 @@ import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 // react-native-reanimated
 import com.swmansion.reanimated.ReanimatedPackage;
+// react-native-text-gradient
+import iyegoroff.RNTextGradient.RNTextGradientPackage;
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
 
@@ -70,6 +72,7 @@ public class PackageList {
       new AsyncStoragePackage(),
       new RNGestureHandlerPackage(),
       new ReanimatedPackage(),
+      new RNTextGradientPackage(),
       new VectorIconsPackage()
     ));
   }

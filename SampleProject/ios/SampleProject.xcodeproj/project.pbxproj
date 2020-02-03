@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* SampleProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SampleProjectTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -31,6 +32,9 @@
 		F1B2A07DCCA84EB1A3AE91EC /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9E22CD8BE144BF7B5B75242 /* Octicons.ttf */; };
 		EF720558DEBA4545B9D42096 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63E58A758463482091FF9E81 /* SimpleLineIcons.ttf */; };
 		5E3D0B85A82C45158D83189E /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A466D83EE7741E681B76FE6 /* Zocial.ttf */; };
+		CBA02768DF04462EAF3D21B9 /* VeganStylePersonalUse-5Y58.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BBD7FBA593D413D9AF60C80 /* VeganStylePersonalUse-5Y58.ttf */; };
+		6B5CE488118845A89BCF375A /* Blessed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5A3F3E86DB844FEAC8CAC40 /* Blessed.ttf */; };
+		340F8A8075B24E1C9DFEC4DA /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D3AD274CCF34C44AE6A12CB /* Billabong.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,9 @@
 		B9E22CD8BE144BF7B5B75242 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		63E58A758463482091FF9E81 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		1A466D83EE7741E681B76FE6 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0BBD7FBA593D413D9AF60C80 /* VeganStylePersonalUse-5Y58.ttf */ = {isa = PBXFileReference; name = "VeganStylePersonalUse-5Y58.ttf"; path = "../assets/fonts/ViegainFont/VeganStylePersonalUse-5Y58.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A5A3F3E86DB844FEAC8CAC40 /* Blessed.ttf */ = {isa = PBXFileReference; name = "Blessed.ttf"; path = "../assets/fonts/Blessed.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1D3AD274CCF34C44AE6A12CB /* Billabong.ttf */ = {isa = PBXFileReference; name = "Billabong.ttf"; path = "../assets/fonts/Billabong.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +215,9 @@
 				B9E22CD8BE144BF7B5B75242 /* Octicons.ttf */,
 				63E58A758463482091FF9E81 /* SimpleLineIcons.ttf */,
 				1A466D83EE7741E681B76FE6 /* Zocial.ttf */,
+				0BBD7FBA593D413D9AF60C80 /* VeganStylePersonalUse-5Y58.ttf */,
+				A5A3F3E86DB844FEAC8CAC40 /* Blessed.ttf */,
+				1D3AD274CCF34C44AE6A12CB /* Billabong.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -365,6 +375,9 @@
 				F1B2A07DCCA84EB1A3AE91EC /* Octicons.ttf in Resources */,
 				EF720558DEBA4545B9D42096 /* SimpleLineIcons.ttf in Resources */,
 				5E3D0B85A82C45158D83189E /* Zocial.ttf in Resources */,
+				CBA02768DF04462EAF3D21B9 /* VeganStylePersonalUse-5Y58.ttf in Resources */,
+				6B5CE488118845A89BCF375A /* Blessed.ttf in Resources */,
+				340F8A8075B24E1C9DFEC4DA /* Billabong.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

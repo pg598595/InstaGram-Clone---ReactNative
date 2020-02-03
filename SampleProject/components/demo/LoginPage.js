@@ -1,64 +1,75 @@
 import React, { Component } from 'react'
 import { KeyboardAvoidingView, Text, TextInput, View, Image, StyleSheet, TouchableOpacity, StatusBar, Alert, ImageBackground } from 'react-native'
-import  AsyncStorage  from '@react-native-community/async-storage'
+import AsyncStorage from '@react-native-community/async-storage'
 import * as constant from './Constants';
+import LoadingIndicator from './LoadingIndicatior';
 export default class LoginPage extends Component {
     constructor() {
         super()
-        this.state = { email: '', password: '' }
+        this.state = { email: '', password: '',isLoading: false }
 
     }
     render() {
         return (
-            <ImageBackground source={require('../../images/bgImage.jpg')} style={{ width: '100%', height: '100%' }}>
-                <View style={styles.container}>
-                    <View style={styles.logoContainer}>
-                        <Text style={styles.title}>Login</Text>
-                        <Text style={styles.titlesmall}>Welcome Again!!</Text>
-                    </View>
-                    <View style={styles.formContainer}>
-                        <View style={styles.container}>
-                            <TextInput
-                                value={this.state.email}
-                                onChangeText={(email) => this.setState({ email })}
-                                placeholder="Email"
-                                placeholderTextColor="#C6C6C6"
-                                style={styles.input}
-                                returnKeyType="next"
-                                keyboardType='email-address'
-                                autoCapitalize="none"
-                                autoCorrect={false}
-                                onSubmitEditing={() => this.passwordInput.focus()}
-                            />
-                            <TextInput
-                                value={this.state.password}
-                                onChangeText={(password) => this.setState({ password })}
-                                placeholder="Password"
-                                placeholderTextColor="#C6C6C6"
-                                secureTextEntry
-                                style={styles.input}
-                                ref={(input) => this.passwordInput = input}
-                            />
-                            <TouchableOpacity style={styles.buttonContainer} onPress={this.login}>
-                                <Text style={styles.buttonText}>LOGIN</Text>
-                            </TouchableOpacity>
-                            <Text style={styles.dontHaveAccount}>Don't have account? Signup</Text>
+            <View style={styles.container}>
+               
+                <View style={styles.logoContainer}>
+                    <Text style={styles.title}>Foodogram</Text>
 
+                </View>
+               
+                <View style={styles.formContainer}>
+                <LoadingIndicator
+             ></LoadingIndicator>
+                    <View style={styles.container}>
+                   
+                        <TextInput
+                            value={this.state.email}
+                            onChangeText={(email) => this.setState({ email })}
+                            placeholder="Email"
+                            placeholderTextColor="#C6C6C6"
+                            style={styles.input}
+                            returnKeyType="next"
+                            keyboardType='email-address'
+                            autoCapitalize="none"
+                            autoCorrect={false}
+                            onSubmitEditing={() => this.passwordInput.focus()}
+                        />
+                        <TextInput
+                            value={this.state.password}
+                            onChangeText={(password) => this.setState({ password })}
+                            placeholder="Password"
+                            placeholderTextColor="#C6C6C6"
+                            secureTextEntry
+                            style={styles.input}
+                            ref={(input) => this.passwordInput = input}
+                        />
+                        <TouchableOpacity style={styles.buttonContainer} onPress={this.login}>
+                            <Text style={styles.buttonText}>Log In</Text>
+                        </TouchableOpacity>
+                        <View style={{ flex: 1, flexDirection: 'row', alignSelf: 'center', marginTop: 5 }}>
+                            <Text style={styles.dontHaveAccount}>Forgot your login details? </Text>
+                            <Text style={styles.signupText}>Get help signing in.</Text>
+                        </View>
+                        <View style={{ flex: 1, flexDirection: 'row', alignSelf: 'center', marginTop: 90 }}>
+                            <Text style={styles.dontHaveAccount}>Don't have account? </Text>
+                            <Text style={styles.signupText}>Sign up</Text>
                         </View>
 
                     </View>
-                    <View style={styles.bottomContainer}>
 
-                    </View>
                 </View>
-                {/* <View style={styles.intro}>
+              
+                
+            </View>
+             
 
-                </View> */}
-            </ImageBackground>
+
         )
     }
     login = () => {
         console.log("====================")
+        this.setState({isLoading: true})
         console.log('email =' + this.state.email + ' password =' + this.state.password)
         fetch('http://35.160.197.175:3006/api/v1/user/login',
             {
@@ -74,10 +85,14 @@ export default class LoginPage extends Component {
                 if (response.status == 200) {
                     return response.json().then((responseJSON) => {
                         console.log(responseJSON.token);
-                       // this.goToHomePage
+                        this.setState({isLoading: false})
+                        // this.goToHomePage
                         this.storeData(responseJSON)
-                        
-                        Alert.alert('Success', 'Successfully logged in', [
+                        var str = 'Successfully logged in as ';
+
+                        // Joining the strings together 
+                        var value = str.concat(responseJSON.firstName+' ' +responseJSON.lastName);
+                        Alert.alert('Welcome', value, [
                             {
                                 text: 'Ok',
                                 onPress: this.goToHomePage
@@ -88,6 +103,7 @@ export default class LoginPage extends Component {
 
                     })
                 } else {
+                    this.setState({isLoading: false})
                     console.log(response.body);
                     Alert.alert('Error', 'Please enter valid credentials.', [
                         {
@@ -101,21 +117,21 @@ export default class LoginPage extends Component {
     }
 
     storeData = async (responseJSON) => {
-        console.log('called store data '+responseJSON.email);
+        console.log('called store data ' + responseJSON.email);
         try {
             let userId = '';
-            userId=responseJSON.email;
-            console.log('called try block '+ userId);
-            
-           await AsyncStorage.setItem('named', userId)
+            userId = responseJSON.email;
+            console.log('called try block ' + userId);
+
+            await AsyncStorage.setItem('named', userId)
         } catch (e) {
-            console.log('called catch block----e --------'+e);
+            console.log('called catch block----e --------' + e);
         }
-      }
+    }
 
     goToHomePage = () => {
-        console.log("Opening Home page")
-        this.props.navigation.navigate('HomePage')
+        console.log("Opening PostDemo page")
+        this.props.navigation.navigate('PostDemo')
 
     }
 }
@@ -143,23 +159,31 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     dontHaveAccount: {
-        alignSelf: 'center',
-        color: '#FFFFFF',
-        marginTop: 200,
+
+
+
         opacity: 0.8,
-        fontSize: 15,
+        fontSize: 13,
         paddingBottom: 10,
 
+
+    },
+    signupText: {
+        color: '#1774EA',
+        opacity: 0.8,
+        fontSize: 13,
+        paddingBottom: 10,
         fontWeight: 'bold'
     },
 
     container: {
 
-        backgroundColor: "rgba(0,0,0,0.3)",
         flex: 1,
         padding: 20
     },
     logoContainer: {
+        
+        marginTop:100,
         alignItems: "center",
         flex: 0.2,
         justifyContent: "flex-end"
@@ -169,47 +193,47 @@ const styles = StyleSheet.create({
         height: 100
     },
     title: {
-        color: '#FFFFFF',
         marginTop: 10,
         opacity: 0.8,
-        fontSize: 30,
-        fontWeight: 'bold'
+        fontSize: 35,
+        fontFamily: 'Blessed'
     }
     ,
     formContainer: {
-        backgroundColor: 'rgba(0,0,0,0.2)',
-        marginTop: 20,
-        flex: 0.5,
+       
+        flex: 0.8,
         alignContent: 'center',
         justifyContent: 'center',
         flexDirection: 'column'
     },
     bottomContainer: {
-        flex: 0.4,
+        flex: 0.1,
+        backgroundColor: 'pink'
 
     },
     input: {
         marginBottom: 10,
         height: 40,
-        backgroundColor: 'rgba(255,255,255,1)',
+        backgroundColor: 'rgba(193,193,193,0.2)',
         color: '#000000',
         paddingHorizontal: 10,
         borderWidth: 1,
-        borderColor: 'white',
+        borderColor: 'rgba(193,193,193,0.8)',
         borderRadius: 5
     },
     buttonContainer: {
-        backgroundColor: "#F26D00",
-        paddingVertical: 10,
+        backgroundColor: "#1774EA",
+        paddingVertical: 12,
         borderWidth: 1,
         borderColor: 'white',
-        borderRadius: 10,
-        marginTop: 20
+        borderRadius: 5,
+        marginTop: 5
     },
     buttonText: {
         textAlign: 'center',
         color: "#FFF",
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontSize: 15
     }
 
 })

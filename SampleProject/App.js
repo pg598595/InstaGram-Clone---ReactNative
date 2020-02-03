@@ -24,8 +24,8 @@ const MainNavigator = createStackNavigator({
       header: null
     }
   },
-  HomePage: {
-    screen: HomePage,
+  PostDemo: {
+    screen: PostDemo,
     navigationOptions: {
       header: null
     }
@@ -33,13 +33,13 @@ const MainNavigator = createStackNavigator({
 
 });
 
-// const App = createAppContainer(MainNavigator);
+const App = createAppContainer(MainNavigator);
 
-// export default App;
-export default function App() {
-  return <View>
-    <PostDemo></PostDemo>
+export default App;
+// export default function App() {
+//   return <View>
+//     <PostDemo></PostDemo>
 
-  </View>
+//   </View>
 
-}
+// }

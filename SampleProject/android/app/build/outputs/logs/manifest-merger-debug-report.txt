@@ -11,6 +11,7 @@ MERGED from [:react-native-reanimated] /home/priyankagupta/Desktop/ReactNative/R
 MERGED from [:react-native-vector-icons] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.61.4] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6408b47dae729fdf02156778021a6d7c/AndroidManifest.xml:2:1-13:12
 MERGED from [org.webkit:android-jsc:r245459] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/955288c17384cea22c85e94fbabfaf36/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-text-gradient] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-text-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c0b58bfeb9d33b70d03da84249f829f3/AndroidManifest.xml:17:1-22:12
 MERGED from [com.facebook.fresco:fresco:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/79dded0822ac6c78ea8a3799f7152c9e/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/cd74cb6152003809a63666a4e9f44f9d/AndroidManifest.xml:2:1-9:12
@@ -149,6 +150,8 @@ MERGED from [com.facebook.react:react-native:0.61.4] /home/priyankagupta/.gradle
 MERGED from [com.facebook.react:react-native:0.61.4] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6408b47dae729fdf02156778021a6d7c/AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r245459] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/955288c17384cea22c85e94fbabfaf36/AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r245459] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/955288c17384cea22c85e94fbabfaf36/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-text-gradient] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-text-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-text-gradient] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-text-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c0b58bfeb9d33b70d03da84249f829f3/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c0b58bfeb9d33b70d03da84249f829f3/AndroidManifest.xml:20:5-44
 MERGED from [com.facebook.fresco:fresco:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/79dded0822ac6c78ea8a3799f7152c9e/AndroidManifest.xml:5:5-7:41
