@@ -7,6 +7,7 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import PostDemo from './components/demo/PostDemo';
 import {View} from 'react-native'
+import MainScreen from './components/demo/MainScreen';
 
 const MainNavigator = createStackNavigator({
 
@@ -22,8 +23,8 @@ const MainNavigator = createStackNavigator({
       header: null
     }
   },
-  PostDemo: {
-    screen: PostDemo,
+  MainScreen: {
+    screen: MainScreen,
     navigationOptions: {
       header: null
     }

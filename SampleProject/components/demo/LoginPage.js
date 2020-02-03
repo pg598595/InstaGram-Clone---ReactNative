@@ -130,8 +130,8 @@ export default class LoginPage extends Component {
     }
 
     goToHomePage = () => {
-        console.log("Opening PostDemo page")
-        this.props.navigation.navigate('PostDemo')
+        console.log("Opening MainScreen page")
+        this.props.navigation.navigate('MainScreen')
 
     }
 }
