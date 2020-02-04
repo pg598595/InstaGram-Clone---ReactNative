@@ -34,7 +34,8 @@ export default class ProfileScreen extends Component {
             refreshing: false,
             setRefreshing: false,
             placeHolderImage: 'https://www.mageworx.com/blog/wp-content/uploads/2012/06/Page-Not-Found-13.jpg',
-            
+            profilePicture: 'https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__340.jpg'
+
 
         }
 
@@ -57,10 +58,37 @@ export default class ProfileScreen extends Component {
     }
 
     render() {
-        return <View>
+        return <View  style={{backgroundColor:'rgba(219, 219, 219,0.2)'}}>
 
             <SafeAreaView>
                 <ProfileScreenToolBar></ProfileScreenToolBar>
+                <ScrollView showsHorizontalScrollIndicator={false}>
+                <View style={{ flexDirection: 'row', padding: 12,backgroundColor:'rgba(219, 219, 219,0)' }}>
+                    <View style={{ flexDirection: 'column', alignItems: 'center' }}>
+                        <Image style={styles.profileImage} source={{ uri: this.state.profilePicture }} />
+                        <Text style={{ marginTop: 5 }}>Priyanka Gupta</Text>
+                    </View>
+                    <View style={{ flexDirection: 'row', flex: 1,marginTop:15 }}>
+                        <View style={styles.details}>
+                            <Text style={styles.textBold}>0</Text>
+                            <Text>Posts</Text>
+                        </View>
+                        <View style={styles.details}>
+                            <Text style={styles.textBold}>0</Text>
+                            <Text>Followers</Text>
+                        </View>
+                        <View style={styles.details}>
+                            <Text style={styles.textBold}>0</Text>
+                            <Text>Following</Text>
+                        </View>
+                    </View>
+
+                </View>
+                <View style={{ padding: 12,backgroundColor:'rgba(219, 219, 219,0)' }} >
+                     <TouchableOpacity style={styles.buttonContainer} onPress={this.login}>
+                            <Text style={styles.buttonText}>Edit Profile</Text>
+                        </TouchableOpacity>
+                </View>
                 <LoadingIndicator isLoading={this.state.isLoading}></LoadingIndicator>
                
                 <FlatList
@@ -88,6 +116,7 @@ export default class ProfileScreen extends Component {
                     keyExtractor={(item) => item.recipeId}
                     extraData={this.state}
                 ></FlatList>
+                </ScrollView>
             </SafeAreaView>
         </View>
     }
@@ -133,25 +162,34 @@ export default class ProfileScreen extends Component {
 }
 
 const styles = StyleSheet.create({
+    textBold:{
+        fontWeight:'bold',
+        fontSize:18
+    },
+    details: {
+        flexDirection: 'column',
+        flex: 1,
+        alignItems: 'center'
+    },
     iconcamera: {
         height: 22,
         width: 25,
         marginStart: 10
     },
     titleToolbar: {
-        marginTop:5,
+        marginTop: 5,
         fontSize: 20,
         marginStart: 15,
         fontFamily: 'Blessed',
-        textAlign:"center"
+        textAlign: "center"
     },
     toolBar: {
         padding: 2,
 
         flexDirection: 'row',
-        alignItems:'center'
+        alignItems: 'center'
     },
-   
+
     image: {
         height: '100%',
         width: '100%'
@@ -160,7 +198,23 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#FFF'
     },
-   
+
+    profileImage: {
+        height: 80,
+        width: 80,
+        borderRadius: 100
+    },
+    buttonContainer: {
+        backgroundColor: "#FFF",
+        paddingVertical: 5,
+        borderWidth: 1,
+        borderColor: '#C6C6C6',
+        borderRadius: 5,
+        marginTop: 5
+    },
+    buttonText: {
+        textAlign: 'center',
+    }
 
 
 })

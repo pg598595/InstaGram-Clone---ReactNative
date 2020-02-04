@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
    
     titleToolbar: {
         marginTop:5,
+        marginBottom:5,
         fontSize: 18,
         marginStart: 15,
         textAlign:"center",
