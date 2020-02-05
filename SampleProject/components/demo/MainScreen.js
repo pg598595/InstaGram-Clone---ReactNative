@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native'
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-import { createAppContainer } from 'react-navigation';
+import { createAppContainer, NavigationEvents } from 'react-navigation';
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import Fontisto from "react-native-vector-icons/Fontisto";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
@@ -9,6 +9,9 @@ import FontAwesome from "react-native-vector-icons/FontAwesome";
 import PostDemo from './PostDemo';
 import FavoriteScreen from './FavoriteScreen';
 import ProfileScreen from './ProfileScreen';
+import DetailScreen from './DetailScreen';
+import { createStackNavigator } from 'react-navigation-stack';
+import AddNewRecipeComponent from './AddNewRecipeComponent';
 
 
 export default class MainScreen extends Component {
@@ -34,49 +37,92 @@ class SearchScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
-              <Text>Search Screen</Text>
+                <Text>Search Screen</Text>
             </View>
         );
     }
 }
 
+const homePageNavigator = createStackNavigator({
+
+    Posts: {
+        screen: PostDemo,
+        navigationOptions: {
+            header: null
+        }
+
+    },
+    Details: {
+        screen: DetailScreen,
+        navigationOptions: ({ navigation }) => ({
+            title: `${navigation.state.params.details.name}`,
+        }),
+        
+    },
+
+},
+    {
+
+
+        mode: 'card',
+
+    })
+
+
+homePageNavigator.navigationOptions = ({ navigation }) => {
+    let tabBarVisible;
+    if (navigation.state.routes.length > 1) {
+        navigation.state.routes.map(route => {
+            if (route.routeName === "Details") {
+                tabBarVisible = false;
+            } else {
+                tabBarVisible = true;
+            }
+        });
+    }
+
+    return {
+        tabBarVisible
+    };
+};
+
 const bottomTabNavigator = createBottomTabNavigator(
     {
         Home: {
-            screen: PostDemo,
+            screen: homePageNavigator,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
                     <Fontisto name="home" size={22} color={tintColor} />
                 ),
-                tabBarLabel:() => {return null},
-                
+                tabBarLabel: () => { return null },
+
             }
         },
-        Search:{
+        Search: {
             screen: SearchScreen,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
                     <Fontisto name="search" size={22} color={tintColor} />
                 ),
-                tabBarLabel:() => {return null},
+                tabBarLabel: () => { return null },
             }
         },
         Add: {
-            screen: AddNewRecipeScreen,
+            screen: AddNewRecipeComponent,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
                     <MaterialIcons name="add" size={30} color={tintColor} />
                 ),
-                tabBarLabel:() => {return null},
+                tabBarLabel: () => { return null },
             }
         },
-        Favorites:{
+        Favorites: {
             screen: FavoriteScreen,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
                     <FontAwesome name="heart" size={22} color={tintColor} />
                 ),
-                tabBarLabel:() => {return null},
+                tabBarLabel: () => { return null },
             }
         },
         Profile: {
@@ -85,9 +131,10 @@ const bottomTabNavigator = createBottomTabNavigator(
                 tabBarIcon: ({ tintColor }) => (
                     <MaterialIcons name="person-outline" size={28} color={tintColor} />
                 ),
-                tabBarLabel:() => {return null},
+                tabBarLabel: () => { return null },
             }
         },
+        // transfer : detailsNavigator
 
     },
     {
@@ -100,8 +147,8 @@ const AppContainer = createAppContainer(bottomTabNavigator);
 const styles = StyleSheet.create({
 
     container: {
-        flex: 1, 
-    
+        flex: 1,
+
     },
     icon: {
         height: 19,

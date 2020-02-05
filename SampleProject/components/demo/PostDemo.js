@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Alert, TouchableWithoutFeedback, FlatList, RefreshControl, Text, View, TouchableOpacity, StyleSheet, Image, SafeAreaView, ScrollView } from 'react-native'
-import AntIcons from "react-native-vector-icons/EvilIcons";
 import Entypo from "react-native-vector-icons/Entypo";
 import Fontisto from "react-native-vector-icons/EvilIcons";
 import * as constant from './Constants';
@@ -20,7 +19,7 @@ export default class PostDemo extends Component {
 
     componentDidMount() {
         this.setState({ isLoading: true });
-        console.log("called home comopent")
+        console.log("called home comopent componentDidMount")
         console.log("===========================")
        
        this.getListfromApi()
@@ -28,7 +27,7 @@ export default class PostDemo extends Component {
 
     constructor() {
         super()
-
+        
         this.state = {
             checked:false,
             isLoading: false,
@@ -40,23 +39,31 @@ export default class PostDemo extends Component {
             profilePicture: 'https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__340.jpg'
 
         }
-
+       
+        
 
     }
 
-    onPostClick = (item) => {
-
-        Alert.alert(item.name, 'Complexity: ' + item.complexity + '                             ' +
-            'Preparation Time: ' + item.preparationTime + '                                 ' +
-            'No. of serves: ' + item.serves
-            , [
-                {
-                    text: 'OK',
 
 
-                },
+    onPostClick(item){
+            console.log('clicked Post item');
+           // this.props.navigation.popToTop();
+           this.props.navigation.navigate('Details',{details:item})
 
-            ])
+        console.log('clicked Post item 2');
+
+        // Alert.alert(item.name, 'Complexity: ' + item.complexity + '                             ' +
+        //     'Preparation Time: ' + item.preparationTime + '                                 ' +
+        //     'No. of serves: ' + item.serves
+        //     , [
+        //         {
+        //             text: 'OK',
+
+
+        //         },
+
+        //     ])
     }
 
     render() {
@@ -88,17 +95,16 @@ export default class PostDemo extends Component {
 
                                     </View>
                                 </View>
-                                <TouchableWithoutFeedback onPress={() => this.onPostClick(item)}>
-
+                                <TouchableOpacity onPress={() => this.onPostClick(item)}>
                                     <Image source={(item.photo != null) ? { uri: item.photo } : { uri: this.state.placeHolderImage }} style={styles.image}></Image>
-                                </TouchableWithoutFeedback>
+                                </TouchableOpacity>
                                 <View style={styles.header}>
                                     <CheckBox
                                     style={{width:20}}
                                         checkedComponent={<FontAwesome name='heart' size={23} color='red'/>}
                                         uncheckedComponent={<FontAwesome name='heart-o' size={23} />}
                                         label=''
-                                        checked={this.state.checked}
+                                        checked={Boolean(Number(item.inCookingList))}
                                         onChange={(checked) => this.setState({checked: !this.state.checked})}
                                     />
                                     
