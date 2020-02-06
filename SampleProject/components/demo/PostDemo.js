@@ -69,10 +69,13 @@ export default class PostDemo extends Component {
     render() {
         return <View>
 
+
+
             <SafeAreaView>
                <HomePageToolBar></HomePageToolBar>
                 <LoadingIndicator isLoading={this.state.isLoading}></LoadingIndicator>
                 {/* <Text>Test</Text> */}
+                
                 <FlatList
                     ItemSeparatorComponent={this.separator}
                     refreshControl={
@@ -81,6 +84,7 @@ export default class PostDemo extends Component {
                     data={this.state.recipesList}
 
                     renderItem={({ item }) => {
+                       
                         return <View>
                             <View style={styles.postContainer}>
                                 <View style={styles.header}>
@@ -151,7 +155,7 @@ export default class PostDemo extends Component {
     );
 
     getListfromApi = () => {
-        fetch(constant.API_FOR_FEED_LIST,
+        fetch(constant.API_FOR_COOKING_LIST,
         {
             method: 'GET',
             headers: {

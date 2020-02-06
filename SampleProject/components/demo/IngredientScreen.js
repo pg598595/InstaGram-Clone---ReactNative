@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Text, View, TouchableOpacity, Image, StyleSheet, KeyboardAvoidingView,Alert,FlatList,RefreshControl } from 'react-native'
+import { ImageBackground,Text, View, TouchableOpacity, Image, StyleSheet, KeyboardAvoidingView,Alert,FlatList,RefreshControl } from 'react-native'
+import Entypo from "react-native-vector-icons/Entypo";
 
 import * as constant from './Constants';
 import LoadingIndicator from './LoadingIndicatior';
@@ -9,11 +10,17 @@ export default class IngredientScreen extends Component {
     // title:this.state.nameofRecipe
 
     // }
+    onRefresh = () => {
+        this.setState({ setRefreshing: true });
+        const itemDetails = this.props.screenProps.itemDetails.navigation.state['params']
+        this.getIngredientsfromApi(itemDetails.details.recipeId);
+    };
     constructor() {
         super()
         this.state = {
             isLoading: false,
             recipeId: 0,
+            photo:'',
             ingredientList: [
             ],
 
@@ -27,6 +34,7 @@ export default class IngredientScreen extends Component {
         console.log('called Ingredient Screen');
         const itemDetails = this.props.screenProps.itemDetails.navigation.state['params']
         this.setState({ recipeId: itemDetails.details.recipeId })
+        this.setState({ photo: itemDetails.details.photo })
         console.log('recipeId:'+itemDetails.details.recipeId);
         this.getIngredientsfromApi(itemDetails.details.recipeId);
 
@@ -34,6 +42,7 @@ export default class IngredientScreen extends Component {
     render() {
         return (
 
+            <ImageBackground source={(this.state.photo != null) ? { uri: this.state.photo } : { uri: constant.PLACEHOLDER_IMAGE }} style={styles.image}>
 
             <View style={styles.container}>
 
@@ -46,23 +55,39 @@ export default class IngredientScreen extends Component {
                     data={this.state.ingredientList}
 
                     renderItem={({ item }) => {
-                        return <View>
-                            <View >
-                               <Text>{item.ingredient}</Text>
-                               
-                            </View>
+
+                    
+                          return <View style={{padding:5,marginStart:5,marginTop:5}}>
+                          <View style={{flexDirection:'row',alignItems:'center'}} >
+                             
+                              <Entypo name='check' size={20} color='white' />
+
+                             <Text style={{marginStart:10,color:'white',fontSize:18,fontWeight:'bold'}}>{item.ingredient}</Text>
+                             
+                          </View>
 
 
-                        </View>
+                      </View>
                     }}
                     keyExtractor={(item) => item.id}
                     extraData={this.state}
+                    ListEmptyComponent={this.ListEmpty}
                 ></FlatList>
 
             </View>
+            </ImageBackground>
 
         )
     }
+
+    ListEmpty = () => {
+        return (
+          //View to show when list is empty
+          <View style={{flex:1,justifyContent:'center',}}>
+            <Text style={{ textAlign: 'center',fontSize:30,fontWeight:'bold' ,color:'white'}}>No Ingredient Found</Text>
+          </View>
+        );
+      };
 
     getIngredientsfromApi = (id) => {
         fetch('http://35.160.197.175:3006/api/v1/recipe/'+id+'/ingredients',
@@ -112,7 +137,11 @@ const styles = StyleSheet.create({
         width: '100%'
     },
     container: {
-        flex: 1
+        margin: 10,
+        padding: 15,
+        borderTopEndRadius: 20,
+        borderTopStartRadius: 20,
+        backgroundColor:'rgba(0,0,0,0.7)',
     },
 
 })
