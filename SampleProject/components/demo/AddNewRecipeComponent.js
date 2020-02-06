@@ -6,6 +6,8 @@ import { Dropdown } from 'react-native-material-dropdown';
 import NumericInput from 'react-native-numeric-input'
 import Icon from "react-native-vector-icons/FontAwesome";
 import { Chip } from 'react-native-paper';
+import * as constant from './Constants';
+
 
 
 import {
@@ -122,7 +124,7 @@ export default class AddNewRecipeComponent extends Component {
     addValuesTags = (text, index) => {
         let textInputTags = this.state.textInputTags;
         textInputTags.push(
-            <Chip variant="outlined" onDelete={()=>{}}>{text}</Chip>
+            <Chip variant="outlined" onDelete={() => { }}>{text}</Chip>
         );
         this.setState({ tagValue: '' })
         this.setState({ textInputTags });
@@ -173,46 +175,40 @@ export default class AddNewRecipeComponent extends Component {
             <SafeAreaView style={styles.scrollcontainer}>
                 <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
                     <View>
-                        <View style={styles.titlecontainer}>
-                            <Text style={styles.titleText}>Add New Recipe </Text>
-
+                        <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', margin: 10 }}>
+                            <Image source={{ uri: constant.PLACEHOLDER_IMAGE }} style={styles.postingImage}></Image>
+                            <TextInput value={this.state.email}
+                                placeholder="Write name of recipe..."
+                                placeholderTextColor="#C6C6C6"
+                                returnKeyType="next"
+                                style={{ marginStart: 10 }}
+                                autoCapitalize="words"
+                                autoCorrect={false}
+                            ></TextInput>
                         </View>
+                        <View style={styles.lineDivider}></View>
                         <View style={styles.formcontainer}>
 
-                            <OutlinedTextField
-                                style={styles.input}
-                                label='Name of Recipe *'
-                                keyboardType='default'
-
-
-                            />
-                            {/* <OutlinedTextField
-                                style={styles.input}
-                                label='Time Requied'
-                                keyboardType='default'
-                            />
-                            <OutlinedTextField
-                                style={styles.input}
-                                label='Complexcity'
-                                keyboardType='default'
-                            /> */}
-                            <OutlinedTextField
+                            <TextField
                                 style={styles.input}
                                 label='No. of serves *'
                                 keyboardType='number-pad'
                             />
 
+                          
                             <View style={styles.rowTime}>
-                                <OutlinedTextField
+                                <TextField
                                     style={styles.input}
                                     label='Time Requierd *'
                                     keyboardType='number-pad'
                                 />
-                                {/* <Dropdown containerStyle={styles.dropDown}
-                                label='unit'
-                                data={timeUnit}
-                            /> */}
+
                             </View>
+                            <TextField
+                                style={styles.input}
+                                label='Youtube URL'
+                               
+                            />
                             <Dropdown containerStyle={styles.dropDown}
                                 label='Complexcity *'
                                 data={complexcity}
@@ -220,7 +216,7 @@ export default class AddNewRecipeComponent extends Component {
 
 
                         </View>
-
+                        <View style={styles.lineDivider}></View>
                         <View style={styles.formcontainer}>
                             <View style={styles.rowAdd}>
 
@@ -238,6 +234,7 @@ export default class AddNewRecipeComponent extends Component {
                             })}
 
                         </View>
+                        <View style={styles.lineDivider}></View>
                         <View style={styles.formcontainer}>
                             <View style={styles.rowAdd}>
 
@@ -255,7 +252,7 @@ export default class AddNewRecipeComponent extends Component {
                                 return value
                             })}
                         </View>
-
+                        <View style={styles.lineDivider}></View>
                         <View style={styles.formcontainer}>
                             <View style={styles.rowAdd}>
 
@@ -265,7 +262,6 @@ export default class AddNewRecipeComponent extends Component {
                             </View>
                             <View style={styles.row}>
 
-                                {/* // <Text style={styles.textNumber}>{index + 1}</Text> */}
                                 <View style={{ flex: 1 }}>
 
 
@@ -289,15 +285,9 @@ export default class AddNewRecipeComponent extends Component {
                                 return value
                             })}
                         </View>
-                        <View style={styles.formcontainer}>
-                            <OutlinedTextField
-                                style={styles.input}
-                                label='Youtube URL'
-                                keyboardType='default'
+                      
 
-                            />
-                        </View>
-                        <View >
+                        <View style={{marginTop:10,marginBottom:20}}>
                             <View style={styles.buttonSubmit}>
                                 <TouchableOpacity style={styles.buttonContainer} onPress={this.getValues}>
                                     <Text style={styles.buttonText}>Submit</Text>
@@ -315,6 +305,18 @@ export default class AddNewRecipeComponent extends Component {
 //export default SplashScreen
 
 const styles = StyleSheet.create({
+    lineDivider: {
+        height: 0.5,
+        backgroundColor: 'rgba(142, 142, 142,0.5)',
+        width: '100%',
+        marginTop:5
+    },
+    postingImage: {
+        height: 60,
+        width: 60,
+
+
+    },
     titleSmall: {
         fontSize: 20,
         fontWeight: 'bold',
@@ -368,7 +370,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     buttonContainer: {
-        backgroundColor: "#F26D00",
+        backgroundColor: "#1774EA",
         paddingVertical: 10,
         borderWidth: 1,
         borderColor: 'white',
@@ -380,14 +382,15 @@ const styles = StyleSheet.create({
     },
     scrollView: {
 
-        marginHorizontal: 10,
+
     },
     rowAdd: {
 
         flex: 1,
         flexDirection: 'row',
         alignContent: 'space-between',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        padding: 10
 
     },
     addIndigreantscontaier: {
@@ -433,10 +436,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     formcontainer: {
-        padding: 15,
-        margin: 10,
-        backgroundColor: 'rgba(204,204,204,0.2)',
-        borderRadius: 10,
+
+        marginStart: 10,
+        marginEnd: 10
+
+
 
     },
     titleText: {

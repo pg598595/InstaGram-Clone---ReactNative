@@ -12,6 +12,7 @@ import ProfileScreen from './ProfileScreen';
 import DetailScreen from './DetailScreen';
 import { createStackNavigator } from 'react-navigation-stack';
 import AddNewRecipeComponent from './AddNewRecipeComponent';
+import AddImage from './AddImage';
 
 
 export default class MainScreen extends Component {
@@ -57,7 +58,7 @@ const homePageNavigator = createStackNavigator({
         navigationOptions: ({ navigation }) => ({
             title: `${navigation.state.params.details.name}`,
         }),
-        
+
     },
 
 },
@@ -85,6 +86,46 @@ homePageNavigator.navigationOptions = ({ navigation }) => {
         tabBarVisible
     };
 };
+const addPostNavigator = createStackNavigator({
+
+    AddImage:{
+        screen: AddImage,
+        navigationOptions: {
+            header: null
+        }
+    },
+    AddPost: {
+        screen: AddNewRecipeComponent,
+        navigationOptions: ({ navigation }) => ({
+            title: `Add Post`,
+        }),
+    },
+
+},
+    {
+
+
+        mode: 'card',
+
+    })
+
+
+    addPostNavigator.navigationOptions = ({ navigation }) => {
+        let tabBarVisible;
+        if (navigation.state.routes.length > 0) {
+            navigation.state.routes.map(route => {
+                if (route.routeName === "AddPost") {
+                    tabBarVisible = false;
+                } else {
+                    tabBarVisible = true;
+                }
+            });
+        }
+    
+        return {
+            tabBarVisible
+        };
+    };
 
 const bottomTabNavigator = createBottomTabNavigator(
     {
@@ -108,7 +149,7 @@ const bottomTabNavigator = createBottomTabNavigator(
             }
         },
         Add: {
-            screen: AddNewRecipeComponent,
+            screen: addPostNavigator,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
                     <MaterialIcons name="add" size={30} color={tintColor} />
