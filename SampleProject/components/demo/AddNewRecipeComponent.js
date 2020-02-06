@@ -7,14 +7,15 @@ import NumericInput from 'react-native-numeric-input'
 import Icon from "react-native-vector-icons/FontAwesome";
 import { Chip } from 'react-native-paper';
 import * as constant from './Constants';
-
-
+import {ToastAndroid} from 'react-native';
 
 import {
     TextField,
     FilledTextField,
     OutlinedTextField,
 } from 'react-native-material-textfield';
+import ImagePicker from "react-native-image-picker";
+
 
 export default class AddNewRecipeComponent extends Component {
     constructor(props) {
@@ -26,12 +27,32 @@ export default class AddNewRecipeComponent extends Component {
             textInputSteps: [],
             inputDataSteps: [],
             textInputTags: [],
-            inputDataTags: []
+            inputDataTags: [],
+            pickedImage: null,
+            nameOfRecipe:'',
+            timeRequierd:'',
+            youtubeUrl:'',
+            complexcity:'',
+            noOfServes:''
 
         }
     }
     //function to add TextInput dynamically
+    pickImageHandler = () => {
+        ImagePicker.showImagePicker({ title: "Pick an Image", maxWidth: 800, maxHeight: 600 }, res => {
+            if (res.didCancel) {
+                console.log("User cancelled!");
+                // this.props.navigation.popToTop()
+            } else if (res.error) {
+                console.log("Error", res.error);
+            } else {
+                this.setState({
+                    pickedImage: { uri: res.uri }
+                });
 
+            }
+        });
+    }
     addTextInput = (index) => {
 
         let textInputIndredients = this.state.textInputIndredients;
@@ -153,10 +174,22 @@ export default class AddNewRecipeComponent extends Component {
 
     //function to console the output
     getValues = () => {
-        console.log('Data of Indredients ', this.state.inputDataIndredients);
-        console.log('Data of Steps ', this.state.inputDataSteps);
-        console.log('Data of Tags ', this.state.inputDataTags);
-
+        if(this.state.nameOfRecipe==''||this.state.timeRequierd==''||this.state.noOfServes==''||this.state.complexcity==''){
+            ToastAndroid.show('Fill requierd fields', ToastAndroid.SHORT);
+        }else{
+            console.log('Name ', this.state.nameOfRecipe);
+            console.log('noOfServes : ', this.state.noOfServes);
+            console.log('timeRequierd : ', this.state.timeRequierd);
+            console.log('complexcity : ', this.state.complexcity);
+            console.log('youtubeUrl : ', this.state.youtubeUrl);
+            console.log('Data of Indredients ', this.state.inputDataIndredients);
+            console.log('Data of Steps ', this.state.inputDataSteps);
+            console.log('Data of Tags ', this.state.inputDataTags);
+            this.handleAddNewRecipe();
+            
+        }
+       
+        
     }
     render() {
         let complexcity = [{
@@ -176,12 +209,15 @@ export default class AddNewRecipeComponent extends Component {
                 <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
                     <View>
                         <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', margin: 10 }}>
-                            <Image source={{ uri: constant.PLACEHOLDER_IMAGE }} style={styles.postingImage}></Image>
-                            <TextInput value={this.state.email}
+                            <TouchableOpacity style={styles.postingImage} onPress={this.pickImageHandler}>
+                            <Image source={(this.state.pickedImage == null)?{ uri: constant.PLACEHOLDER_IMAGE }:this.state.pickedImage} style={styles.postingImage}></Image>
+                            </TouchableOpacity>
+                         <TextInput value={this.state.email}
                                 placeholder="Write name of recipe..."
                                 placeholderTextColor="#C6C6C6"
                                 returnKeyType="next"
                                 style={{ marginStart: 10 }}
+                                onChangeText={(nameOfRecipe) => this.setState({ nameOfRecipe })}
                                 autoCapitalize="words"
                                 autoCorrect={false}
                             ></TextInput>
@@ -193,6 +229,7 @@ export default class AddNewRecipeComponent extends Component {
                                 style={styles.input}
                                 label='No. of serves *'
                                 keyboardType='number-pad'
+                                onChangeText={(noOfServes) => this.setState({ noOfServes })}
                             />
 
                           
@@ -201,17 +238,21 @@ export default class AddNewRecipeComponent extends Component {
                                     style={styles.input}
                                     label='Time Requierd *'
                                     keyboardType='number-pad'
+                                    onChangeText={(timeRequierd) => this.setState({ timeRequierd })}
                                 />
 
                             </View>
                             <TextField
                                 style={styles.input}
                                 label='Youtube URL'
+                                onChangeText={(youtubeUrl) => this.setState({ youtubeUrl })}
+
                                
                             />
                             <Dropdown containerStyle={styles.dropDown}
                                 label='Complexcity *'
                                 data={complexcity}
+                                 onChangeText={(complexcity) => this.setState({ complexcity })}
                             />
 
 
@@ -300,6 +341,90 @@ export default class AddNewRecipeComponent extends Component {
             </SafeAreaView>
         )
     }
+
+    handleAddNewRecipe = () => {
+        fetch(constant.ADD_NEW_RECIPE,
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    'name': this.state.nameOfRecipe,
+                    'preparationTime': this.state.preparationTime,
+                    'serves': this.state.noOfServes,
+                    'complexity': this.state.complexcity,
+                    'ytUrl': this.state.youtubeUrl,
+
+                })
+            }).then((response) => {
+                if (response.status == 200) {
+                    return response.json().then((responseJSON) => {
+                        console.log(responseJSON);
+                        //this.setState({isLoading: false})
+                        // this.goToHomePage
+                       // this.storeData(responseJSON)
+                        //var str = 'Successfully logged in as ';
+
+                        // Joining the strings together 
+                       // var value = str.concat(responseJSON.firstName+' ' +responseJSON.lastName);
+                        // Alert.alert('Welcome', value, [
+                        //     {
+                        //         text: 'Ok',
+                        //         onPress: this.goToHomePage
+
+                        //     },
+
+                        // ])
+
+                    })
+                } else {
+                    //this.setState({isLoading: false})
+                    console.log(response.status);
+                    // Alert.alert('Error', 'Please enter valid credentials.', [
+                    //     {
+                    //         text: 'Ok',
+                    //     },
+
+                    // ])
+
+                }
+            })
+    }
+
+    handleUploadPhoto = () => {
+        fetch(constant.UPLOAD_IMAGE_FILE, {
+          method: "POST",
+          body: this.createFormData(this.state.pickedImage, { recipeId: 553} )
+        })
+          .then(response => response.json())
+          .then(response => {
+            console.log("upload succes", response);
+            alert("Upload success!");
+            this.setState({ photo: null });
+          })
+          .catch(error => {
+            console.log("upload error", error);
+            alert("Upload failed!");
+          });
+      };
+
+       createFormData = (photo, body) => {
+        const data = new FormData();
+        var photo = {
+            uri: this.state.pickedImage.uri,
+            type: 'image/jpeg',
+            name: 'photo.jpg',
+        };
+        data.append("photo", photo);
+      
+        data.append("recipeId",553)
+        console.log('picked Image: '+this.state.pickedImage.uri);
+        
+        console.log(data);
+        
+        return data;
+      };
 }
 
 //export default SplashScreen

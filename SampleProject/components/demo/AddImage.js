@@ -11,14 +11,13 @@ import ImagePicker from "react-native-image-picker";
 
 export default class AddImage extends Component {
 
-    componentDidMount() {
-        // this.props.navigation.addListener('didFocus', () => {
-        //    this.pickImageHandler();
-        // })
-    }
-
+   
+    
+    
+    
     state = {
-        pickedImage: null
+        pickedImage: null,
+        screenCalled:0
     }
 
     reset = () => {
@@ -56,8 +55,8 @@ export default class AddImage extends Component {
                 <View style={styles.button}>
 
                     
-
-                    <Button title="Change" onPress={this.resetHandler} />
+                <Button title="take" onPress={this.pickImageHandler} />
+                    <Button title="Change" onPress={this.pickImageHandler} />
                     <Button title="Next" onPress={()=>{
                          this.props.navigation.navigate('AddPost')
                     }} />

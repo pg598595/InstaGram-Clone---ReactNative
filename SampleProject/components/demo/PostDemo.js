@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Alert, TouchableWithoutFeedback, FlatList, RefreshControl, Text, View, TouchableOpacity, StyleSheet, Image, SafeAreaView, ScrollView } from 'react-native'
 import Entypo from "react-native-vector-icons/Entypo";
-import Fontisto from "react-native-vector-icons/EvilIcons";
 import * as constant from './Constants';
 import LoadingIndicator from './LoadingIndicatior';
 import FontAwesome from "react-native-vector-icons/FontAwesome";
@@ -155,7 +154,7 @@ export default class PostDemo extends Component {
     );
 
     getListfromApi = () => {
-        fetch(constant.API_FOR_COOKING_LIST,
+        fetch(constant.API_FOR_FEED_LIST,
         {
             method: 'GET',
             headers: {

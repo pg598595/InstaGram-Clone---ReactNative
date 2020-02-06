@@ -88,12 +88,7 @@ homePageNavigator.navigationOptions = ({ navigation }) => {
 };
 const addPostNavigator = createStackNavigator({
 
-    AddImage:{
-        screen: AddImage,
-        navigationOptions: {
-            header: null
-        }
-    },
+    
     AddPost: {
         screen: AddNewRecipeComponent,
         navigationOptions: ({ navigation }) => ({
