@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Dimensions,Alert, TouchableWithoutFeedback, FlatList, RefreshControl, Text, View, TouchableOpacity, StyleSheet, Image, SafeAreaView, ScrollView } from 'react-native'
+import { Dimensions, Alert, TouchableWithoutFeedback, FlatList, RefreshControl, Text, View, TouchableOpacity, StyleSheet, Image, SafeAreaView, ScrollView } from 'react-native'
 
 import * as constant from './Constants';
 import LoadingIndicator from './LoadingIndicatior';
@@ -19,18 +19,19 @@ export default class ProfileScreen extends Component {
         this.setState({ isLoading: true });
         console.log("called home comopent")
         console.log("===========================")
-       
-       this.getListfromApi()
+
+        this.getListfromApi()
     }
 
     constructor() {
         super()
 
         this.state = {
-            checked:false,
+            checked: false,
             isLoading: false,
             recipesList: [
             ],
+            noOfPost: 0,
             refreshing: false,
             setRefreshing: false,
             placeHolderImage: 'https://www.mageworx.com/blog/wp-content/uploads/2012/06/Page-Not-Found-13.jpg',
@@ -44,117 +45,152 @@ export default class ProfileScreen extends Component {
 
     onPostClick = (item) => {
 
-        Alert.alert(item.name, 'Complexity: ' + item.complexity + '                             ' +
-            'Preparation Time: ' + item.preparationTime + '                                 ' +
-            'No. of serves: ' + item.serves
+        Alert.alert('Delete', 'Do you want to delete this post?'
             , [
+
+                {
+                    text: 'Cancel',
+                    onPress: () => this.cancelPost(item)
+                },
                 {
                     text: 'OK',
-
+                    onPress:() => this.deletePost(item)
 
                 },
 
             ])
     }
+    cancelPost =(item)=>{
+        console.log("Called cancel Post");
+        
+    }
+   
+    deletePost = (item) => {
+        console.log('Called Delete: ' + item.recipeId)
+        fetch('http://35.160.197.175:3006/api/v1/recipe/'+item.recipeId,
+            {
+                method: 'DELETE',
+                headers: {
+                    'Authorization': constant.API_TOKEN,
+                    'Content-Type': 'application/json'
+                },
+                
+            }
+        ).then((response) => {
+            if (response.status == 200) {
+                console.log("Delete Sucess")
+                return response.json()
+            } else {
+                console.log("Delete Failed")
+            }
+        }).then((responseJson) => {
+            
+            this.getListfromApi()
+            //this.addInstructions(id);
+            //this.handleUploadPhoto(id)
+        }).catch((error) => {
+            console.log(error)
+        });
+    }
 
     render() {
-        return <View  style={{backgroundColor:'rgba(219, 219, 219,0.2)'}}>
+        return <View style={{ backgroundColor: 'rgba(219, 219, 219,0.2)' }}>
 
             <SafeAreaView>
                 <ProfileScreenToolBar></ProfileScreenToolBar>
                 <ScrollView showsHorizontalScrollIndicator={false}>
-                <View style={{ flexDirection: 'row', padding: 12,backgroundColor:'rgba(219, 219, 219,0)' }}>
-                    <View style={{ flexDirection: 'column', alignItems: 'center' }}>
-                        <Image style={styles.profileImage} source={{ uri: this.state.profilePicture }} />
-                        <Text style={{ marginTop: 5 }}>Priyanka Gupta</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', flex: 1,marginTop:15 }}>
-                        <View style={styles.details}>
-                            <Text style={styles.textBold}>0</Text>
-                            <Text>Posts</Text>
+                    <View style={{ flexDirection: 'row', padding: 12, backgroundColor: 'rgba(219, 219, 219,0)' }}>
+                        <View style={{ flexDirection: 'column', alignItems: 'center' }}>
+                            <Image style={styles.profileImage} source={{ uri: this.state.profilePicture }} />
+                            <Text style={{ marginTop: 5 }}>Jay Metha</Text>
                         </View>
-                        <View style={styles.details}>
-                            <Text style={styles.textBold}>0</Text>
-                            <Text>Followers</Text>
+                        <View style={{ flexDirection: 'row', flex: 1, marginTop: 15 }}>
+                            <View style={styles.details}>
+                                <Text style={styles.textBold}>{this.state.noOfPost}</Text>
+                                <Text>Posts</Text>
+                            </View>
+                            <View style={styles.details}>
+                                <Text style={styles.textBold}>0</Text>
+                                <Text>Followers</Text>
+                            </View>
+                            <View style={styles.details}>
+                                <Text style={styles.textBold}>0</Text>
+                                <Text>Following</Text>
+                            </View>
                         </View>
-                        <View style={styles.details}>
-                            <Text style={styles.textBold}>0</Text>
-                            <Text>Following</Text>
-                        </View>
-                    </View>
 
-                </View>
-                <View style={{ padding: 12,backgroundColor:'rgba(219, 219, 219,0)' }} >
-                     <TouchableOpacity style={styles.buttonContainer} onPress={this.login}>
+                    </View>
+                    <View style={{ padding: 12, backgroundColor: 'rgba(219, 219, 219,0)' }} >
+                        <TouchableOpacity style={styles.buttonContainer} onPress={this.login}>
                             <Text style={styles.buttonText}>Edit Profile</Text>
                         </TouchableOpacity>
-                </View>
-                <LoadingIndicator isLoading={this.state.isLoading}></LoadingIndicator>
-               
-                <FlatList
-                    
-                    refreshControl={
-                        <RefreshControl refreshing={this.state.refreshing} onRefresh={this.onRefresh}></RefreshControl>
-                    }
-                    numColumns={3}
-                    data={this.state.recipesList}
+                    </View>
+                    <LoadingIndicator isLoading={this.state.isLoading}></LoadingIndicator>
 
-                    renderItem={({ item }) => {
-                        return <View style={{margin: 1, backgroundColor: 'cyan', height: 100, width: ((Dimensions.get('window').width-6)/3) }}>
-                            <View style={styles.postContainer}>
-                                
-                                <TouchableWithoutFeedback onPress={() => this.onPostClick(item)}>
+                    <FlatList
 
-                                    <Image source={(item.photo != null) ? { uri: item.photo } : { uri: this.state.placeHolderImage }} style={styles.image}></Image>
-                                </TouchableWithoutFeedback>
-                               
+                        refreshControl={
+                            <RefreshControl refreshing={this.state.refreshing} onRefresh={this.onRefresh}></RefreshControl>
+                        }
+                        numColumns={3}
+                        data={this.state.recipesList}
+
+                        renderItem={({ item }) => {
+                            return <View style={{ margin: 1, backgroundColor: 'cyan', height: 100, width: ((Dimensions.get('window').width - 6) / 3) }}>
+                                <View style={styles.postContainer}>
+
+                                    <TouchableWithoutFeedback onPress={() => this.onPostClick(item)}>
+
+                                        <Image source={(item.photo != null) ? { uri: item.photo } : { uri: this.state.placeHolderImage }} style={styles.image}></Image>
+                                    </TouchableWithoutFeedback>
+
+                                </View>
+
+
                             </View>
-
-
-                        </View>
-                    }}
-                    keyExtractor={(item) => item.recipeId}
-                    extraData={this.state}
-                ></FlatList>
+                        }}
+                        keyExtractor={(item) => item.recipeId}
+                        extraData={this.state}
+                    ></FlatList>
                 </ScrollView>
             </SafeAreaView>
         </View>
     }
 
-   
+
     getListfromApi = () => {
         fetch(constant.API_FOR_FEED_LIST,
-        {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': constant.API_TOKEN
-            },
+            {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': constant.API_TOKEN
+                },
 
-        }).then((response) => {
-            if (response.status == 200) {
-                return response.json().then((responseJSON) => {
-                    
-                    this.setState({ recipesList: responseJSON });
-                    //DATA = responseJSON
-                   
+            }).then((response) => {
+                if (response.status == 200) {
+                    return response.json().then((responseJSON) => {
+
+                        this.setState({ recipesList: responseJSON });
+                        //DATA = responseJSON
+
+                        this.setState({ isLoading: false });
+                        this.setState({ noOfPost: this.state.recipesList.length })
+
+                    })
+                } else {
+                    console.log(response.body);
+                    Alert.alert('Error', 'Please try again later.', [
+                        {
+                            text: 'Ok',
+                        },
+
+                    ])
                     this.setState({ isLoading: false });
 
 
-                })
-            } else {
-                console.log(response.body);
-                Alert.alert('Error', 'Please try again later.', [
-                    {
-                        text: 'Ok',
-                    },
-
-                ])
-                this.setState({ isLoading: false });
-
-
-            }
-        })
+                }
+            })
     }
 
 
@@ -162,9 +198,9 @@ export default class ProfileScreen extends Component {
 }
 
 const styles = StyleSheet.create({
-    textBold:{
-        fontWeight:'bold',
-        fontSize:18
+    textBold: {
+        fontWeight: 'bold',
+        fontSize: 18
     },
     details: {
         flexDirection: 'column',

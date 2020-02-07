@@ -141,6 +141,8 @@ const styles = StyleSheet.create({
         padding: 15,
         borderTopEndRadius: 20,
         borderTopStartRadius: 20,
+        borderBottomEndRadius:20,
+        borderBottomLeftRadius:20
        
     },
 

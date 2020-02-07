@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, TouchableOpacity, StyleSheet } from 'react-native'
+import { Image,Text, View, TouchableOpacity, StyleSheet } from 'react-native'
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createAppContainer, NavigationEvents } from 'react-navigation';
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
@@ -88,12 +88,14 @@ homePageNavigator.navigationOptions = ({ navigation }) => {
 };
 const addPostNavigator = createStackNavigator({
 
+    AddImage:{
+        screen: AddImage,
+        
+    },
     
     AddPost: {
         screen: AddNewRecipeComponent,
-        navigationOptions: ({ navigation }) => ({
-            title: `Add Post`,
-        }),
+        
     },
 
 },
@@ -109,9 +111,11 @@ const addPostNavigator = createStackNavigator({
         let tabBarVisible;
         if (navigation.state.routes.length > 0) {
             navigation.state.routes.map(route => {
-                if (route.routeName === "AddPost") {
+                if (route.routeName === "AddImage" || route.routeName === "AddPost") {
                     tabBarVisible = false;
-                } else {
+                }
+                
+                 else {
                     tabBarVisible = true;
                 }
             });
@@ -127,9 +131,14 @@ const bottomTabNavigator = createBottomTabNavigator(
         Home: {
             screen: homePageNavigator,
             navigationOptions: {
-                tabBarIcon: ({ tintColor }) => (
-                    <Fontisto name="home" size={22} color={tintColor} />
-                ),
+                tabBarIcon: ({ focused }) => {
+                    if (focused) {
+                        return <Image style={{height:23,width:23}} source={require('../../images/home.png')}></Image>
+                    } else {
+                        return <Image style={{height:23,width:23}} source={require('../../images/homePlain.png')}></Image>
+                    }
+
+                },
                 tabBarLabel: () => { return null },
 
             }
@@ -137,9 +146,14 @@ const bottomTabNavigator = createBottomTabNavigator(
         Search: {
             screen: SearchScreen,
             navigationOptions: {
-                tabBarIcon: ({ tintColor }) => (
-                    <Fontisto name="search" size={22} color={tintColor} />
-                ),
+                tabBarIcon:({ focused }) => {
+                    if (focused) {
+                        return <Image style={{height:23,width:23}} source={require('../../images/searchDark.png')}></Image>
+                    } else {
+                        return <Image style={{height:23,width:23}} source={require('../../images/search.png')}></Image>
+                    }
+
+                },
                 tabBarLabel: () => { return null },
             }
         },
@@ -147,7 +161,8 @@ const bottomTabNavigator = createBottomTabNavigator(
             screen: addPostNavigator,
             navigationOptions: {
                 tabBarIcon: ({ tintColor }) => (
-                    <MaterialIcons name="add" size={30} color={tintColor} />
+                    <Image style={styles.tabAddPost} source={require('../../images/addpost.png')} />
+
                 ),
                 tabBarLabel: () => { return null },
             }
@@ -155,18 +170,28 @@ const bottomTabNavigator = createBottomTabNavigator(
         Favorites: {
             screen: FavoriteScreen,
             navigationOptions: {
-                tabBarIcon: ({ tintColor }) => (
-                    <FontAwesome name="heart" size={22} color={tintColor} />
-                ),
+                tabBarIcon: ({ focused }) => {
+                    if (focused) {
+                        return <Image style={{height:23,width:23}} source={require('../../images/likeBlack.png')}></Image>
+                    } else {
+                        return <Image style={{height:23,width:23}} source={require('../../images/likeplain.png')}></Image>
+                    }
+
+                },
                 tabBarLabel: () => { return null },
             }
         },
         Profile: {
             screen: ProfileScreen,
             navigationOptions: {
-                tabBarIcon: ({ tintColor }) => (
-                    <MaterialIcons name="person-outline" size={28} color={tintColor} />
-                ),
+                tabBarIcon: ({ focused }) => {
+                    if (focused) {
+                        return <Image style={{height:20,width:22}} source={require('../../images/userBlack.png')}></Image>
+                    } else {
+                        return <Image style={{height:20,width:22}} source={require('../../images/userplain.png')}></Image>
+                    }
+
+                },
                 tabBarLabel: () => { return null },
             }
         },
@@ -191,4 +216,8 @@ const styles = StyleSheet.create({
         width: 25,
         marginStart: 20
     },
+    tabAddPost:{
+        height:24,
+        width:24
+    }
 })

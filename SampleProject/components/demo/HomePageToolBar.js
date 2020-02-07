@@ -9,7 +9,7 @@ export default class HomePageToolBar extends Component {
             <View style={styles.toolBar}>
                     <Image style={styles.iconcamera} source={require('../../images/Camera-1.jpg')} />
                     <Text style={styles.titleToolbar}>Foodogram</Text>
-                    <View style={{ flex: 1, alignItems: 'flex-end' }}>
+                    <View style={{ flex: 1, alignItems: 'flex-end',marginEnd:5 }}>
                         <Image style={styles.icon} source={require('../../images/Send-1.jpg')} />
 
                     </View>

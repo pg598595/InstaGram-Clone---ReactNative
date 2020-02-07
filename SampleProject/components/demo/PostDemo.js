@@ -108,7 +108,7 @@ export default class PostDemo extends Component {
                                         uncheckedComponent={<FontAwesome name='heart-o' size={23} />}
                                         label=''
                                         checked={Boolean(Number(item.inCookingList))}
-                                        onChange={(checked) => this.setState({checked: !this.state.checked})}
+                                        onChange={(checked) => this.addToCookingList(item.recipeId,item.inCookingList)}
                                     />
                                     
                                     <Image style={styles.iconComment} source={require('../../images/Comment-1.jpg')} />
@@ -145,6 +145,45 @@ export default class PostDemo extends Component {
                 ></FlatList>
             </SafeAreaView>
         </View>
+    }
+
+    addToCookingList=(recipeId,inCookinList) =>{
+        var API=''
+        if(inCookinList == 0){
+            console.log("in Cookong List: " + inCookinList);
+            
+             API = 'http://35.160.197.175:3006/api/v1/recipe/add-to-cooking-list'
+        }else{
+            console.log("in Cookong List: " + inCookinList);
+            
+             API = 'http://35.160.197.175:3006/api/v1/recipe/rm-from-cooking-list'
+        }
+        fetch(API,
+        {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer ' + 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mn0.MGBf-reNrHdQuwQzRDDNPMo5oWv4GlZKlDShFAAe16s',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+               
+                'recipeId': recipeId,
+
+            })
+        }
+    ).then((response) => {
+        if (response.status == 200) {
+            console.log("Cooking List Sucess")
+            this.getListfromApi()
+            return response.json()
+        } else {
+            console.log("Cooking List failed")
+        }
+    }).then((responseJson) => {
+       
+    }).catch((error) => {
+        console.log(error)
+    });
     }
 
     separator = () => (

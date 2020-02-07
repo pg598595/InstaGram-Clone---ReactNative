@@ -30,6 +30,7 @@ const bottomTabNavigator = createMaterialTopTabNavigator(
     {
         Preview: {
             screen: PreviewScreen,
+           
             
 
             
@@ -42,8 +43,18 @@ const bottomTabNavigator = createMaterialTopTabNavigator(
             screen: InstructionScreen,
           
         },
+        
       
     },
+    {
+        
+      tabBarOptions:{
+        activeTintColor: '#ffffff',
+        labelStyle: { fontSize: 12 },
+        style: { backgroundColor: 'rgba(0,0,0,0.8)' },
+      }
+    }
+   
     
 );
 

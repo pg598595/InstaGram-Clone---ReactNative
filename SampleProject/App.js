@@ -10,35 +10,6 @@ import {View} from 'react-native'
 import MainScreen from './components/demo/MainScreen';
 import DetailScreen from './components/demo/DetailScreen';
 
-// const MainNavigator = createStackNavigator({
-
-//   SplashScreen: {
-//     screen: SplashScreen,
-//     navigationOptions: {
-//       header: null
-//     }
-//   },
-//   LoginPage: {
-//     screen: LoginPage,
-//     navigationOptions: {
-//       header: null
-//     }
-//   },
-//   MainScreen: {
-//     screen: MainScreen,
-//     navigationOptions: {
-//       header: null
-//     }
-//   },
-  
-
-// }
-// );
-
-// const App = createAppContainer(MainNavigator);
-
-// export default App;
-
 export default createAppContainer(
   
   createSwitchNavigator(
@@ -62,12 +33,6 @@ export default createAppContainer(
           header: null
         }
       },
-      // Detail:{
-      //   screen:DetailScreen
-      // }
-     
-     
-      
     },
     {
       
@@ -77,10 +42,5 @@ export default createAppContainer(
     }
   )
 )
-// export default function App() {
-//   return <View>
-//     <PostDemo></PostDemo>
-
-//   </View>
-
-// }
+console.ignoredYellowBox = ['Warning: Each', 'Warning: Failed'];
+console.disableYellowBox = true;

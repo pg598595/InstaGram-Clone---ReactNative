@@ -142,6 +142,8 @@ const styles = StyleSheet.create({
         borderTopEndRadius: 20,
         borderTopStartRadius: 20,
         backgroundColor:'rgba(0,0,0,0.7)',
+        borderBottomEndRadius:20,
+        borderBottomLeftRadius:20
     },
 
 })

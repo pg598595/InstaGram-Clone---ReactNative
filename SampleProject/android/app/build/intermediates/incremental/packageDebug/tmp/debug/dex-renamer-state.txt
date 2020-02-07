@@ -1,4 +1,4 @@
-#Thu Feb 06 15:31:26 IST 2020
+#Fri Feb 07 15:46:35 IST 2020
 base.0=/home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/build/intermediates/transforms/dexMerger/debug/0
 renamed.0=classes.dex
 path.0=classes.dex

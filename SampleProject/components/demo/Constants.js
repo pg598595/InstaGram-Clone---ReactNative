@@ -6,3 +6,4 @@ export const API_FOR_COOKING_LIST= 'http://35.160.197.175:3006/api/v1/recipe/coo
 export const PLACEHOLDER_IMAGE = 'https://www.mageworx.com/blog/wp-content/uploads/2012/06/Page-Not-Found-13.jpg'
 export const UPLOAD_IMAGE_FILE = 'http://35.160.197.175:3006/api/v1/recipe/add-update-recipe-photo'
 export const ADD_NEW_RECIPE = 'http://35.160.197.175:3006/api/v1/recipe/add'
+export const ADD_IMAGE = 'https://i.dlpng.com/static/png/1496258-pluspng-plus-png-1600_1600_preview.png'

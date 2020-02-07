@@ -4,20 +4,48 @@ import {
     Text,
     View,
     Image,
-    Button
+    Button,
+    TouchableOpacity
 } from 'react-native';
 import ImagePicker from "react-native-image-picker";
+import { RNCamera } from 'react-native-camera';
+import Entypo from "react-native-vector-icons/Entypo";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
 
 export default class AddImage extends Component {
 
-   
-    
-    
-    
+    static navigationOptions = ({ navigation }) => {
+        const { params = {} } = navigation.state;
+        return {
+            headerTitle: <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                <TouchableOpacity style={{ marginStart: 10 }} onPress={() => params.handleCancel()}>
+                    <Entypo name='cross' size={30} />
+
+                </TouchableOpacity>
+                <Text style={{ fontSize: 15 }}>Select Image</Text>
+            </View>,
+            headerTitleStyle: { fontSize: 18 },
+            // headerStyle: {backgroundColor:'#3c3c3c'},
+            headerRight: <TouchableOpacity style={{ marginEnd: 10 }} onPress={() => params.handleSave()}>
+                <Text style={{ color: '#1774EA', fontSize: 15 }}>Open Gallery</Text>
+            </TouchableOpacity>
+
+        };
+    };
+
+    componentDidMount() {
+        this.props.navigation.setParams({ handleSave: this.pickImageHandler });
+        this.props.navigation.setParams({ handleCancel: this.goToHomePage });
+    }
+
+    goToHomePage = () => {
+        this.props.navigation.navigate('Home')
+    }
+
     state = {
         pickedImage: null,
-        screenCalled:0
+        screenCalled: 0
     }
 
     reset = () => {
@@ -27,7 +55,7 @@ export default class AddImage extends Component {
     }
 
     pickImageHandler = () => {
-        ImagePicker.showImagePicker({ title: "Pick an Image", maxWidth: 800, maxHeight: 600 }, res => {
+        ImagePicker.launchImageLibrary({ title: "Pick an Image", maxWidth: 800, maxHeight: 600 }, res => {
             if (res.didCancel) {
                 console.log("User cancelled!");
                 // this.props.navigation.popToTop()
@@ -36,7 +64,9 @@ export default class AddImage extends Component {
             } else {
                 this.setState({
                     pickedImage: { uri: res.uri }
+
                 });
+                this.goToAddPostPage(this.state.pickedImage)
 
             }
         });
@@ -49,7 +79,24 @@ export default class AddImage extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={styles.placeholder}>
+                <RNCamera
+
+                    ref={ref => {
+                        this.camera = ref;
+                    }}
+                    style={{
+                        flex: 0.8,
+                        width: '100%',
+                    }}
+                >
+                </RNCamera>
+                <View style={{ flex: 0.4, justifyContent: 'center',marginTop:50 }}>
+                    <TouchableOpacity onPress={this.takePicture.bind(this)} style={styles.capture}>
+                    <MaterialCommunityIcons name='camera-iris' size={60} color='#898989' />
+
+                    </TouchableOpacity>
+                </View>
+                {/* <View style={styles.placeholder}>
                     <Image source={this.state.pickedImage} style={styles.previewImage} />
                 </View>
                 <View style={styles.button}>
@@ -60,15 +107,28 @@ export default class AddImage extends Component {
                     <Button title="Next" onPress={()=>{
                          this.props.navigation.navigate('AddPost')
                     }} />
-                </View>
+                </View> */}
             </View>
         );
     }
+    takePicture = async() => {
+        if (this.camera) {
+          const options = { quality: 0.5, base64: true };
+          const data = await this.camera.takePictureAsync(options);
+          console.log(data.uri);
+          this.goToAddPostPage(data)
+        }
+      };
+
+    goToAddPostPage = (data) => {
+        this.props.navigation.navigate('AddPost',{photoUri:data})
+    } 
 }
 
 const styles = StyleSheet.create({
     container: {
-        alignItems: "center"
+        alignItems: "center",
+        flex: 1
     },
     textStyle: {
         fontWeight: "bold",
