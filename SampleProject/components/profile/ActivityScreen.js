@@ -6,13 +6,13 @@ import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import EvilIcons from "react-native-vector-icons/EvilIcons";
 
-import PostDemo from './PostDemo';
-import FavoriteScreen from './FavoriteScreen';
+import PostDemo from '../home/PostDemo';
+import FavoriteScreen from '../favorite/FavoriteScreen';
 import ProfileScreen from './ProfileScreen';
-import DetailScreen from './DetailScreen';
+import DetailScreen from '../home/DetailScreen';
 import { createStackNavigator, createSwitchNavigator } from 'react-navigation-stack';
-import AddNewRecipeComponent from './AddNewRecipeComponent';
-import AddImage from './AddImage';
+import AddNewRecipeComponent from '../addRecipe/AddNewRecipeComponent';
+import AddImage from '../addRecipe/AddImage';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 export default class ActivityScreen extends Component {

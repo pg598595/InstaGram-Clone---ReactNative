@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { Button, Text, View, TouchableOpacity, Image, StyleSheet, KeyboardAvoidingView, SafeAreaView, ScrollView } from 'react-native'
-import LoginPage from './LoginPage';
+import LoginPage from '../demo/LoginPage';
 import { TextInput } from 'react-native-gesture-handler';
 import { Dropdown } from 'react-native-material-dropdown';
 import NumericInput from 'react-native-numeric-input'
 import Icon from "react-native-vector-icons/FontAwesome";
 import { Chip } from 'react-native-paper';
-import * as constant from './Constants';
+import * as constant from '../demo/Constants';
 import { ToastAndroid } from 'react-native';
 
 import {
@@ -15,7 +15,7 @@ import {
     OutlinedTextField,
 } from 'react-native-material-textfield';
 import ImagePicker from "react-native-image-picker";
-import LoadingIndicator from './LoadingIndicatior';
+import LoadingIndicator from '../demo/LoadingIndicatior';
 
 
 export default class AddNewRecipeComponent extends Component {

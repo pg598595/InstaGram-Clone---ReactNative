@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Dimensions,Alert, TouchableWithoutFeedback, FlatList, RefreshControl, Text, View, TouchableOpacity, StyleSheet, Image, SafeAreaView, ScrollView } from 'react-native'
 
-import * as constant from './Constants';
-import LoadingIndicator from './LoadingIndicatior';
+import * as constant from '../demo/Constants';
+import LoadingIndicator from '../demo/LoadingIndicatior';
 
 
 

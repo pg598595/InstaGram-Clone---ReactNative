@@ -6,15 +6,15 @@ import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import Fontisto from "react-native-vector-icons/Fontisto";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 
-import PostDemo from './PostDemo';
-import FavoriteScreen from './FavoriteScreen';
-import ProfileScreen from './ProfileScreen';
-import DetailScreen from './DetailScreen';
+import PostDemo from '../home/PostDemo';
+import FavoriteScreen from '../favorite/FavoriteScreen';
+import ProfileScreen from '../profile/ProfileScreen';
+import DetailScreen from '../home/DetailScreen';
 import { createStackNavigator } from 'react-navigation-stack';
-import AddNewRecipeComponent from './AddNewRecipeComponent';
-import AddImage from './AddImage';
+import AddNewRecipeComponent from '../addRecipe/AddNewRecipeComponent';
+import AddImage from '../addRecipe/AddImage';
 import SearchScreen from './SearchScreen';
-import ProfileDrawer from './ProfileDrawer';
+import ProfileDrawer from '../profile/ProfileDrawer';
 
 
 
@@ -122,7 +122,7 @@ const bottomTabNavigator = createBottomTabNavigator(
                     } else {
                         return <Image style={{ height: 23, width: 23 }} source={require('../../images/homePlain.png')}></Image>
                     }
-                    
+
 
                 },
                 tabBarLabel: () => { return null },

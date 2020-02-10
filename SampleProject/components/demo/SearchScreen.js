@@ -6,13 +6,13 @@ import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import Fontisto from "react-native-vector-icons/Fontisto";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 
-import PostDemo from './PostDemo';
-import FavoriteScreen from './FavoriteScreen';
-import ProfileScreen from './ProfileScreen';
-import DetailScreen from './DetailScreen';
+import PostDemo from '../home/PostDemo';
+import FavoriteScreen from '../favorite/FavoriteScreen';
+import ProfileScreen from '../profile/ProfileScreen';
+import DetailScreen from '../home/DetailScreen';
 import { createStackNavigator,createSwitchNavigator } from 'react-navigation-stack';
-import AddNewRecipeComponent from './AddNewRecipeComponent';
-import AddImage from './AddImage';
+import AddNewRecipeComponent from '../addRecipe/AddNewRecipeComponent';
+import AddImage from '../addRecipe/AddImage';
 
  
 export default class SearchScreen extends Component {

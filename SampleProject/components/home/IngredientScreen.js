@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { ImageBackground,Text, View, TouchableOpacity, Image, StyleSheet, KeyboardAvoidingView,Alert,FlatList,RefreshControl } from 'react-native'
 import Entypo from "react-native-vector-icons/Entypo";
 
-import * as constant from './Constants';
-import LoadingIndicator from './LoadingIndicatior';
+import * as constant from '../demo/Constants';
+import LoadingIndicator from '../demo/LoadingIndicatior';
 
 export default class IngredientScreen extends Component {
     // static navigationOptions = {
