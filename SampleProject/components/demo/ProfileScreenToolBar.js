@@ -18,7 +18,7 @@ export default class ProfileScreenToolBar extends Component {
             
             <View style={styles.toolBar}>
                     <Text style={styles.titleToolbar}>{this.state.name}</Text>
-                   
+                    
                 </View>
             
         )
@@ -62,3 +62,5 @@ const styles = StyleSheet.create({
    
 
 })
+
+

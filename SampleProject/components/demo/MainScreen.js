@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Image,Text, View, TouchableOpacity, StyleSheet } from 'react-native'
+import { Image, Text, View, TouchableOpacity, StyleSheet } from 'react-native'
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createAppContainer, NavigationEvents } from 'react-navigation';
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
@@ -13,6 +13,9 @@ import DetailScreen from './DetailScreen';
 import { createStackNavigator } from 'react-navigation-stack';
 import AddNewRecipeComponent from './AddNewRecipeComponent';
 import AddImage from './AddImage';
+import SearchScreen from './SearchScreen';
+import ProfileDrawer from './ProfileDrawer';
+
 
 
 export default class MainScreen extends Component {
@@ -24,25 +27,7 @@ export default class MainScreen extends Component {
 }
 
 
-class AddNewRecipeScreen extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>Add New Recipe</Text>
-            </View>
-        );
-    }
-}
 
-class SearchScreen extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>Search Screen</Text>
-            </View>
-        );
-    }
-}
 
 const homePageNavigator = createStackNavigator({
 
@@ -88,14 +73,14 @@ homePageNavigator.navigationOptions = ({ navigation }) => {
 };
 const addPostNavigator = createStackNavigator({
 
-    AddImage:{
+    AddImage: {
         screen: AddImage,
-        
+
     },
-    
+
     AddPost: {
         screen: AddNewRecipeComponent,
-        
+
     },
 
 },
@@ -106,25 +91,25 @@ const addPostNavigator = createStackNavigator({
 
     })
 
-
-    addPostNavigator.navigationOptions = ({ navigation }) => {
-        let tabBarVisible;
-        if (navigation.state.routes.length > 0) {
-            navigation.state.routes.map(route => {
-                if (route.routeName === "AddImage" || route.routeName === "AddPost") {
-                    tabBarVisible = false;
-                }
-                
-                 else {
-                    tabBarVisible = true;
-                }
-            });
-        }
     
-        return {
-            tabBarVisible
-        };
+addPostNavigator.navigationOptions = ({ navigation }) => {
+    let tabBarVisible;
+    if (navigation.state.routes.length > 0) {
+        navigation.state.routes.map(route => {
+            if (route.routeName === "AddImage" || route.routeName === "AddPost") {
+                tabBarVisible = false;
+            }
+
+            else {
+                tabBarVisible = true;
+            }
+        });
+    }
+
+    return {
+        tabBarVisible
     };
+};
 
 const bottomTabNavigator = createBottomTabNavigator(
     {
@@ -133,10 +118,11 @@ const bottomTabNavigator = createBottomTabNavigator(
             navigationOptions: {
                 tabBarIcon: ({ focused }) => {
                     if (focused) {
-                        return <Image style={{height:23,width:23}} source={require('../../images/home.png')}></Image>
+                        return <Image style={{ height: 23, width: 23 }} source={require('../../images/home.png')}></Image>
                     } else {
-                        return <Image style={{height:23,width:23}} source={require('../../images/homePlain.png')}></Image>
+                        return <Image style={{ height: 23, width: 23 }} source={require('../../images/homePlain.png')}></Image>
                     }
+                    
 
                 },
                 tabBarLabel: () => { return null },
@@ -146,11 +132,11 @@ const bottomTabNavigator = createBottomTabNavigator(
         Search: {
             screen: SearchScreen,
             navigationOptions: {
-                tabBarIcon:({ focused }) => {
+                tabBarIcon: ({ focused }) => {
                     if (focused) {
-                        return <Image style={{height:23,width:23}} source={require('../../images/searchDark.png')}></Image>
+                        return <Image style={{ height: 23, width: 23 }} source={require('../../images/searchDark.png')}></Image>
                     } else {
-                        return <Image style={{height:23,width:23}} source={require('../../images/search.png')}></Image>
+                        return <Image style={{ height: 23, width: 23 }} source={require('../../images/search.png')}></Image>
                     }
 
                 },
@@ -172,9 +158,9 @@ const bottomTabNavigator = createBottomTabNavigator(
             navigationOptions: {
                 tabBarIcon: ({ focused }) => {
                     if (focused) {
-                        return <Image style={{height:23,width:23}} source={require('../../images/likeBlack.png')}></Image>
+                        return <Image style={{ height: 23, width: 23 }} source={require('../../images/likeBlack.png')}></Image>
                     } else {
-                        return <Image style={{height:23,width:23}} source={require('../../images/likeplain.png')}></Image>
+                        return <Image style={{ height: 23, width: 23 }} source={require('../../images/likeplain.png')}></Image>
                     }
 
                 },
@@ -182,17 +168,18 @@ const bottomTabNavigator = createBottomTabNavigator(
             }
         },
         Profile: {
-            screen: ProfileScreen,
+            screen: ProfileDrawer,
             navigationOptions: {
                 tabBarIcon: ({ focused }) => {
                     if (focused) {
-                        return <Image style={{height:20,width:22}} source={require('../../images/userBlack.png')}></Image>
+                        return <Image style={{ height: 22, width: 22 }} source={require('../../images/profileBlack.png')}></Image>
                     } else {
-                        return <Image style={{height:20,width:22}} source={require('../../images/userplain.png')}></Image>
+                        return <Image style={{ height: 22, width: 22 }} source={require('../../images/profile.png')}></Image>
                     }
 
                 },
                 tabBarLabel: () => { return null },
+               
             }
         },
         // transfer : detailsNavigator
@@ -216,8 +203,8 @@ const styles = StyleSheet.create({
         width: 25,
         marginStart: 20
     },
-    tabAddPost:{
-        height:24,
-        width:24
+    tabAddPost: {
+        height: 24,
+        width: 24
     }
 })

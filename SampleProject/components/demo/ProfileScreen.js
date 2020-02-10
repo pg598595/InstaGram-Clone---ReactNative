@@ -4,7 +4,9 @@ import { Dimensions, Alert, TouchableWithoutFeedback, FlatList, RefreshControl, 
 import * as constant from './Constants';
 import LoadingIndicator from './LoadingIndicatior';
 import ProfileScreenToolBar from './ProfileScreenToolBar';
-
+import DetailScreen from './DetailScreen';
+import AsyncStorage from '@react-native-community/async-storage'
+import EvilIcons from 'react-native-vector-icons/EvilIcons'
 
 
 export default class ProfileScreen extends Component {
@@ -19,7 +21,7 @@ export default class ProfileScreen extends Component {
         this.setState({ isLoading: true });
         console.log("called home comopent")
         console.log("===========================")
-
+        this.retrieveData()
         this.getListfromApi()
     }
 
@@ -27,6 +29,7 @@ export default class ProfileScreen extends Component {
         super()
 
         this.state = {
+            name: '',
             checked: false,
             isLoading: false,
             recipesList: [
@@ -42,7 +45,19 @@ export default class ProfileScreen extends Component {
 
 
     }
-
+    retrieveData = async () => {
+        try {
+            const value = await AsyncStorage.getItem(constant.NAME);
+            if (value !== null) {
+                // We have data!!
+                console.log(value);
+                this.setState({ name: value })
+            }
+        } catch (error) {
+            // Error retrieving data
+            console.log(error);
+        }
+    };
     onPostClick = (item) => {
 
         Alert.alert('Delete', 'Do you want to delete this post?'
@@ -54,27 +69,27 @@ export default class ProfileScreen extends Component {
                 },
                 {
                     text: 'OK',
-                    onPress:() => this.deletePost(item)
+                    onPress: () => this.deletePost(item)
 
                 },
 
             ])
     }
-    cancelPost =(item)=>{
+    cancelPost = (item) => {
         console.log("Called cancel Post");
-        
+
     }
-   
+
     deletePost = (item) => {
         console.log('Called Delete: ' + item.recipeId)
-        fetch('http://35.160.197.175:3006/api/v1/recipe/'+item.recipeId,
+        fetch('http://35.160.197.175:3006/api/v1/recipe/' + item.recipeId,
             {
                 method: 'DELETE',
                 headers: {
                     'Authorization': constant.API_TOKEN,
                     'Content-Type': 'application/json'
                 },
-                
+
             }
         ).then((response) => {
             if (response.status == 200) {
@@ -84,7 +99,7 @@ export default class ProfileScreen extends Component {
                 console.log("Delete Failed")
             }
         }).then((responseJson) => {
-            
+
             this.getListfromApi()
             //this.addInstructions(id);
             //this.handleUploadPhoto(id)
@@ -97,7 +112,11 @@ export default class ProfileScreen extends Component {
         return <View style={{ backgroundColor: 'rgba(219, 219, 219,0.2)' }}>
 
             <SafeAreaView>
-                <ProfileScreenToolBar></ProfileScreenToolBar>
+            <View style={styles.toolBar}>
+                    <Text style={styles.titleToolbar}>{this.state.name}</Text>
+                    <EvilIcons name='navicon' size={35} onPress={()=>this.props.navigation.openDrawer()}/>
+                </View>
+            
                 <ScrollView showsHorizontalScrollIndicator={false}>
                     <View style={{ flexDirection: 'row', padding: 12, backgroundColor: 'rgba(219, 219, 219,0)' }}>
                         <View style={{ flexDirection: 'column', alignItems: 'center' }}>
@@ -125,6 +144,7 @@ export default class ProfileScreen extends Component {
                             <Text style={styles.buttonText}>Edit Profile</Text>
                         </TouchableOpacity>
                     </View>
+
                     <LoadingIndicator isLoading={this.state.isLoading}></LoadingIndicator>
 
                     <FlatList
@@ -173,6 +193,17 @@ export default class ProfileScreen extends Component {
 
                         this.setState({ recipesList: responseJSON });
                         //DATA = responseJSON
+                        // var i;
+                        // for (i = 0; i < this.state.recipesList.length; i++) {
+                        //     console.log('Ingerent is : ' + this.state.recipesList[i].firstName)
+                        //     if(this.state.recipesList[i].firstName == "Jay")
+                        //     {
+                        //         console.log('True')
+                        //     }
+                        //     else{
+                        //         console.log('False')
+                        //     }
+                        // }
 
                         this.setState({ isLoading: false });
                         this.setState({ noOfPost: this.state.recipesList.length })
@@ -213,17 +244,18 @@ const styles = StyleSheet.create({
         marginStart: 10
     },
     titleToolbar: {
-        marginTop: 5,
+        marginTop:5,
+        marginBottom:5,
         fontSize: 20,
         marginStart: 15,
-        fontFamily: 'Blessed',
-        textAlign: "center"
+        textAlign:"center",
+        textTransform: 'lowercase',
     },
     toolBar: {
-        padding: 2,
-
+        padding: 10,
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems:'center',
+        justifyContent:'space-between'
     },
 
     image: {

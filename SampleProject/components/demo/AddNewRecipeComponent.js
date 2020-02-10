@@ -15,6 +15,7 @@ import {
     OutlinedTextField,
 } from 'react-native-material-textfield';
 import ImagePicker from "react-native-image-picker";
+import LoadingIndicator from './LoadingIndicatior';
 
 
 export default class AddNewRecipeComponent extends Component {
@@ -58,7 +59,8 @@ export default class AddNewRecipeComponent extends Component {
             timeRequierd: '',
             youtubeUrl: '',
             complexcity: '',
-            noOfServes: ''
+            noOfServes: '',
+            isLoading:false
 
         }
     }
@@ -220,7 +222,7 @@ export default class AddNewRecipeComponent extends Component {
 
         }
         //this.addIndigreants()
-
+          //  this.addInstructions(1)
 
     }
     render() {
@@ -240,6 +242,7 @@ export default class AddNewRecipeComponent extends Component {
             <SafeAreaView style={styles.scrollcontainer}>
                 <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
                     <View>
+                        {/* <LoadingIndicator isLoading={this.state.isLoading} style={{height:200}}></LoadingIndicator> */}
                         <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', margin: 10 }}>
                             <TouchableOpacity style={styles.postingImage} onPress={this.pickImageHandler}>
                                 <Image source={(this.state.pickedImage == null) ? { uri: constant.ADD_IMAGE } : this.state.pickedImage} style={styles.postingImage}></Image>
@@ -370,7 +373,7 @@ export default class AddNewRecipeComponent extends Component {
     }
 
     handleAddNewRecipe = () => {
-
+        this.setState({isLoading:true})
         fetch('http://35.160.197.175:3006/api/v1/recipe/add',
             {
                 method: 'POST',
@@ -409,19 +412,30 @@ export default class AddNewRecipeComponent extends Component {
     addIndigreants(id) {
         var i;
         for (i = 0; i < this.state.inputDataIndredients.length; i++) {
-            console.log('Ingerent is : ' + this.state.inputDataIndredients[i].text)
-            this.addIngredientsToAPI(id, this.state.inputDataIndredients[i].text)
+            console.log('Index is:'+ i +' ==Ingerent is : ' + this.state.inputDataIndredients[i].text +'==length is: '+this.state.inputDataIndredients.length)
+            if(i == this.state.inputDataIndredients.length-1){
+                this.addIngredientsToAPI(id, this.state.inputDataIndredients[i].text,true)
+            }
+            else{
+                this.addIngredientsToAPI(id, this.state.inputDataIndredients[i].text,false)
+            }
         }
     }
     addInstructions(id) {
         var i;
         for (i = 0; i < this.state.inputDataSteps.length; i++) {
             console.log('Ingerent is : ' + this.state.inputDataSteps[i].text)
-            this.addinstructionToAPI(id, this.state.inputDataSteps[i].text)
+            if(i == this.state.inputDataSteps.length-1){
+                this.addinstructionToAPI(id, this.state.inputDataSteps[i].text,true)
+            }
+            else{
+                this.addinstructionToAPI(id, this.state.inputDataSteps[i].text,false)
+            }
+            
         }
     }
 
-    addIngredientsToAPI = (id, text) => {
+    addIngredientsToAPI = (id, text, isLast) => {
 
         console.log("Add Ingredtieds Called");
 
@@ -440,8 +454,11 @@ export default class AddNewRecipeComponent extends Component {
             }
         ).then((response) => {
             if (response.status == 200) {
-                console.log("ingredient added Sucess")
-                this.addInstructions(id)
+                console.log("ingredient added Sucess==isLast : "+isLast)
+                if(isLast == true){
+                    this.addInstructions(id)
+                }
+                
                 return response.json()
             } else {
                 console.log("ingredient added failed")
@@ -452,7 +469,7 @@ export default class AddNewRecipeComponent extends Component {
             console.log(error)
         });
     }
-    addinstructionToAPI = (id, text) => {
+    addinstructionToAPI = (id, text,isLast) => {
 
         console.log("Add instruction Called");
 
@@ -471,8 +488,11 @@ export default class AddNewRecipeComponent extends Component {
             }
         ).then((response) => {
             if (response.status == 200) {
-                console.log("Instruction added Sucess")
-                this.handleUploadPhoto(id)
+                console.log("Instruction added Sucess==isLast : "+isLast)
+                if(isLast == true){
+                    this.handleUploadPhoto(id)
+                }
+                
                 return response.json()
             } else {
                 console.log("Instruction added failed")
@@ -496,6 +516,8 @@ export default class AddNewRecipeComponent extends Component {
             .then(response => response.json())
             .then(response => {
                 console.log("upload succes", response);
+                this.setState({isLoading:false})
+
                 this.goToTopScreen()
 
             })

@@ -23,7 +23,7 @@ export default class SplashScreen extends Component {
                 this.props.navigation.navigate('MainScreen')
             }
            
-        }, 2000)
+        }, 5000)
     }
     render() {
         return (
@@ -33,8 +33,8 @@ export default class SplashScreen extends Component {
                 </View>
                 <View style={styles.intro}>
                     <Text style={styles.subtitleFrom}>from</Text>
+                    {/* <Image style={styles.subtitleFb} source={require('../../images/facebookText.png')}></Image> */}
                     <Text style={styles.subtitleFb}>FACEBOOK</Text>
-                    
                 </View>
             </View>
         )
@@ -71,13 +71,15 @@ const styles = StyleSheet.create({
         width: 70
     },
     subtitleFrom: {
-        color: '#C1C1C1',
+        color: '#8E8E8E',
         textAlign: 'center',
     },
     subtitleFb: {
         textAlign:'center',
         fontWeight:'bold',
-        fontSize:15
+        fontSize:15,
+        letterSpacing:2
+        
     },
     intro: {
         flex: 0.1,

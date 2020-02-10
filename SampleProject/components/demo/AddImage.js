@@ -19,11 +19,12 @@ export default class AddImage extends Component {
         const { params = {} } = navigation.state;
         return {
             headerTitle: <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <TouchableOpacity style={{ marginStart: 10 }} onPress={() => params.handleCancel()}>
-                    <Entypo name='cross' size={30} />
+                <TouchableOpacity style={{ marginStart: 10 ,marginEnd:10}} onPress={() => params.handleCancel()}>
+                    {/* <Entypo name='cross' size={30} /> */}
+                    <Image style={{ height: 18, width: 18 }} source={require('../../images/cancel.png')}></Image>
 
                 </TouchableOpacity>
-                <Text style={{ fontSize: 15 }}>Select Image</Text>
+                <Text style={{ fontSize: 18 }}>Select Image</Text>
             </View>,
             headerTitleStyle: { fontSize: 18 },
             // headerStyle: {backgroundColor:'#3c3c3c'},
