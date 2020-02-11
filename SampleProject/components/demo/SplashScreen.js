@@ -15,15 +15,17 @@ export default class SplashScreen extends Component {
     componentDidMount() {
         this.retrieveData()
         setTimeout(() => {
-            if(this.state.name === ''){
-                const {navigate} = this.props.navigation;
-                this.props.navigation.navigate('LoginPage')
-            }else{
-                const {navigate} = this.props.navigation;
-                this.props.navigation.navigate('MainScreen')
-            }
+            const {navigate} = this.props.navigation;
+            this.props.navigation.navigate('LoginPage')
+            // if(this.state.name === ''){
+            //     const {navigate} = this.props.navigation;
+            //     this.props.navigation.navigate('LoginPage')
+            // }else{
+            //     const {navigate} = this.props.navigation;
+            //     this.props.navigation.navigate('MainScreen')
+            // }
            
-        }, 5000)
+        }, 3000)
     }
     render() {
         return (

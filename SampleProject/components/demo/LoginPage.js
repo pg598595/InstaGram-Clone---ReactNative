@@ -3,7 +3,10 @@ import { KeyboardAvoidingView, Text, TextInput, View, Image, StyleSheet, Touchab
 import AsyncStorage from '@react-native-community/async-storage'
 import * as constant from './Constants';
 import LoadingIndicator from './LoadingIndicatior';
-export default class LoginPage extends Component {
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import {setToken} from '../actions/userActions'
+class LoginPage extends Component {
     constructor() {
         super()
         this.state = { email: '', password: '',isLoading: false }
@@ -86,8 +89,9 @@ export default class LoginPage extends Component {
                     return response.json().then((responseJSON) => {
                         console.log(responseJSON.token);
                         this.setState({isLoading: false})
-                        // this.goToHomePage
-                        this.storeData(responseJSON)
+                         //this.goToHomePage
+                         this.storeData(responseJSON)
+                        this.props.setToken(responseJSON.token)
                         var str = 'Successfully logged in as ';
 
                         // Joining the strings together 
@@ -116,6 +120,8 @@ export default class LoginPage extends Component {
             })
     }
 
+    
+
     storeData = async (responseJSON) => {
         
         try {
@@ -136,6 +142,21 @@ export default class LoginPage extends Component {
 
     }
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setToken:(token)=>{
+            dispatch(setToken(token))
+        }
+    }
+}
+const mapStateToProps = (state) => {
+    return { token: state.token }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginPage)
+
+
 
 const styles = StyleSheet.create({
     subtitle: {

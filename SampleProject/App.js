@@ -4,14 +4,15 @@ import LoginPage from './components/demo/LoginPage';
 
 import SplashScreen from './components/demo/SplashScreen';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
-import PostDemo from './components/demo/PostDemo';
-import {View} from 'react-native'
-import MainScreen from './components/demo/MainScreen';
-import DetailScreen from './components/demo/DetailScreen';
 
-export default createAppContainer(
-  
+import MainScreen from './components/demo/MainScreen';
+
+import { Provider } from 'react-redux'
+
+import store from './store'
+
+const AppContaior = createAppContainer(
+
   createSwitchNavigator(
     {
       SplashScreen: {
@@ -26,7 +27,7 @@ export default createAppContainer(
           header: null
         }
       },
-      
+
       MainScreen: {
         screen: MainScreen,
         navigationOptions: {
@@ -35,12 +36,22 @@ export default createAppContainer(
       },
     },
     {
-      
+
       // initialRouteName: 'FAQ'
-       mode: 'modal',
+      mode: 'modal',
       // headerMode: 'none'
     }
   )
 )
+
+
+
+export default function App() {
+  return <Provider store={store}>
+    <AppContaior />
+  </Provider>
+}
+
+
 console.ignoredYellowBox = ['Warning: Each', 'Warning: Failed'];
 console.disableYellowBox = true;

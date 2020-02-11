@@ -6,9 +6,9 @@ import LoadingIndicator from './LoadingIndicatior';
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import CheckBox from 'react-native-modest-checkbox'
 import HomePageToolBar from './HomePageToolBar';
-
-
-export default class PostDemo extends Component {
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+class PostDemo extends Component {
 
 
     onRefresh = () => {
@@ -198,7 +198,7 @@ export default class PostDemo extends Component {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': constant.API_TOKEN
+                'Authorization': this.props.token
             },
 
         }).then((response) => {
@@ -230,7 +230,13 @@ export default class PostDemo extends Component {
 
 
 }
+const mapStateToProps = (state) => {
+    console.log("called =="+ state.userReducer.token);
+    
+    return { token: state.userReducer.token }
+}
 
+export default connect(mapStateToProps)(PostDemo)
 const styles = StyleSheet.create({
     iconcamera: {
         height: 22,
