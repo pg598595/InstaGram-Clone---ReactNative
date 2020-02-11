@@ -5,16 +5,14 @@ import { createAppContainer, NavigationEvents } from 'react-navigation';
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import Fontisto from "react-native-vector-icons/Fontisto";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
-
-import PostDemo from '../home/PostDemo';
-import FavoriteScreen from '../favorite/FavoriteScreen';
-import ProfileScreen from '../profile/ProfileScreen';
-import DetailScreen from '../home/DetailScreen';
+import FavoriteScreen from './FavoriteScreen';
+import DetailScreen from './DetailScreen';
 import { createStackNavigator } from 'react-navigation-stack';
-import AddNewRecipeComponent from '../addRecipe/AddNewRecipeComponent';
-import AddImage from '../addRecipe/AddImage';
+import AddNewRecipeComponent from './AddNewRecipeComponent';
+import AddImage from './AddImage';
 import SearchScreen from './SearchScreen';
-import ProfileDrawer from '../profile/ProfileDrawer';
+import ProfileDrawer from './ProfileDrawer';
+import PostDemo from './PostDemo';
 
 
 

@@ -6,13 +6,8 @@ import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import Fontisto from "react-native-vector-icons/Fontisto";
 import Entypo from "react-native-vector-icons/Entypo";
 
-import PostDemo from '../home/PostDemo';
-import FavoriteScreen from '../favorite/FavoriteScreen';
 import ProfileScreen from './ProfileScreen';
-import DetailScreen from '../home/DetailScreen';
-import { createStackNavigator,createSwitchNavigator } from 'react-navigation-stack';
-import AddNewRecipeComponent from '../addRecipe/AddNewRecipeComponent';
-import AddImage from '../addRecipe/AddImage';
+import { createStackNavigator,createSwitchNavigator } from 'react-navigation-stack';;
 import ActvityScrren from './ActivityScreen'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import {  

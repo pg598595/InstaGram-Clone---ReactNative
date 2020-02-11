@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Alert, TouchableWithoutFeedback, FlatList, RefreshControl, Text, View, TouchableOpacity, StyleSheet, Image, SafeAreaView, ScrollView } from 'react-native'
 import Entypo from "react-native-vector-icons/Entypo";
-import * as constant from '../demo/Constants';
-import LoadingIndicator from '../demo/LoadingIndicatior';
+import * as constant from './Constants';
+import LoadingIndicator from './LoadingIndicatior';
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import CheckBox from 'react-native-modest-checkbox'
 import HomePageToolBar from './HomePageToolBar';
