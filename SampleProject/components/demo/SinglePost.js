@@ -137,6 +137,8 @@ class SinglePost extends Component {
                     }}
                     keyExtractor={(item) => item.recipeId}
                     extraData={this.state}
+                    contentContainerStyle={{ paddingBottom: 80}}
+                    contentInsetAdjustmentBehavior="automatic"
                 ></FlatList>
             </View>
 

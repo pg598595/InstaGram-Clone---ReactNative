@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Alert, TouchableWithoutFeedback, FlatList, RefreshControl, Text, View, TouchableOpacity, StyleSheet, Image, SafeAreaView, ScrollView } from 'react-native'
+import { TextInput, Alert, TouchableWithoutFeedback, FlatList, RefreshControl, Text, View, TouchableOpacity, StyleSheet, Image, SafeAreaView, ScrollView } from 'react-native'
 import Entypo from "react-native-vector-icons/Entypo";
 import * as constant from './Constants';
 import LoadingIndicator from './LoadingIndicatior';
@@ -21,15 +21,16 @@ class PostDemo extends Component {
         this.setState({ isLoading: true });
         console.log("called home comopent componentDidMount")
         console.log("===========================")
-       
-       this.getListfromApi()
+
+        this.getListfromApi()
     }
 
     constructor() {
         super()
-        
+
         this.state = {
-            checked:false,
+            comment: '',
+            checked: false,
             isLoading: false,
             refreshing: false,
             setRefreshing: false,
@@ -37,19 +38,19 @@ class PostDemo extends Component {
             profilePicture: 'https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__340.jpg'
 
         }
-       
-        
+
+
 
     }
 
 
 
-    onPostClick(item){
-            console.log('clicked Post item');
-           // this.props.navigation.popToTop();
-           this.props.navigation.navigate('Details',{details:item})
+    onPostClick(item) {
+        console.log('clicked Post item');
+        // this.props.navigation.popToTop();
+        this.props.navigation.navigate('Details', { details: item })
 
-        console.log('clicked Post item 2');
+        // console.log('clicked Post item 2');
 
         // Alert.alert(item.name, 'Complexity: ' + item.complexity + '                             ' +
         //     'Preparation Time: ' + item.preparationTime + '                                 ' +
@@ -64,16 +65,21 @@ class PostDemo extends Component {
         //     ])
     }
 
+    openCommnetScreen = (item) => {
+        console.log('clicked commnet icon');
+        this.props.navigation.navigate('Comments', { details: item })
+    }
+
     render() {
         return <View>
 
 
 
             <SafeAreaView>
-               <HomePageToolBar></HomePageToolBar>
+                <HomePageToolBar></HomePageToolBar>
                 <LoadingIndicator isLoading={this.state.isLoading}></LoadingIndicator>
                 {/* <Text>Test</Text> */}
-                
+
                 <FlatList
                     ItemSeparatorComponent={this.separator}
                     refreshControl={
@@ -82,7 +88,7 @@ class PostDemo extends Component {
                     data={this.props.recipeFeed}
 
                     renderItem={({ item }) => {
-                       
+
                         return <View>
                             <View style={styles.postContainer}>
                                 <View style={styles.header}>
@@ -102,15 +108,17 @@ class PostDemo extends Component {
                                 </TouchableOpacity>
                                 <View style={styles.header}>
                                     <CheckBox
-                                    style={{width:20}}
-                                        checkedComponent={<FontAwesome name='heart' size={23} color='red'/>}
+                                        style={{ width: 20 }}
+                                        checkedComponent={<FontAwesome name='heart' size={23} color='red' />}
                                         uncheckedComponent={<FontAwesome name='heart-o' size={23} />}
                                         label=''
                                         checked={Boolean(Number(item.inCookingList))}
-                                        onChange={(checked) => this.addToCookingList(item.recipeId,item.inCookingList)}
+                                        onChange={(checked) => this.addToCookingList(item.recipeId, item.inCookingList)}
                                     />
-                                    
-                                    <Image style={styles.iconComment} source={require('../../images/Comment-1.jpg')} />
+                                    <TouchableWithoutFeedback onPress={() => this.openCommnetScreen(item)}>
+                                        <Image style={styles.iconComment} source={require('../../images/Comment-1.jpg')}  />
+
+                                    </TouchableWithoutFeedback>
 
 
                                     <Image style={styles.icon} source={require('../../images/Send-1.jpg')} />
@@ -134,6 +142,17 @@ class PostDemo extends Component {
                                     <Text style={styles.caption}> {item.name}</Text>
 
                                 </View>
+                                <View style={styles.bottom}>
+                                    <Image style={styles.commentProfileImage} source={{ uri: this.state.profilePicture }} />
+                                    <TextInput
+                                        value={this.state.comment}
+                                        placeholder="Add a comment..."
+                                        onChangeText={(comment) => this.setState({ comment })}
+                                        style={{ marginStart: 5, paddingVertical: 0 }}
+                                        onSubmitEditing={() => this.sendComment(item)}
+
+                                    ></TextInput>
+                                </View>
                             </View>
 
 
@@ -141,48 +160,83 @@ class PostDemo extends Component {
                     }}
                     keyExtractor={(item) => item.recipeId}
                     extraData={this.state}
+                    contentContainerStyle={{ paddingBottom: 20 }}
                 ></FlatList>
             </SafeAreaView>
         </View>
     }
+    sendComment = (item) => {
+        var commentText = this.state.comment
+        console.log(item.recipeId + '  commnet is : ' + this.state.comment);
+        this.setState({ comment: '' })
 
-    addToCookingList=(recipeId,inCookinList) =>{
-        var API=''
-        if(inCookinList == 0){
+        var API = constant.ADD_COMMENT + item.recipeId + '/comments'
+        console.log(API);
+        fetch(API,
+            {
+                method: 'POST',
+                headers: {
+                    'Authorization': this.props.token,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    'comment': commentText,
+
+                })
+            }
+        ).then((response) => {
+            if (response.status == 200) {
+                console.log("Comment added Sucess")
+                return response.json()
+            } else {
+                console.log("Comment added Failed")
+            }
+        }).then((responseJson) => {
+            console.log(responseJson)
+
+        }).catch((error) => {
+            console.log(error)
+        });
+
+    }
+
+    addToCookingList = (recipeId, inCookinList) => {
+        var API = ''
+        if (inCookinList == 0) {
             console.log("in Cookong List: " + inCookinList);
-            
-             API = 'http://35.160.197.175:3006/api/v1/recipe/add-to-cooking-list'
-        }else{
+
+            API = 'http://35.160.197.175:3006/api/v1/recipe/add-to-cooking-list'
+        } else {
             console.log("in Cookong List: " + inCookinList);
-            
-             API = 'http://35.160.197.175:3006/api/v1/recipe/rm-from-cooking-list'
+
+            API = 'http://35.160.197.175:3006/api/v1/recipe/rm-from-cooking-list'
         }
         fetch(API,
-        {
-            method: 'POST',
-            headers: {
-                'Authorization': this.props.token,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-               
-                'recipeId': recipeId,
+            {
+                method: 'POST',
+                headers: {
+                    'Authorization': this.props.token,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
 
-            })
-        }
-    ).then((response) => {
-        if (response.status == 200) {
-            console.log("Cooking List Sucess")
-            this.getListfromApi()
-            return response.json()
-        } else {
-            console.log("Cooking List failed")
-        }
-    }).then((responseJson) => {
-       
-    }).catch((error) => {
-        console.log(error)
-    });
+                    'recipeId': recipeId,
+
+                })
+            }
+        ).then((response) => {
+            if (response.status == 200) {
+                console.log("Cooking List Sucess")
+                this.getListfromApi()
+                return response.json()
+            } else {
+                console.log("Cooking List failed")
+            }
+        }).then((responseJson) => {
+
+        }).catch((error) => {
+            console.log(error)
+        });
     }
 
     separator = () => (
@@ -193,37 +247,37 @@ class PostDemo extends Component {
 
     getListfromApi = () => {
         fetch(constant.API_FOR_FEED_LIST,
-        {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': this.props.token
-            },
+            {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': this.props.token
+                },
 
-        }).then((response) => {
-            if (response.status == 200) {
-                return response.json().then((responseJSON) => {
-                    //console.log(responseJSON);
-                   // this.setState({ recipesList: responseJSON });
-                    //DATA = responseJSON
-                    //console.log(this.state.recipesList);
+            }).then((response) => {
+                if (response.status == 200) {
+                    return response.json().then((responseJSON) => {
+                        //console.log(responseJSON);
+                        // this.setState({ recipesList: responseJSON });
+                        //DATA = responseJSON
+                        //console.log(this.state.recipesList);
+                        this.setState({ isLoading: false });
+                        this.props.setFeedList(responseJSON)
+
+                    })
+                } else {
+                    console.log(response.body);
+                    Alert.alert('Error', 'Please try again later.', [
+                        {
+                            text: 'Ok',
+                        },
+
+                    ])
                     this.setState({ isLoading: false });
-                    this.props.setFeedList(responseJSON)
-
-                })
-            } else {
-                console.log(response.body);
-                Alert.alert('Error', 'Please try again later.', [
-                    {
-                        text: 'Ok',
-                    },
-
-                ])
-                this.setState({ isLoading: false });
 
 
-            }
-        })
+                }
+            })
     }
 
 
@@ -231,38 +285,39 @@ class PostDemo extends Component {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        setFeedList :(list)=>{
+        setFeedList: (list) => {
             dispatch(setFeedList(list))
         }
     }
 }
 const mapStateToProps = (state) => {
-    console.log("called =="+ state.userReducer.token);
-    
-    return { token: state.userReducer.token,recipeFeed: state.dataReducer.recipeFeed }
+    console.log("called ==" + state.userReducer.token);
+
+    return { token: state.userReducer.token, recipeFeed: state.dataReducer.recipeFeed }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(PostDemo)
+export default connect(mapStateToProps, mapDispatchToProps)(PostDemo)
 
 
 const styles = StyleSheet.create({
+
     iconcamera: {
         height: 22,
         width: 25,
         marginStart: 10
     },
     titleToolbar: {
-        marginTop:5,
+        marginTop: 5,
         fontSize: 20,
         marginStart: 15,
         fontFamily: 'Blessed',
-        textAlign:"center"
+        textAlign: "center"
     },
     toolBar: {
         padding: 5,
 
         flexDirection: 'row',
-        alignItems:'center'
+        alignItems: 'center'
     },
     likeSpantext: {
         marginStart: 10,
@@ -283,11 +338,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
 
+
     },
     iconComment: {
         height: 20,
         width: 21,
-       
+
     },
     icon: {
         height: 19,
@@ -313,10 +369,11 @@ const styles = StyleSheet.create({
 
     },
     header: {
-        margin: 10,
+        padding: 10,
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
+
 
     },
     image: {
@@ -328,8 +385,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF'
     },
     dividerLine: {
-        backgroundColor: 'rgba(178,178,178,0.3)',
-        height: '0.2%',
+        backgroundColor: 'rgba(178,178,178,0.8)',
+        height: 0.5,
+    },
+    commentProfileImage: {
+        height: 20,
+        width: 20,
+        borderRadius: 100
     }
 
 

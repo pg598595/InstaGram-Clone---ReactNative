@@ -13,6 +13,7 @@ import AddImage from './AddImage';
 import SearchScreen from './SearchScreen';
 import ProfileDrawer from './ProfileDrawer';
 import PostDemo from './PostDemo';
+import CommentScreenComponent from './CommentScreenComponent';
 
 
 
@@ -43,6 +44,13 @@ const homePageNavigator = createStackNavigator({
         }),
 
     },
+    Comments:{
+        screen: CommentScreenComponent,
+        navigationOptions: ({ navigation }) => ({
+            title: 'Comments',
+        }),
+
+    }
 
 },
     {
@@ -59,7 +67,11 @@ homePageNavigator.navigationOptions = ({ navigation }) => {
         navigation.state.routes.map(route => {
             if (route.routeName === "Details") {
                 tabBarVisible = false;
-            } else {
+            }
+            if (route.routeName === "Comments") {
+                tabBarVisible = false;
+            }
+             else {
                 tabBarVisible = true;
             }
         });

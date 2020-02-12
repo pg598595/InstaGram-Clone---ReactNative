@@ -137,6 +137,7 @@ class GridPostView extends Component {
                     }}
                     keyExtractor={(item) => item.recipeId}
                     extraData={this.state}
+                    contentInsetAdjustmentBehavior="automatic"
                 ></FlatList>
             </View>
 
