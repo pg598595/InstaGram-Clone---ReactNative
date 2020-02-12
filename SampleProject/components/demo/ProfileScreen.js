@@ -5,14 +5,15 @@ import * as constant from './Constants';
 import LoadingIndicator from './LoadingIndicatior';
 import AsyncStorage from '@react-native-community/async-storage'
 import EvilIcons from 'react-native-vector-icons/EvilIcons'
+import { connect } from 'react-redux'
+import {setFeedList} from '../actions/dataActions'
 
-
-export default class ProfileScreen extends Component {
+class ProfileScreen extends Component {
 
 
     onRefresh = () => {
         this.setState({ setRefreshing: true });
-        this.getListfromApi()
+       // this.getListfromApi()
     };
 
     componentDidMount() {
@@ -20,7 +21,12 @@ export default class ProfileScreen extends Component {
         console.log("called home comopent")
         console.log("===========================")
         this.retrieveData()
-        this.getListfromApi()
+        //this.getListfromApi()
+
+        console.log("==+++++++++++++++++");
+        console.log(this.props.recipeFeed);
+        
+        
     }
 
     constructor() {
@@ -30,8 +36,6 @@ export default class ProfileScreen extends Component {
             name: '',
             checked: false,
             isLoading: false,
-            recipesList: [
-            ],
             noOfPost: 0,
             refreshing: false,
             setRefreshing: false,
@@ -98,7 +102,7 @@ export default class ProfileScreen extends Component {
             }
         }).then((responseJson) => {
 
-            this.getListfromApi()
+           this.getListfromApi()
             //this.addInstructions(id);
             //this.handleUploadPhoto(id)
         }).catch((error) => {
@@ -123,7 +127,7 @@ export default class ProfileScreen extends Component {
                         </View>
                         <View style={{ flexDirection: 'row', flex: 1, marginTop: 15 }}>
                             <View style={styles.details}>
-                                <Text style={styles.textBold}>{this.state.noOfPost}</Text>
+                                <Text style={styles.textBold}>{this.props.recipeFeed.length}</Text>
                                 <Text>Posts</Text>
                             </View>
                             <View style={styles.details}>
@@ -143,7 +147,7 @@ export default class ProfileScreen extends Component {
                         </TouchableOpacity>
                     </View>
 
-                    <LoadingIndicator isLoading={this.state.isLoading}></LoadingIndicator>
+                    {/* <LoadingIndicator isLoading={this.state.isLoading}></LoadingIndicator> */}
 
                     <FlatList
 
@@ -151,7 +155,8 @@ export default class ProfileScreen extends Component {
                             <RefreshControl refreshing={this.state.refreshing} onRefresh={this.onRefresh}></RefreshControl>
                         }
                         numColumns={3}
-                        data={this.state.recipesList}
+
+                        data={this.props.recipeFeed}
 
                         renderItem={({ item }) => {
                             return <View style={{ margin: 1, backgroundColor: 'cyan', height: 100, width: ((Dimensions.get('window').width - 6) / 3) }}>
@@ -175,56 +180,59 @@ export default class ProfileScreen extends Component {
         </View>
     }
 
-
     getListfromApi = () => {
         fetch(constant.API_FOR_FEED_LIST,
-            {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': constant.API_TOKEN
-                },
+        {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': this.props.token
+            },
 
-            }).then((response) => {
-                if (response.status == 200) {
-                    return response.json().then((responseJSON) => {
+        }).then((response) => {
+            if (response.status == 200) {
+                return response.json().then((responseJSON) => {
+                    //console.log(responseJSON);
+                   // this.setState({ recipesList: responseJSON });
+                    //DATA = responseJSON
+                    //console.log(this.state.recipesList);
+                    //this.setState({ isLoading: false });
+                    this.props.setFeedList(responseJSON)
 
-                        this.setState({ recipesList: responseJSON });
-                        //DATA = responseJSON
-                        // var i;
-                        // for (i = 0; i < this.state.recipesList.length; i++) {
-                        //     console.log('Ingerent is : ' + this.state.recipesList[i].firstName)
-                        //     if(this.state.recipesList[i].firstName == "Jay")
-                        //     {
-                        //         console.log('True')
-                        //     }
-                        //     else{
-                        //         console.log('False')
-                        //     }
-                        // }
+                })
+            } else {
+                console.log(response.body);
+                Alert.alert('Error', 'Please try again later.', [
+                    {
+                        text: 'Ok',
+                    },
 
-                        this.setState({ isLoading: false });
-                        this.setState({ noOfPost: this.state.recipesList.length })
-
-                    })
-                } else {
-                    console.log(response.body);
-                    Alert.alert('Error', 'Please try again later.', [
-                        {
-                            text: 'Ok',
-                        },
-
-                    ])
-                    this.setState({ isLoading: false });
+                ])
+                this.setState({ isLoading: false });
 
 
-                }
-            })
+            }
+        })
     }
 
 
-
 }
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setFeedList :(list)=>{
+            dispatch(setFeedList(list))
+        }
+    }
+}
+const mapStateToProps = (state) => {
+    console.log("Called Profile Screen");
+    
+    //console.log(state.dataReducer.recipeFeed);
+    
+    return { recipeFeed: state.dataReducer.recipeFeed, token: state.userReducer.token }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(ProfileScreen)
 
 const styles = StyleSheet.create({
     textBold: {

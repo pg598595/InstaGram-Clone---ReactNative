@@ -4,11 +4,11 @@ const dataReducer = (state = {
     console.log("Called dataReducer");
 
     switch (action.type) {
-        case 'FEED':
-
-            console.log(action.value);
+        case 'SET_FEED_LIST':
+            console.log("Called dataReducer SET_FEED_LIST");
+            console.log(action.recipeList);
             //state.token
-            return { recipeFeed: action.value }
+            return { recipeFeed: action.recipeList }
 
         default: { recipeFeed: state.recipeFeed }
     }

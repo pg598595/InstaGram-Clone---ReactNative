@@ -8,6 +8,7 @@ import CheckBox from 'react-native-modest-checkbox'
 import HomePageToolBar from './HomePageToolBar';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { setFeedList } from '../actions/dataActions'
 class PostDemo extends Component {
 
 
@@ -30,8 +31,6 @@ class PostDemo extends Component {
         this.state = {
             checked:false,
             isLoading: false,
-            recipesList: [
-            ],
             refreshing: false,
             setRefreshing: false,
             placeHolderImage: 'https://www.mageworx.com/blog/wp-content/uploads/2012/06/Page-Not-Found-13.jpg',
@@ -80,7 +79,7 @@ class PostDemo extends Component {
                     refreshControl={
                         <RefreshControl refreshing={this.state.refreshing} onRefresh={this.onRefresh}></RefreshControl>
                     }
-                    data={this.state.recipesList}
+                    data={this.props.recipeFeed}
 
                     renderItem={({ item }) => {
                        
@@ -162,7 +161,7 @@ class PostDemo extends Component {
         {
             method: 'POST',
             headers: {
-                'Authorization': 'Bearer ' + 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Mn0.MGBf-reNrHdQuwQzRDDNPMo5oWv4GlZKlDShFAAe16s',
+                'Authorization': this.props.token,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
@@ -205,11 +204,11 @@ class PostDemo extends Component {
             if (response.status == 200) {
                 return response.json().then((responseJSON) => {
                     //console.log(responseJSON);
-                    this.setState({ recipesList: responseJSON });
+                   // this.setState({ recipesList: responseJSON });
                     //DATA = responseJSON
                     //console.log(this.state.recipesList);
                     this.setState({ isLoading: false });
-
+                    this.props.setFeedList(responseJSON)
 
                 })
             } else {
@@ -230,13 +229,22 @@ class PostDemo extends Component {
 
 
 }
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setFeedList :(list)=>{
+            dispatch(setFeedList(list))
+        }
+    }
+}
 const mapStateToProps = (state) => {
     console.log("called =="+ state.userReducer.token);
     
-    return { token: state.userReducer.token }
+    return { token: state.userReducer.token,recipeFeed: state.dataReducer.recipeFeed }
 }
 
-export default connect(mapStateToProps)(PostDemo)
+export default connect(mapStateToProps,mapDispatchToProps)(PostDemo)
+
+
 const styles = StyleSheet.create({
     iconcamera: {
         height: 22,
