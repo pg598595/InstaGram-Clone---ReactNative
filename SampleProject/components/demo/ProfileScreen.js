@@ -7,6 +7,7 @@ import AsyncStorage from '@react-native-community/async-storage'
 import EvilIcons from 'react-native-vector-icons/EvilIcons'
 import { connect } from 'react-redux'
 import {setFeedList} from '../actions/dataActions'
+import ProfilePost from './ProfilePost';
 
 class ProfileScreen extends Component {
 
@@ -60,55 +61,7 @@ class ProfileScreen extends Component {
             console.log(error);
         }
     };
-    onPostClick = (item) => {
-
-        Alert.alert('Delete', 'Do you want to delete this post?'
-            , [
-
-                {
-                    text: 'Cancel',
-                    onPress: () => this.cancelPost(item)
-                },
-                {
-                    text: 'OK',
-                    onPress: () => this.deletePost(item)
-
-                },
-
-            ])
-    }
-    cancelPost = (item) => {
-        console.log("Called cancel Post");
-
-    }
-
-    deletePost = (item) => {
-        console.log('Called Delete: ' + item.recipeId)
-        fetch('http://35.160.197.175:3006/api/v1/recipe/' + item.recipeId,
-            {
-                method: 'DELETE',
-                headers: {
-                    'Authorization': constant.API_TOKEN,
-                    'Content-Type': 'application/json'
-                },
-
-            }
-        ).then((response) => {
-            if (response.status == 200) {
-                console.log("Delete Sucess")
-                return response.json()
-            } else {
-                console.log("Delete Failed")
-            }
-        }).then((responseJson) => {
-
-           this.getListfromApi()
-            //this.addInstructions(id);
-            //this.handleUploadPhoto(id)
-        }).catch((error) => {
-            console.log(error)
-        });
-    }
+    
 
     render() {
         return <View style={{ backgroundColor: 'rgba(219, 219, 219,0.2)' }}>
@@ -146,74 +99,16 @@ class ProfileScreen extends Component {
                             <Text style={styles.buttonText}>Edit Profile</Text>
                         </TouchableOpacity>
                     </View>
-
+                    <ProfilePost></ProfilePost>
                     {/* <LoadingIndicator isLoading={this.state.isLoading}></LoadingIndicator> */}
 
-                    <FlatList
-
-                        refreshControl={
-                            <RefreshControl refreshing={this.state.refreshing} onRefresh={this.onRefresh}></RefreshControl>
-                        }
-                        numColumns={3}
-
-                        data={this.props.recipeFeed}
-
-                        renderItem={({ item }) => {
-                            return <View style={{ margin: 1, backgroundColor: 'cyan', height: 100, width: ((Dimensions.get('window').width - 6) / 3) }}>
-                                <View style={styles.postContainer}>
-
-                                    <TouchableWithoutFeedback onPress={() => this.onPostClick(item)}>
-
-                                        <Image source={(item.photo != null) ? { uri: item.photo } : { uri: this.state.placeHolderImage }} style={styles.image}></Image>
-                                    </TouchableWithoutFeedback>
-
-                                </View>
-
-
-                            </View>
-                        }}
-                        keyExtractor={(item) => item.recipeId}
-                        extraData={this.state}
-                    ></FlatList>
+                   
                 </ScrollView>
             </SafeAreaView>
         </View>
     }
 
-    getListfromApi = () => {
-        fetch(constant.API_FOR_FEED_LIST,
-        {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': this.props.token
-            },
-
-        }).then((response) => {
-            if (response.status == 200) {
-                return response.json().then((responseJSON) => {
-                    //console.log(responseJSON);
-                   // this.setState({ recipesList: responseJSON });
-                    //DATA = responseJSON
-                    //console.log(this.state.recipesList);
-                    //this.setState({ isLoading: false });
-                    this.props.setFeedList(responseJSON)
-
-                })
-            } else {
-                console.log(response.body);
-                Alert.alert('Error', 'Please try again later.', [
-                    {
-                        text: 'Ok',
-                    },
-
-                ])
-                this.setState({ isLoading: false });
-
-
-            }
-        })
-    }
+   
 
 
 }
@@ -226,8 +121,6 @@ const mapDispatchToProps = (dispatch) => {
 }
 const mapStateToProps = (state) => {
     console.log("Called Profile Screen");
-    
-    //console.log(state.dataReducer.recipeFeed);
     
     return { recipeFeed: state.dataReducer.recipeFeed, token: state.userReducer.token }
 }
