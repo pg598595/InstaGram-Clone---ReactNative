@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, TouchableOpacity, Image, StyleSheet, KeyboardAvoidingView, ImageBackground } from 'react-native'
+import { Text, View, TouchableOpacity, Image, StyleSheet, KeyboardAvoidingView, ImageBackground,Share } from 'react-native'
 
 import * as constant from './Constants';
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -50,6 +50,23 @@ export default class PreviewScreen extends Component {
 
         console.log(this.state.photo);
     }
+
+    onShare = async () => {
+        try {
+        const recipeDetailsMessage = 'Recipe Name : ' + this.state.nameofRecipe  + '\nBy : ' + this.state.firstName+' '+this.state.lastName+'\nServes : '+this.state.serves
+
+          await Share.share({
+            message: recipeDetailsMessage
+              ,
+          });
+    
+         
+        } catch (error) {
+          alert(error.message);
+        }
+      };
+
+
     render() {
         return (
 
@@ -88,15 +105,18 @@ export default class PreviewScreen extends Component {
 
                                 
                             </View>
-                            <View style={{ flexDirection: 'row',flex:1,alignItems:'center',justifyContent:'flex-end' }}>
+                            <TouchableOpacity onPress={this.onShare} style={{  flexDirection: 'row',flex:1,alignItems:'center',justifyContent:'flex-end' }}>
+                            <View style={{ flexDirection: 'row',flex:1,alignItems:'center',justifyContent:'flex-end'}}>
                                 
+                              
                                     <MaterialCommunityIcons name='share' size={20} color='white' />
                                     <Text style={styles.titleSmall}> Share</Text>
-                                    
+                                  
                                    
 
                                 
                             </View>
+                            </TouchableOpacity>
 
                         </View>
                     </View>

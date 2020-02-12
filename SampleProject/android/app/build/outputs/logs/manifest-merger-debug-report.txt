@@ -5,6 +5,7 @@ INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/an
 INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:1:1-29:12
 INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:1:1-29:12
 MERGED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:1:1-29:12
+MERGED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-23:12
 MERGED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
 MERGED from [:@react-native-community_async-storage] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/@react-native-community/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:2:1-18:12
@@ -93,6 +94,8 @@ MERGED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/React
 		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:5:22-62
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:6:5-80
+MERGED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-81
+MERGED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-81
 	android:name
 		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:6:22-78
 uses-permission#android.permission.RECORD_AUDIO
@@ -107,6 +110,8 @@ application
 ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:9:5-27:19
 MERGED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:9:5-27:19
 MERGED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:9:5-27:19
+MERGED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
+MERGED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
 MERGED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [com.facebook.react:react-native:0.61.4] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6408b47dae729fdf02156778021a6d7c/AndroidManifest.xml:11:5-20
@@ -185,6 +190,8 @@ uses-sdk
 INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml
 INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:@react-native-community_async-storage] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/@react-native-community/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -309,6 +316,22 @@ uses-permission#android.permission.SYSTEM_ALERT_WINDOW
 ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/debug/AndroidManifest.xml:5:5-77
 	android:name
 		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/debug/AndroidManifest.xml:5:22-75
+provider#cl.json.RNShareFileProvider
+ADDED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
+	android:grantUriPermissions
+		ADDED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
+	android:authorities
+		ADDED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-72
+	android:exported
+		ADDED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-55
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:64
+	android:resource
+		ADDED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-61
+	android:name
+		ADDED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
 provider#com.imagepicker.FileProvider
 ADDED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:9-18:20
 	android:grantUriPermissions
@@ -319,12 +342,6 @@ ADDED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/
 		ADDED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-37
 	android:name
 		ADDED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-56
-meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-17:58
-	android:resource
-		ADDED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-55
-	android:name
-		ADDED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:17-67
 uses-feature#android.hardware.camera
 ADDED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:11:5-13:36
 	android:required

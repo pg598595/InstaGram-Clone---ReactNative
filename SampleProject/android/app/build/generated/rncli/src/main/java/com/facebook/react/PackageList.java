@@ -24,6 +24,8 @@ import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.imagepicker.ImagePickerPackage;
 // react-native-reanimated
 import com.swmansion.reanimated.ReanimatedPackage;
+// react-native-share
+import cl.json.RNSharePackage;
 // react-native-text-gradient
 import iyegoroff.RNTextGradient.RNTextGradientPackage;
 // react-native-vector-icons
@@ -78,6 +80,7 @@ public class PackageList {
       new RNGestureHandlerPackage(),
       new ImagePickerPackage(),
       new ReanimatedPackage(),
+      new RNSharePackage(),
       new RNTextGradientPackage(),
       new VectorIconsPackage()
     ));
