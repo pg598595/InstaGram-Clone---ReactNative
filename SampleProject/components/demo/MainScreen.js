@@ -65,10 +65,10 @@ homePageNavigator.navigationOptions = ({ navigation }) => {
     let tabBarVisible;
     if (navigation.state.routes.length > 1) {
         navigation.state.routes.map(route => {
-            if (route.routeName === "Details") {
-                tabBarVisible = false;
-            }
-            if (route.routeName === "Comments") {
+            // if (route.routeName === "Details") {
+            //     tabBarVisible = false;
+            // }
+            if (route.routeName === "Comments" || route.routeName === "Details" ) {
                 tabBarVisible = false;
             }
              else {

@@ -9,6 +9,7 @@ import { getCurrentDate } from './DateUtils'
 import Entypo from "react-native-vector-icons/Entypo";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import OptionsMenu from "react-native-options-menu";
+import moment from 'moment';
 
 
 class CommentScreenComponent extends Component {
@@ -65,7 +66,7 @@ class CommentScreenComponent extends Component {
                         data={this.state.commentList}
 
                         renderItem={({ item }) => {
-                            return <View style={{ flex: 1, flexDirection: 'row', paddingTop: 5, paddingBottom: 5 }}>
+                            return <View style={{ flex: 1, flexDirection: 'row', paddingTop: 5, paddingBottom: 5,alignItems:'center',justifyContent:'center' }}>
                                 <Image style={styles.commentProfileImage} source={{ uri: constant.PROFILE_PICTURE }} />
                                 <View>
                                     <View style={styles.bottom}>
@@ -85,7 +86,7 @@ class CommentScreenComponent extends Component {
                                         ></TextInput>
                                     </View>
                                     <View style={styles.bottom}>
-                                        <Text style={styles.time}>{item.createdAt}</Text>
+                                        <Text style={styles.time}>{moment(item.createdAt, "YYYY-MM-DD h:mm:ss").fromNow()}</Text>
                                     </View>
                                 </View>
                                 <View style={{ flex: 1, alignItems: 'flex-end' }}>
@@ -96,7 +97,7 @@ class CommentScreenComponent extends Component {
 
                                             <AntDesign name="edit" size={18} color='black' style={{ marginEnd: 5 }} />
                                         </TouchableOpacity>
-                                        <TouchableOpacity onPress={() => this.diff_hours(item.createdAt)}>
+                                        <TouchableOpacity onPress={() => this.deleteComment(item)}>
                                             <MaterialCommunityIcons name="delete" size={18} color='black' />
                                         </TouchableOpacity>
                                     </View>
@@ -113,6 +114,7 @@ class CommentScreenComponent extends Component {
                         keyExtractor={(item) => item.id}
                         extraData={this.state}
                         contentInsetAdjustmentBehavior="automatic"
+                        ListEmptyComponent={this.ListEmpty}
                     ></FlatList>
                 </ScrollView>
                 <View style={{ flex: 0.1, alignSelf: 'flex-end', flexDirection: 'row', alignItems: 'center' }}>
@@ -140,6 +142,14 @@ class CommentScreenComponent extends Component {
 
         )
     }
+    ListEmpty = () => {
+        return (
+          //View to show when list is empty
+          <View style={{flex:1,justifyContent:'center'}}>
+            <Text style={{ textAlign: 'center',fontSize:15,fontWeight:'bold',color:'black' }}>No Comments</Text>
+          </View>
+        );
+      };
 
     deleteComment = (item) => {
         console.log("Delete Comment Called ==" + item.id);
@@ -275,33 +285,7 @@ class CommentScreenComponent extends Component {
         });
 
     }
-    diff_hours(createdDate) {
-        // var currentDate = getCurrentDate()
-
-        // var diff = (currentDate.getTime() - dt1.getTime()) / 1000;
-        // diff /= (60 * 60);
-        // return Math.abs(Math.round(diff));
-        //specified date:
-        console.log(createdDate);
-        
-        var oneDate = new Date(createdDate);
-
-        //number of milliseconds since midnight Jan 1 1970 till specified date
-
-        var oneDateMiliseconds = oneDate.getTime()
-
-        ////number of milliseconds since midnight Jan 1 1970 till now
-
-        var currentMiliseconds = new Date()
-
-        //return time difference in miliseconds
-
-        //alert(currentMiliseconds - oneDateMiliseconds);
-        console.log(currentMiliseconds);
-        
-
-    }
-
+   
     getCommentsList = (id) => {
         var API = constant.ADD_COMMENT + id + '/comments'
         console.log(API);
@@ -318,10 +302,10 @@ class CommentScreenComponent extends Component {
                     return response.json().then((responseJSON) => {
 
                         console.log(responseJSON);
-                        var CommnetList =
+                        var CommnetList =responseJSON.reverse()
                             //this.setState({ commentList: responseJSON.reverse() })
                             this.setState({
-                                commentList: responseJSON.map(function (items) {
+                                commentList: CommnetList.map(function (items) {
                                     return {
                                         comment: items.comment,
                                         createdAt: items.createdAt,
