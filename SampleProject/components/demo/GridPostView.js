@@ -13,7 +13,7 @@ class GridPostView extends Component {
         super()
 
         this.state = {
-            name: '',
+            userName: '',
             checked: false,
             isLoading: false,
             noOfPost: 0,
@@ -24,7 +24,24 @@ class GridPostView extends Component {
 
 
         }
+        this.retrieveData()
     }
+
+    retrieveData = async () => {
+        try {
+            const value = await AsyncStorage.getItem(constant.NAME);
+            if (value !== null) {
+                // We have data!!
+                console.log(value);
+                this.setState({ userName: value.toLowerCase() })
+                
+            }
+        } catch (error) {
+            // Error retrieving data
+            console.log(error);
+        }
+    };
+    
     onPostClick = (item) => {
 
         Alert.alert('Delete', 'Do you want to delete this post?'
@@ -122,7 +139,11 @@ class GridPostView extends Component {
                     data={this.props.recipeFeed}
 
                     renderItem={({ item }) => {
-                        return <View style={{ margin: 1, backgroundColor: 'cyan', height: 100, width: ((Dimensions.get('window').width - 6) / 3) }}>
+                        var madeBy = item.firstName.toLowerCase()+item.lastName.toLowerCase()
+                        console.log("===Made By=="+madeBy+"===="+"userName=="+this.state.userName);
+                        
+                        if(madeBy == this.state.userName){
+                            return <View style={{ margin: 1, backgroundColor: 'cyan', height: 100, width: ((Dimensions.get('window').width - 6) / 3) }}>
                             <View style={styles.postContainer}>
 
                                 <TouchableWithoutFeedback onPress={() => this.onPostClick(item)}>
@@ -134,6 +155,8 @@ class GridPostView extends Component {
 
 
                         </View>
+                        }
+                       
                     }}
                     keyExtractor={(item) => item.recipeId}
                     extraData={this.state}

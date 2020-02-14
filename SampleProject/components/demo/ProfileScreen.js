@@ -34,7 +34,8 @@ class ProfileScreen extends Component {
         super()
 
         this.state = {
-            name: '',
+            userName: '',
+            name:'',
             checked: false,
             isLoading: false,
             noOfPost: 0,
@@ -54,7 +55,8 @@ class ProfileScreen extends Component {
             if (value !== null) {
                 // We have data!!
                 console.log(value);
-                this.setState({ name: value })
+                this.setState({ userName: value })
+                this.setState({name:value})
             }
         } catch (error) {
             // Error retrieving data
@@ -68,7 +70,7 @@ class ProfileScreen extends Component {
 
             <SafeAreaView>
             <View style={styles.toolBar}>
-                    <Text style={styles.titleToolbar}>{this.state.name}</Text>
+                    <Text style={styles.titleToolbar}>{this.state.userName}</Text>
                     <EvilIcons name='navicon' size={35} onPress={()=>this.props.navigation.openDrawer()}/>
                 </View>
             
@@ -76,7 +78,7 @@ class ProfileScreen extends Component {
                     <View style={{ flexDirection: 'row', padding: 12, backgroundColor: 'rgba(219, 219, 219,0)' }}>
                         <View style={{ flexDirection: 'column', alignItems: 'center' }}>
                             <Image style={styles.profileImage} source={{ uri: this.state.profilePicture }} />
-                            <Text style={{ marginTop: 5 }}>Jay Metha</Text>
+                            <Text style={{ marginTop: 5 }}>{this.state.name}</Text>
                         </View>
                         <View style={{ flexDirection: 'row', flex: 1, marginTop: 15 }}>
                             <View style={styles.details}>
