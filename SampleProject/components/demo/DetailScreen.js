@@ -49,9 +49,10 @@ const bottomTabNavigator = createMaterialTopTabNavigator(
     {
         
       tabBarOptions:{
-        activeTintColor: '#ffffff',
+        activeTintColor: '#000000',
         labelStyle: { fontSize: 12 },
-        style: { backgroundColor: 'rgba(0,0,0,0.8)' },
+        style: { backgroundColor: '#ffffff' },
+        inactiveTintColor:'#919191'
       }
     }
    

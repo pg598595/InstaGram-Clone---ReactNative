@@ -26,7 +26,7 @@ class ProfileScreen extends Component {
 
         console.log("==+++++++++++++++++");
         console.log(this.props.recipeFeed);
-        
+        this.getNoOfPost()
         
     }
 
@@ -46,8 +46,26 @@ class ProfileScreen extends Component {
 
 
         }
+        
 
+    }
+  
+    getNoOfPost = () => {
+        var i;
+       
+        console.log("Fedd List");
 
+        
+        for (i = 0; i < this.props.recipeFeed; i++) {
+            var madeBy = i.firstName.toLowerCase()+i.lastName.toLowerCase()
+            if (this.state.userName == madeBy) {
+
+               console.log("Add");
+               
+                this.setState({noOfPost : this.state.noOfPost++})
+               
+            }
+        }
     }
     retrieveData = async () => {
         try {

@@ -66,7 +66,9 @@ class CommentScreenComponent extends Component {
                         data={this.state.commentList}
 
                         renderItem={({ item }) => {
-                            return <View style={{ flex: 1, flexDirection: 'row', paddingTop: 5, paddingBottom: 5,alignItems:'center',justifyContent:'center' }}>
+
+
+                            return <View style={{ flex: 1, flexDirection: 'row', paddingTop: 5, paddingBottom: 5, alignItems: 'center', justifyContent: 'center' }}>
                                 <Image style={styles.commentProfileImage} source={{ uri: constant.PROFILE_PICTURE }} />
                                 <View>
                                     <View style={styles.bottom}>
@@ -86,7 +88,7 @@ class CommentScreenComponent extends Component {
                                         ></TextInput>
                                     </View>
                                     <View style={styles.bottom}>
-                                        <Text style={styles.time}>{moment(item.createdAt, "YYYY-MM-DD h:mm:ss").fromNow()}</Text>
+                                        <Text style={styles.time}>{moment(item.createdAt + ' UTC', "YYYY-MM-DD h:mm:ss UTC").fromNow()}</Text>
                                     </View>
                                 </View>
                                 <View style={{ flex: 1, alignItems: 'flex-end' }}>
@@ -144,12 +146,12 @@ class CommentScreenComponent extends Component {
     }
     ListEmpty = () => {
         return (
-          //View to show when list is empty
-          <View style={{flex:1,justifyContent:'center'}}>
-            <Text style={{ textAlign: 'center',fontSize:15,fontWeight:'bold',color:'black' }}>No Comments</Text>
-          </View>
+            //View to show when list is empty
+            <View style={{ flex: 1, justifyContent: 'center' }}>
+                <Text style={{ textAlign: 'center', fontSize: 15, fontWeight: 'bold', color: 'black' }}>No Comments</Text>
+            </View>
         );
-      };
+    };
 
     deleteComment = (item) => {
         console.log("Delete Comment Called ==" + item.id);
@@ -251,41 +253,44 @@ class CommentScreenComponent extends Component {
     }
 
     sendComment = () => {
-        var commentText = this.state.comment
-        console.log(this.state.recipeId + '  commnet is : ' + this.state.comment);
-        this.setState({ comment: '' })
+        if (this.state.comment != '') {
+            var commentText = this.state.comment
+            console.log(this.state.recipeId + '  commnet is : ' + this.state.comment);
+            this.setState({ comment: '' })
 
-        var API = constant.ADD_COMMENT + this.state.recipeId + '/comments'
-        console.log(API);
-        fetch(API,
-            {
-                method: 'POST',
-                headers: {
-                    'Authorization': this.props.token,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    'comment': commentText,
+            var API = constant.ADD_COMMENT + this.state.recipeId + '/comments'
+            console.log(API);
+            fetch(API,
+                {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': this.props.token,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        'comment': commentText,
 
-                })
-            }
-        ).then((response) => {
-            if (response.status == 200) {
-                console.log("Comment added Sucess")
-                this.getCommentsList(this.state.recipeId)
-                return response.json()
-            } else {
-                console.log("Comment added Failed")
-            }
-        }).then((responseJson) => {
-            console.log(responseJson)
+                    })
+                }
+            ).then((response) => {
+                if (response.status == 200) {
+                    console.log("Comment added Sucess")
+                    this.getCommentsList(this.state.recipeId)
+                    return response.json()
+                } else {
+                    console.log("Comment added Failed")
+                }
+            }).then((responseJson) => {
+                console.log(responseJson)
 
-        }).catch((error) => {
-            console.log(error)
-        });
+            }).catch((error) => {
+                console.log(error)
+            });
+
+        }
 
     }
-   
+
     getCommentsList = (id) => {
         var API = constant.ADD_COMMENT + id + '/comments'
         console.log(API);
@@ -302,21 +307,21 @@ class CommentScreenComponent extends Component {
                     return response.json().then((responseJSON) => {
 
                         console.log(responseJSON);
-                        var CommnetList =responseJSON.reverse()
-                            //this.setState({ commentList: responseJSON.reverse() })
-                            this.setState({
-                                commentList: CommnetList.map(function (items) {
-                                    return {
-                                        comment: items.comment,
-                                        createdAt: items.createdAt,
-                                        firstName: items.firstName,
-                                        id: items.id,
-                                        lastName: items.lastName,
-                                        isEditable: false,
+                        var CommnetList = responseJSON.reverse()
+                        //this.setState({ commentList: responseJSON.reverse() })
+                        this.setState({
+                            commentList: CommnetList.map(function (items) {
+                                return {
+                                    comment: items.comment,
+                                    createdAt: items.createdAt,
+                                    firstName: items.firstName,
+                                    id: items.id,
+                                    lastName: items.lastName,
+                                    isEditable: false,
 
-                                    };
-                                }),
-                            });
+                                };
+                            }),
+                        });
 
                     })
                 } else {

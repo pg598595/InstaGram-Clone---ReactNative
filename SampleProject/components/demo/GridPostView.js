@@ -139,11 +139,11 @@ class GridPostView extends Component {
                     data={this.props.recipeFeed}
 
                     renderItem={({ item }) => {
-                        var madeBy = item.firstName.toLowerCase()+item.lastName.toLowerCase()
-                        console.log("===Made By=="+madeBy+"===="+"userName=="+this.state.userName);
+                        // var madeBy = item.firstName.toLowerCase()+item.lastName.toLowerCase()
+                        // console.log("===Made By=="+madeBy+"===="+"userName=="+this.state.userName);
                         
-                        if(madeBy == this.state.userName){
-                            return <View style={{ margin: 1, backgroundColor: 'cyan', height: 100, width: ((Dimensions.get('window').width - 6) / 3) }}>
+                        // if(madeBy == this.state.userName){
+                            return <View style={{ margin: 1, backgroundColor: 'cyan', height:((Dimensions.get('window').width - 6) / 3), width: ((Dimensions.get('window').width - 6) / 3) }}>
                             <View style={styles.postContainer}>
 
                                 <TouchableWithoutFeedback onPress={() => this.onPostClick(item)}>
@@ -155,7 +155,7 @@ class GridPostView extends Component {
 
 
                         </View>
-                        }
+                       // }
                        
                     }}
                     keyExtractor={(item) => item.recipeId}

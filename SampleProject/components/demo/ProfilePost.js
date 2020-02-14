@@ -64,15 +64,3 @@ const bottomTabNavigator = createMaterialTopTabNavigator(
 
 const AppContainer = createAppContainer(bottomTabNavigator);
 
-const styles = StyleSheet.create({
-
-    container: {
-        flex: 1, 
-    
-    },
-    icon: {
-        height: 19,
-        width: 25,
-        marginStart: 20
-    },
-})
