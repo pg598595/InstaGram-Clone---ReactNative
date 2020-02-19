@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Image, Text, View, TouchableOpacity, StyleSheet } from 'react-native'
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createAppContainer, NavigationEvents } from 'react-navigation';
-import MaterialIcons from "react-native-vector-icons/MaterialIcons";
-import Fontisto from "react-native-vector-icons/Fontisto";
+import Entypo from "react-native-vector-icons/Entypo";
+import EvilIcons from "react-native-vector-icons/EvilIcons";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import FavoriteScreen from './FavoriteScreen';
 import DetailScreen from './DetailScreen';
@@ -14,6 +14,7 @@ import SearchScreen from './SearchScreen';
 import ProfileDrawer from './ProfileDrawer';
 import PostDemo from './PostDemo';
 import CommentScreenComponent from './CommentScreenComponent';
+import TravelComponent from './TravelComponent';
 
 
 
@@ -163,18 +164,33 @@ const bottomTabNavigator = createBottomTabNavigator(
                 tabBarLabel: () => { return null },
             }
         },
-        Favorites: {
-            screen: FavoriteScreen,
+        // Favorites: {
+        //     screen: FavoriteScreen,
+        //     navigationOptions: {
+        //         tabBarIcon: ({ focused }) => {
+        //             if (focused) {
+        //                 return <Image style={{ height: 23, width: 23 }} source={require('../../images/likeBlack.png')}></Image>
+        //             } else {
+        //                 return <Image style={{ height: 23, width: 23 }} source={require('../../images/likeplain.png')}></Image>
+        //             }
+
+        //         },
+        //         tabBarLabel: () => { return null },
+        //     }
+        // },
+        Travel: {
+            screen: TravelComponent,
             navigationOptions: {
                 tabBarIcon: ({ focused }) => {
                     if (focused) {
-                        return <Image style={{ height: 23, width: 23 }} source={require('../../images/likeBlack.png')}></Image>
+                        return <Entypo size={29} name='location-pin'/>
                     } else {
-                        return <Image style={{ height: 23, width: 23 }} source={require('../../images/likeplain.png')}></Image>
+                        return <EvilIcons size={29} name='location'/>
                     }
 
                 },
                 tabBarLabel: () => { return null },
+               
             }
         },
         Profile: {
@@ -192,6 +208,7 @@ const bottomTabNavigator = createBottomTabNavigator(
                
             }
         },
+       
         // transfer : detailsNavigator
 
     },
