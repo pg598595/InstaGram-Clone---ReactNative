@@ -69,7 +69,7 @@ class CommentScreenComponent extends Component {
 
 
                             return <View style={{ flex: 1, flexDirection: 'row', paddingTop: 5, paddingBottom: 5, alignItems: 'center', justifyContent: 'center' }}>
-                                <Image style={styles.commentProfileImage} source={{ uri: constant.PROFILE_PICTURE }} />
+                                <Image style={styles.commentProfileImage} source={{ uri: this.props.profilePicture }} />
                                 <View>
                                     <View style={styles.bottom}>
 
@@ -121,7 +121,7 @@ class CommentScreenComponent extends Component {
                 </ScrollView>
                 <View style={{ flex: 0.1, alignSelf: 'flex-end', flexDirection: 'row', alignItems: 'center' }}>
 
-                    <Image style={styles.commentProfileImage} source={{ uri: constant.PROFILE_PICTURE }} />
+                    <Image style={styles.commentProfileImage} source={{ uri: this.props.profilePicture }} />
 
                     <TextInput
                         value={this.state.comment}
@@ -346,7 +346,7 @@ class CommentScreenComponent extends Component {
 const mapStateToProps = (state) => {
     console.log("called ==" + state.userReducer.token);
 
-    return { token: state.userReducer.token, recipeFeed: state.dataReducer.recipeFeed }
+    return { token: state.userReducer.token, recipeFeed: state.dataReducer.recipeFeed,profilePicture: state.userReducer.userProfilePic }
 }
 
 export default connect(mapStateToProps)(CommentScreenComponent)

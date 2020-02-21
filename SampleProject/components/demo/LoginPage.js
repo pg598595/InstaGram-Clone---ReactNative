@@ -5,7 +5,7 @@ import * as constant from './Constants';
 import LoadingIndicator from './LoadingIndicatior';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import {setToken} from '../actions/userActions'
+import {setToken,setProfilePic} from '../actions/userActions'
 class LoginPage extends Component {
     constructor() {
         super()
@@ -91,7 +91,9 @@ class LoginPage extends Component {
                         this.setState({isLoading: false})
                          //this.goToHomePage
                          this.storeData(responseJSON)
-                        this.props.setToken(responseJSON.token)
+                        this.props.setToken(responseJSON.token,'http://35.160.197.175:3006/uploads/2425b3c2-6365-4d2e-b55d-3213b11f8892.png')
+
+                       // this.props.setProfilePic('http://35.160.197.175:3006/uploads/2425b3c2-6365-4d2e-b55d-3213b11f8892.png')
                         var str = 'Successfully logged in as ';
 
                         // Joining the strings together 
@@ -145,13 +147,14 @@ class LoginPage extends Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        setToken:(token)=>{
-            dispatch(setToken(token))
+        setToken:(token,uri)=>{
+            dispatch(setToken(token,uri))
         }
+        
     }
 }
 const mapStateToProps = (state) => {
-    return { token: state.token }
+    return { profilePicture: state.userReducer.userProfilePic }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginPage)

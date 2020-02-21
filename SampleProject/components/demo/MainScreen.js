@@ -15,6 +15,7 @@ import ProfileDrawer from './ProfileDrawer';
 import PostDemo from './PostDemo';
 import CommentScreenComponent from './CommentScreenComponent';
 import TravelComponent from './TravelComponent';
+import EditProfileScreen from './EditProfileScreen';
 
 
 
@@ -45,7 +46,7 @@ const homePageNavigator = createStackNavigator({
         }),
 
     },
-    Comments:{
+    Comments: {
         screen: CommentScreenComponent,
         navigationOptions: ({ navigation }) => ({
             title: 'Comments',
@@ -69,10 +70,10 @@ homePageNavigator.navigationOptions = ({ navigation }) => {
             // if (route.routeName === "Details") {
             //     tabBarVisible = false;
             // }
-            if (route.routeName === "Comments" || route.routeName === "Details" ) {
+            if (route.routeName === "Comments" || route.routeName === "Details") {
                 tabBarVisible = false;
             }
-             else {
+            else {
                 tabBarVisible = true;
             }
         });
@@ -102,7 +103,7 @@ const addPostNavigator = createStackNavigator({
 
     })
 
-    
+
 addPostNavigator.navigationOptions = ({ navigation }) => {
     let tabBarVisible;
     if (navigation.state.routes.length > 0) {
@@ -121,6 +122,47 @@ addPostNavigator.navigationOptions = ({ navigation }) => {
         tabBarVisible
     };
 };
+
+const profileNavigator = createStackNavigator({
+
+    ProfileDrawer: {
+        screen: ProfileDrawer,
+        navigationOptions: {
+            header: null
+        }
+    },
+
+    EditProfile: {
+        screen: EditProfileScreen,
+        
+    },
+
+},
+    {
+
+
+        mode: 'card',
+
+    })
+profileNavigator.navigationOptions = ({ navigation }) => {
+    let tabBarVisible;
+    if (navigation.state.routes.length > 0) {
+        navigation.state.routes.map(route => {
+            if (route.routeName === "EditProfile") {
+                tabBarVisible = false;
+            }
+
+            else {
+                tabBarVisible = true;
+            }
+        });
+    }
+
+    return {
+        tabBarVisible
+    };
+};
+
 
 const bottomTabNavigator = createBottomTabNavigator(
     {
@@ -183,18 +225,18 @@ const bottomTabNavigator = createBottomTabNavigator(
             navigationOptions: {
                 tabBarIcon: ({ focused }) => {
                     if (focused) {
-                        return <Entypo size={29} name='location-pin'/>
+                        return <Entypo size={29} name='location-pin' />
                     } else {
-                        return <EvilIcons size={29} name='location'/>
+                        return <EvilIcons size={29} name='location' />
                     }
 
                 },
                 tabBarLabel: () => { return null },
-               
+
             }
         },
         Profile: {
-            screen: ProfileDrawer,
+            screen: profileNavigator,
             navigationOptions: {
                 tabBarIcon: ({ focused }) => {
                     if (focused) {
@@ -205,10 +247,10 @@ const bottomTabNavigator = createBottomTabNavigator(
 
                 },
                 tabBarLabel: () => { return null },
-               
+
             }
         },
-       
+
         // transfer : detailsNavigator
 
     },

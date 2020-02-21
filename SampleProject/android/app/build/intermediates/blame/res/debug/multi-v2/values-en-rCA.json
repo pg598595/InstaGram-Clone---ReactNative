@@ -4,7 +4,7 @@
             "outputFile": "/home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
-                    "source": "/home/priyankagupta/.gradle/caches/transforms-2/files-2.1/9ac331d8cca09ef36206db91455480af/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37b6fac246db63a2d1c3fc45a9c25918/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c0b58bfeb9d33b70d03da84249f829f3/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/home/priyankagupta/.gradle/caches/transforms-2/files-2.1/b157350ac2dcca760438b4eb1cdd5b59/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

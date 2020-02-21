@@ -1,5 +1,5 @@
 const userReducer = (state = {
-    token: ''
+    token: '', userProfilePic: ''
 }, action) => {
     console.log("Called userReducer");
 
@@ -7,12 +7,14 @@ const userReducer = (state = {
         case 'TOKEN':
 
             console.log("Token for saving :" + action.value);
+            console.log("ProfilePic :" + action.uriValue);
             //state.token
-            return { token: action.value }
+            return { token: action.value,userProfilePic:action.uriValue }
 
-        default: { token: state.token }
+       
+        default: [{ token: state.token  },{userProfilePic: state.userProfilePic}]
     }
-    return { token: state.token }
+    return { token: state.token,userProfilePic: state.userProfilePic }
 }
 
 export default userReducer;

@@ -92,7 +92,7 @@ class PostDemo extends Component {
                         return <View>
                             <View style={styles.postContainer}>
                                 <View style={styles.header}>
-                                    <Image style={styles.profileImage} source={{ uri: this.state.profilePicture }} />
+                                    <Image style={styles.profileImage} source={{ uri: this.props.profilePicture }} />
                                     <View style={styles.nameandLocation}>
                                         <Text style={styles.userName}>{item.firstName}{item.lastName}</Text>
                                         <Text style={styles.locationName}>Ahmedabad,Gujarat</Text>
@@ -143,7 +143,7 @@ class PostDemo extends Component {
 
                                 </View>
                                 <View style={styles.bottom}>
-                                    <Image style={styles.commentProfileImage} source={{ uri: this.state.profilePicture }} />
+                                    <Image style={styles.commentProfileImage} source={{ uri: this.props.profilePicture }} />
                                     <TextInput
                                         value={this.state.comment}
                                         placeholder="Add a comment..."
@@ -293,7 +293,7 @@ const mapDispatchToProps = (dispatch) => {
 const mapStateToProps = (state) => {
     console.log("called ==" + state.userReducer.token);
 
-    return { token: state.userReducer.token, recipeFeed: state.dataReducer.recipeFeed }
+    return { token: state.userReducer.token, recipeFeed: state.dataReducer.recipeFeed,profilePicture: state.userReducer.userProfilePic }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostDemo)

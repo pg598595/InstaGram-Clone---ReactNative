@@ -4,7 +4,7 @@
             "outputFile": "/home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c0b58bfeb9d33b70d03da84249f829f3/res/values-watch-v20/values-watch-v20.xml",
+                    "source": "/home/priyankagupta/.gradle/caches/transforms-2/files-2.1/b157350ac2dcca760438b4eb1cdd5b59/res/values-watch-v20/values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

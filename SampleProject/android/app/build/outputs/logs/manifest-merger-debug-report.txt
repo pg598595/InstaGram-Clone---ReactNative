@@ -1,67 +1,71 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:1:1-29:12
-INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:1:1-29:12
-INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:1:1-29:12
-INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:1:1-29:12
-MERGED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:1:1-29:12
+ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:1:1-33:12
+INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:1:1-33:12
+INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:1:1-33:12
+INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:1:1-33:12
+MERGED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:1:1-33:12
+MERGED from [:@react-native-community_geolocation] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/@react-native-community/geolocation/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-maps] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-12:12
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37ac7fe8e9375c2b5d9bb87c1f53aec1/AndroidManifest.xml:17:1-38:12
+MERGED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/3207e6f575eff6354d60257c0346deb6/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/bb209e36af2d22872d4bf0f8db863572/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/952eafbd2641313457f8d643ccfe060a/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c5fcfedf5f35470976bfcf5bf442ec56/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/eb0c3ae17cd3bb5b07e96b0679eec08e/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/938b4d7d02eafd2d03162ede36113a3a/AndroidManifest.xml:17:1-29:12
 MERGED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-23:12
 MERGED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-21:12
+MERGED from [org.webkit:android-jsc:r245459] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/f028452529cb1b0ecbd370c49f0f7241/AndroidManifest.xml:2:1-11:12
 MERGED from [:@react-native-community_async-storage] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/@react-native-community/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:2:1-18:12
 MERGED from [:react-native-gesture-handler] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-reanimated] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [:react-native-vector-icons] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [com.facebook.react:react-native:0.61.4] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6408b47dae729fdf02156778021a6d7c/AndroidManifest.xml:2:1-13:12
-MERGED from [org.webkit:android-jsc:r245459] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/955288c17384cea22c85e94fbabfaf36/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-text-gradient] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-text-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.appcompat:appcompat:1.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c0b58bfeb9d33b70d03da84249f829f3/AndroidManifest.xml:17:1-22:12
-MERGED from [com.facebook.fresco:fresco:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/79dded0822ac6c78ea8a3799f7152c9e/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/cd74cb6152003809a63666a4e9f44f9d/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:drawee:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/df866d89bb39a7e806454fc66e63a898/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/23f8f879494eb5b4ee537f8ddf8208a7/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/4ada3b93c19b6fc573a85f8ab09440e9/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/e6ce14b175402efdbd9f94b7e77bcc28/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/4f65119de5b33980c03d2ad51945c70d/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.soloader:soloader:0.6.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/5960f06ed5e4f58757f9c14ec55b27ef/AndroidManifest.xml:2:1-13:12
-MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/61c9bfdbe00f517e3d299e726c70ece5/AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/a5eed7aa041b97b658ce5311b55f6771/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.transition:transition:1.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/9c1e9de0327d171fba2291c59d174fe3/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/e07f74cac5460f8bf86830f088b0369f/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/e6c8ea9733ae33b9820d38fd1b4b61cf/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6541f0a2ff5bd0cd0a4f6f73df60daa0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/e86d1b1a272bbf8d270e7dad459db418/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/249333e007b38cc0daf80ecb5a26999c/AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/dfd27a564d73c291444b647cfe4f5cfd/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:16.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6662a33cc41f4a99f6fc7a811f46db72/AndroidManifest.xml:17:1-28:12
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/5dbcfa47f9d95b26fbcea37cd29580c8/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.fragment:fragment:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/adbf63d0aa5168f2efe04ff342e92c46/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/993db7f2d942b2ffbe3e1d4d4e751106/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/cafc2ec005fc778bc058390d8d92495f/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/080ce98ed1e3ba4b86c5776f931dbf5f/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/3f970836608e30d64b7e45f17fbd0ed8/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.media:media:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/d10f1f2bb6abc973de6d01868def8350/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/1b0611a5f32a9af12b3b7ce6acd0461c/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/eff266ffab0ef7e903137fa90fdcda9b/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/8ba3823f5e36e6b5b462c3ed7bfb5442/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/003053fcf027921c30630365628895f6/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/8cbab2f676555353e43fbc3c8271c621/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/497f8c0e79238055ba604f3bf69f4c8c/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/964d6cf7a71d1e360cbe9abde50eeaef/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/ec5af67d24808fbcf4b4d11234e1b761/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/9ac331d8cca09ef36206db91455480af/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/ecaa0ec35bfb705dc8a8cdd624e981fa/AndroidManifest.xml:17:1-25:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/b15f44f3822c01035d7dfd96aafe09c1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/743bd395d2a63752f49993c58581651f/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/a20768ca2c9af80c938087034af7a47d/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/8e44dafea62022f318af95f2b36533e3/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/4741def70181234cb83bb33b537c983b/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/b0c826fe1ff06c969cb0ba82c6ff6b1a/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6e4773bfeba8f03f53423a603c7d9f34/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c2a6fba6532dbca8436988de9aee47cc/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/1c636b26131d197fe0f43d0b663bf992/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/babec2b9e3bee220698f6714f8afeb0e/AndroidManifest.xml:17:1-22:12
-MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/64c64ef06313e8774df83372f7da1d69/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-vector-icons] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.facebook.react:react-native:0.61.4] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c3594fe03d8bf9f52b58801a52876f33/AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/b157350ac2dcca760438b4eb1cdd5b59/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/830551ac1ade3753f5c71d5fbfed272a/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c8b5be9495dcf377e77f97474d254e1a/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/ed6c8cf6f2dfa44a7cbfdc78079e1297/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.transition:transition:1.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/a38aff19977b553a8086adda637f28c5/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/18170a775f3ed0c313e31b5550e5d37d/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/a4c3fa1bf2c949d252a27e36eeda772a/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/3e3432a1b4d55273cd61bc20464c842e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/1b8342dd492eaafc8c5ce9480eda4d5f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/3ef0b509f5f33d8b207750f1c905d167/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/d1463ddb1a4844e39cc0eb2eb624ea72/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/36110f97b9f2d81cc4df23ce5d65c9d7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/f92b9c4b4911e2dae1dbc045307feda7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/bfd5c578eb069cbea490794776de8a42/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/da5233071e83e79d4969bf81d3ae6e07/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/026934f95c89784410e122f0d4264d6b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/8fadbaf581cdd33724e9acf34d72908c/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/0ab2c8511dc1e5203c78d392662a181f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/57d5f0bed840f5a1999f83419fad92a1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/672448b22e8cbf5f671050370546671a/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37b6fac246db63a2d1c3fc45a9c25918/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/fdd6597b9784de6a04439ecc5f7b4c98/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/25619db374a2897486fdb198603a813d/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/d36e84d2297fe63c5359a65291c0603b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/22ccc7b2675b26df1f0ccbe66257d340/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/19765607ca6202c73538faf7edc44b93/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/b70ef184399005345c2ac4bd4c7a336b/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/66a5d69530c12e52f0550e7b3cb9659a/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/f222c111b071c196e4b66ad31e26d0cb/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/8c624480c2a8d940f1e3bde74eed5645/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/390b54ffea1eb8c86d2a4e35a0f6161c/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/61961e4c0d69bf023fc7e011e940c509/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6804b48620d6a20f79f1b5ae53132750/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/af8dbfe596f5387b7b0a14ca6c8c2e9f/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/84110544979797d937d1a6b2fb96ce3f/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/9fc16b5083dd9690ff6779cb54010337/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/60e78939ae860c188a32c9f60583c2b9/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/7086d25b4035ecadb4552ad24b10c737/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/0bcc1b39582ca62aecb9bc3b827140d7/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/103ef5a0947014c24a28e2ca022630bd/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/cd23937f516407a7827d73c9d21685ec/AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/5df5ad8415c510235eac6acfbe1e5ad0/AndroidManifest.xml:2:1-9:12
 INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/debug/AndroidManifest.xml:2:1-8:12
 INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/debug/AndroidManifest.xml:2:1-8:12
 INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/debug/AndroidManifest.xml:2:1-8:12
@@ -72,18 +76,22 @@ INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/an
 		INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:1:1-29:12
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:1:1-33:12
 		INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/debug/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/debug/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:1:1-29:12
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:1:1-33:12
 		INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
 ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:4:5-67
+MERGED from [:react-native-maps] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:react-native-maps] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37ac7fe8e9375c2b5d9bb87c1f53aec1/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37ac7fe8e9375c2b5d9bb87c1f53aec1/AndroidManifest.xml:24:5-67
 	android:name
 		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:4:22-64
 uses-permission#android.permission.CAMERA
@@ -106,204 +114,226 @@ uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:8:5-80
 	android:name
 		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:8:22-77
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:9:7-80
+	android:name
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:9:24-78
 application
-ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:9:5-27:19
-MERGED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:9:5-27:19
-MERGED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:9:5-27:19
+ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:10:5-31:19
+MERGED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:10:5-31:19
+MERGED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:10:5-31:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37ac7fe8e9375c2b5d9bb87c1f53aec1/AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37ac7fe8e9375c2b5d9bb87c1f53aec1/AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/3207e6f575eff6354d60257c0346deb6/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/3207e6f575eff6354d60257c0346deb6/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/bb209e36af2d22872d4bf0f8db863572/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/bb209e36af2d22872d4bf0f8db863572/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/952eafbd2641313457f8d643ccfe060a/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/952eafbd2641313457f8d643ccfe060a/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/eb0c3ae17cd3bb5b07e96b0679eec08e/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/eb0c3ae17cd3bb5b07e96b0679eec08e/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/938b4d7d02eafd2d03162ede36113a3a/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/938b4d7d02eafd2d03162ede36113a3a/AndroidManifest.xml:22:5-27:19
 MERGED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
 MERGED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
 MERGED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-19:19
-MERGED from [com.facebook.react:react-native:0.61.4] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6408b47dae729fdf02156778021a6d7c/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.react:react-native:0.61.4] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6408b47dae729fdf02156778021a6d7c/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.soloader:soloader:0.6.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/5960f06ed5e4f58757f9c14ec55b27ef/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.soloader:soloader:0.6.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/5960f06ed5e4f58757f9c14ec55b27ef/AndroidManifest.xml:11:5-20
-MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/61c9bfdbe00f517e3d299e726c70ece5/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/61c9bfdbe00f517e3d299e726c70ece5/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/e07f74cac5460f8bf86830f088b0369f/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/e07f74cac5460f8bf86830f088b0369f/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/e6c8ea9733ae33b9820d38fd1b4b61cf/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/e6c8ea9733ae33b9820d38fd1b4b61cf/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/e86d1b1a272bbf8d270e7dad459db418/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/e86d1b1a272bbf8d270e7dad459db418/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/249333e007b38cc0daf80ecb5a26999c/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/249333e007b38cc0daf80ecb5a26999c/AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/dfd27a564d73c291444b647cfe4f5cfd/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/dfd27a564d73c291444b647cfe4f5cfd/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:16.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6662a33cc41f4a99f6fc7a811f46db72/AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:16.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6662a33cc41f4a99f6fc7a811f46db72/AndroidManifest.xml:22:5-26:19
-MERGED from [androidx.core:core:1.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/9ac331d8cca09ef36206db91455480af/AndroidManifest.xml:22:5-89
-MERGED from [androidx.core:core:1.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/9ac331d8cca09ef36206db91455480af/AndroidManifest.xml:22:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/ecaa0ec35bfb705dc8a8cdd624e981fa/AndroidManifest.xml:22:5-23:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/ecaa0ec35bfb705dc8a8cdd624e981fa/AndroidManifest.xml:22:5-23:19
+MERGED from [com.facebook.react:react-native:0.61.4] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c3594fe03d8bf9f52b58801a52876f33/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.61.4] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c3594fe03d8bf9f52b58801a52876f33/AndroidManifest.xml:11:5-20
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/830551ac1ade3753f5c71d5fbfed272a/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/830551ac1ade3753f5c71d5fbfed272a/AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c8b5be9495dcf377e77f97474d254e1a/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c8b5be9495dcf377e77f97474d254e1a/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/ed6c8cf6f2dfa44a7cbfdc78079e1297/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/ed6c8cf6f2dfa44a7cbfdc78079e1297/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37b6fac246db63a2d1c3fc45a9c25918/AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37b6fac246db63a2d1c3fc45a9c25918/AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/fdd6597b9784de6a04439ecc5f7b4c98/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/fdd6597b9784de6a04439ecc5f7b4c98/AndroidManifest.xml:22:5-23:19
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/cd23937f516407a7827d73c9d21685ec/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/cd23937f516407a7827d73c9d21685ec/AndroidManifest.xml:11:5-20
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/9ac331d8cca09ef36206db91455480af/AndroidManifest.xml:22:18-86
+		ADDED from [androidx.core:core:1.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37b6fac246db63a2d1c3fc45a9c25918/AndroidManifest.xml:22:18-86
 	android:label
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:11:7-39
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:11:7-39
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:12:7-39
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:12:7-39
 	tools:ignore
 		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/debug/AndroidManifest.xml:7:75-114
 	android:roundIcon
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:13:7-52
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:13:7-52
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:14:7-52
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:14:7-52
 	tools:targetApi
 		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/debug/AndroidManifest.xml:7:54-74
 	android:icon
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:12:7-41
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:12:7-41
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:13:7-41
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:13:7-41
 	android:allowBackup
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:14:7-34
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:14:7-34
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:15:7-34
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:15:7-34
 	android:theme
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:15:7-38
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:15:7-38
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:16:7-38
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:16:7-38
 	android:usesCleartextTraffic
 		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/debug/AndroidManifest.xml:7:18-53
 	android:name
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:10:7-38
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:10:7-38
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:11:7-38
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:11:7-38
+meta-data#com.google.android.geo.API_KEY
+ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:17:7-19:74
+	android:value
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:19:17-72
+	android:name
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:18:17-62
 activity#com.sampleproject.MainActivity
-ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:16:7-25:18
+ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:20:7-29:18
 	android:label
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:18:9-41
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:22:9-41
 	android:windowSoftInputMode
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:20:9-51
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:24:9-51
 	android:configChanges
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:19:9-79
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:23:9-79
 	android:name
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:17:9-37
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:21:9-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:21:9-24:25
+ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:25:9-28:25
 action#android.intent.action.MAIN
-ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:22:13-65
+ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:26:13-65
 	android:name
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:22:21-62
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:26:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:23:13-73
+ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:27:13-73
 	android:name
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:23:23-70
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:27:23-70
 activity#com.facebook.react.devsupport.DevSettingsActivity
-ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:26:7-84
+ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:30:7-84
 	android:name
-		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:26:17-81
+		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml:30:17-81
 uses-sdk
 INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml
 INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/main/AndroidManifest.xml
+MERGED from [:@react-native-community_geolocation] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/@react-native-community/geolocation/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:@react-native-community_geolocation] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/@react-native-community/geolocation/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-maps] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-maps] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37ac7fe8e9375c2b5d9bb87c1f53aec1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37ac7fe8e9375c2b5d9bb87c1f53aec1/AndroidManifest.xml:20:5-44
+MERGED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/3207e6f575eff6354d60257c0346deb6/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/3207e6f575eff6354d60257c0346deb6/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/bb209e36af2d22872d4bf0f8db863572/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/bb209e36af2d22872d4bf0f8db863572/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/952eafbd2641313457f8d643ccfe060a/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/952eafbd2641313457f8d643ccfe060a/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c5fcfedf5f35470976bfcf5bf442ec56/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c5fcfedf5f35470976bfcf5bf442ec56/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/eb0c3ae17cd3bb5b07e96b0679eec08e/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/eb0c3ae17cd3bb5b07e96b0679eec08e/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/938b4d7d02eafd2d03162ede36113a3a/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/938b4d7d02eafd2d03162ede36113a3a/AndroidManifest.xml:20:5-44
 MERGED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [org.webkit:android-jsc:r245459] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/f028452529cb1b0ecbd370c49f0f7241/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/f028452529cb1b0ecbd370c49f0f7241/AndroidManifest.xml:7:5-9:41
 MERGED from [:@react-native-community_async-storage] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/@react-native-community/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:@react-native-community_async-storage] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/@react-native-community/async-storage/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-gesture-handler] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-gesture-handler] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-reanimated] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-reanimated] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-vector-icons] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-vector-icons] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.61.4] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6408b47dae729fdf02156778021a6d7c/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.61.4] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6408b47dae729fdf02156778021a6d7c/AndroidManifest.xml:7:5-9:41
-MERGED from [org.webkit:android-jsc:r245459] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/955288c17384cea22c85e94fbabfaf36/AndroidManifest.xml:7:5-9:41
-MERGED from [org.webkit:android-jsc:r245459] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/955288c17384cea22c85e94fbabfaf36/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-text-gradient] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-text-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-text-gradient] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-text-gradient/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [androidx.appcompat:appcompat:1.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c0b58bfeb9d33b70d03da84249f829f3/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c0b58bfeb9d33b70d03da84249f829f3/AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.fresco:fresco:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/79dded0822ac6c78ea8a3799f7152c9e/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fresco:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/79dded0822ac6c78ea8a3799f7152c9e/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/cd74cb6152003809a63666a4e9f44f9d/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/cd74cb6152003809a63666a4e9f44f9d/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/df866d89bb39a7e806454fc66e63a898/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/df866d89bb39a7e806454fc66e63a898/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/23f8f879494eb5b4ee537f8ddf8208a7/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/23f8f879494eb5b4ee537f8ddf8208a7/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/4ada3b93c19b6fc573a85f8ab09440e9/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/4ada3b93c19b6fc573a85f8ab09440e9/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/e6ce14b175402efdbd9f94b7e77bcc28/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/e6ce14b175402efdbd9f94b7e77bcc28/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/4f65119de5b33980c03d2ad51945c70d/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/4f65119de5b33980c03d2ad51945c70d/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.soloader:soloader:0.6.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/5960f06ed5e4f58757f9c14ec55b27ef/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.soloader:soloader:0.6.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/5960f06ed5e4f58757f9c14ec55b27ef/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/61c9bfdbe00f517e3d299e726c70ece5/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-vision:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/61c9bfdbe00f517e3d299e726c70ece5/AndroidManifest.xml:5:5-44
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/a5eed7aa041b97b658ce5311b55f6771/AndroidManifest.xml:20:5-44
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/a5eed7aa041b97b658ce5311b55f6771/AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/9c1e9de0327d171fba2291c59d174fe3/AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/9c1e9de0327d171fba2291c59d174fe3/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/e07f74cac5460f8bf86830f088b0369f/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-vision-common:17.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/e07f74cac5460f8bf86830f088b0369f/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/e6c8ea9733ae33b9820d38fd1b4b61cf/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-clearcut:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/e6c8ea9733ae33b9820d38fd1b4b61cf/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6541f0a2ff5bd0cd0a4f6f73df60daa0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6541f0a2ff5bd0cd0a4f6f73df60daa0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/e86d1b1a272bbf8d270e7dad459db418/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-phenotype:16.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/e86d1b1a272bbf8d270e7dad459db418/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/249333e007b38cc0daf80ecb5a26999c/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/249333e007b38cc0daf80ecb5a26999c/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/dfd27a564d73c291444b647cfe4f5cfd/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/dfd27a564d73c291444b647cfe4f5cfd/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6662a33cc41f4a99f6fc7a811f46db72/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6662a33cc41f4a99f6fc7a811f46db72/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/5dbcfa47f9d95b26fbcea37cd29580c8/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/5dbcfa47f9d95b26fbcea37cd29580c8/AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/adbf63d0aa5168f2efe04ff342e92c46/AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/adbf63d0aa5168f2efe04ff342e92c46/AndroidManifest.xml:20:5-44
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/993db7f2d942b2ffbe3e1d4d4e751106/AndroidManifest.xml:20:5-44
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/993db7f2d942b2ffbe3e1d4d4e751106/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/cafc2ec005fc778bc058390d8d92495f/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/cafc2ec005fc778bc058390d8d92495f/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/080ce98ed1e3ba4b86c5776f931dbf5f/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/080ce98ed1e3ba4b86c5776f931dbf5f/AndroidManifest.xml:20:5-44
-MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/3f970836608e30d64b7e45f17fbd0ed8/AndroidManifest.xml:20:5-44
-MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/3f970836608e30d64b7e45f17fbd0ed8/AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/d10f1f2bb6abc973de6d01868def8350/AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/d10f1f2bb6abc973de6d01868def8350/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/1b0611a5f32a9af12b3b7ce6acd0461c/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/1b0611a5f32a9af12b3b7ce6acd0461c/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/eff266ffab0ef7e903137fa90fdcda9b/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/eff266ffab0ef7e903137fa90fdcda9b/AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/8ba3823f5e36e6b5b462c3ed7bfb5442/AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/8ba3823f5e36e6b5b462c3ed7bfb5442/AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/003053fcf027921c30630365628895f6/AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/003053fcf027921c30630365628895f6/AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/8cbab2f676555353e43fbc3c8271c621/AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/8cbab2f676555353e43fbc3c8271c621/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/497f8c0e79238055ba604f3bf69f4c8c/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/497f8c0e79238055ba604f3bf69f4c8c/AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/964d6cf7a71d1e360cbe9abde50eeaef/AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/964d6cf7a71d1e360cbe9abde50eeaef/AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/ec5af67d24808fbcf4b4d11234e1b761/AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/ec5af67d24808fbcf4b4d11234e1b761/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/9ac331d8cca09ef36206db91455480af/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/9ac331d8cca09ef36206db91455480af/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/ecaa0ec35bfb705dc8a8cdd624e981fa/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/ecaa0ec35bfb705dc8a8cdd624e981fa/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/b15f44f3822c01035d7dfd96aafe09c1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/b15f44f3822c01035d7dfd96aafe09c1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/743bd395d2a63752f49993c58581651f/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/743bd395d2a63752f49993c58581651f/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/a20768ca2c9af80c938087034af7a47d/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/a20768ca2c9af80c938087034af7a47d/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/8e44dafea62022f318af95f2b36533e3/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/8e44dafea62022f318af95f2b36533e3/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/4741def70181234cb83bb33b537c983b/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/4741def70181234cb83bb33b537c983b/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/b0c826fe1ff06c969cb0ba82c6ff6b1a/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/b0c826fe1ff06c969cb0ba82c6ff6b1a/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6e4773bfeba8f03f53423a603c7d9f34/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6e4773bfeba8f03f53423a603c7d9f34/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c2a6fba6532dbca8436988de9aee47cc/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c2a6fba6532dbca8436988de9aee47cc/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/1c636b26131d197fe0f43d0b663bf992/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/1c636b26131d197fe0f43d0b663bf992/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/babec2b9e3bee220698f6714f8afeb0e/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/babec2b9e3bee220698f6714f8afeb0e/AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/64c64ef06313e8774df83372f7da1d69/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/64c64ef06313e8774df83372f7da1d69/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-vector-icons] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.4] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c3594fe03d8bf9f52b58801a52876f33/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.4] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c3594fe03d8bf9f52b58801a52876f33/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat:1.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/b157350ac2dcca760438b4eb1cdd5b59/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/b157350ac2dcca760438b4eb1cdd5b59/AndroidManifest.xml:20:5-44
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/830551ac1ade3753f5c71d5fbfed272a/AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.5] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/830551ac1ade3753f5c71d5fbfed272a/AndroidManifest.xml:5:5-43
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c8b5be9495dcf377e77f97474d254e1a/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/c8b5be9495dcf377e77f97474d254e1a/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/ed6c8cf6f2dfa44a7cbfdc78079e1297/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/ed6c8cf6f2dfa44a7cbfdc78079e1297/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/a38aff19977b553a8086adda637f28c5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/a38aff19977b553a8086adda637f28c5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/18170a775f3ed0c313e31b5550e5d37d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/18170a775f3ed0c313e31b5550e5d37d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/a4c3fa1bf2c949d252a27e36eeda772a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/a4c3fa1bf2c949d252a27e36eeda772a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/3e3432a1b4d55273cd61bc20464c842e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/3e3432a1b4d55273cd61bc20464c842e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/1b8342dd492eaafc8c5ce9480eda4d5f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/1b8342dd492eaafc8c5ce9480eda4d5f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/3ef0b509f5f33d8b207750f1c905d167/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/3ef0b509f5f33d8b207750f1c905d167/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/d1463ddb1a4844e39cc0eb2eb624ea72/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/d1463ddb1a4844e39cc0eb2eb624ea72/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/36110f97b9f2d81cc4df23ce5d65c9d7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/36110f97b9f2d81cc4df23ce5d65c9d7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/f92b9c4b4911e2dae1dbc045307feda7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/f92b9c4b4911e2dae1dbc045307feda7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/bfd5c578eb069cbea490794776de8a42/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/bfd5c578eb069cbea490794776de8a42/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/da5233071e83e79d4969bf81d3ae6e07/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/da5233071e83e79d4969bf81d3ae6e07/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/026934f95c89784410e122f0d4264d6b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/026934f95c89784410e122f0d4264d6b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/8fadbaf581cdd33724e9acf34d72908c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/8fadbaf581cdd33724e9acf34d72908c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/0ab2c8511dc1e5203c78d392662a181f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/0ab2c8511dc1e5203c78d392662a181f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/57d5f0bed840f5a1999f83419fad92a1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/57d5f0bed840f5a1999f83419fad92a1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/672448b22e8cbf5f671050370546671a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/672448b22e8cbf5f671050370546671a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37b6fac246db63a2d1c3fc45a9c25918/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37b6fac246db63a2d1c3fc45a9c25918/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/fdd6597b9784de6a04439ecc5f7b4c98/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/fdd6597b9784de6a04439ecc5f7b4c98/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/25619db374a2897486fdb198603a813d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/25619db374a2897486fdb198603a813d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/d36e84d2297fe63c5359a65291c0603b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/d36e84d2297fe63c5359a65291c0603b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/22ccc7b2675b26df1f0ccbe66257d340/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/22ccc7b2675b26df1f0ccbe66257d340/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/19765607ca6202c73538faf7edc44b93/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/19765607ca6202c73538faf7edc44b93/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/b70ef184399005345c2ac4bd4c7a336b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/b70ef184399005345c2ac4bd4c7a336b/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/66a5d69530c12e52f0550e7b3cb9659a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/66a5d69530c12e52f0550e7b3cb9659a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/f222c111b071c196e4b66ad31e26d0cb/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/f222c111b071c196e4b66ad31e26d0cb/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/8c624480c2a8d940f1e3bde74eed5645/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/8c624480c2a8d940f1e3bde74eed5645/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/390b54ffea1eb8c86d2a4e35a0f6161c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/390b54ffea1eb8c86d2a4e35a0f6161c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/61961e4c0d69bf023fc7e011e940c509/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/61961e4c0d69bf023fc7e011e940c509/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6804b48620d6a20f79f1b5ae53132750/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6804b48620d6a20f79f1b5ae53132750/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/af8dbfe596f5387b7b0a14ca6c8c2e9f/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/af8dbfe596f5387b7b0a14ca6c8c2e9f/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/84110544979797d937d1a6b2fb96ce3f/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/84110544979797d937d1a6b2fb96ce3f/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/9fc16b5083dd9690ff6779cb54010337/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/9fc16b5083dd9690ff6779cb54010337/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/60e78939ae860c188a32c9f60583c2b9/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/60e78939ae860c188a32c9f60583c2b9/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/7086d25b4035ecadb4552ad24b10c737/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/7086d25b4035ecadb4552ad24b10c737/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/0bcc1b39582ca62aecb9bc3b827140d7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/0bcc1b39582ca62aecb9bc3b827140d7/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/103ef5a0947014c24a28e2ca022630bd/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/103ef5a0947014c24a28e2ca022630bd/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/cd23937f516407a7827d73c9d21685ec/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/cd23937f516407a7827d73c9d21685ec/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/5df5ad8415c510235eac6acfbe1e5ad0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/5df5ad8415c510235eac6acfbe1e5ad0/AndroidManifest.xml:5:5-7:41
 INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/debug/AndroidManifest.xml
 INJECTED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/debug/AndroidManifest.xml
 	android:targetSdkVersion
@@ -316,6 +346,46 @@ uses-permission#android.permission.SYSTEM_ALERT_WINDOW
 ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/debug/AndroidManifest.xml:5:5-77
 	android:name
 		ADDED from /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/android/app/src/debug/AndroidManifest.xml:5:22-75
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from [:react-native-maps] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from [:react-native-maps] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-maps/lib/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:22-78
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37ac7fe8e9375c2b5d9bb87c1f53aec1/AndroidManifest.xml:23:5-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37ac7fe8e9375c2b5d9bb87c1f53aec1/AndroidManifest.xml:23:22-76
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37ac7fe8e9375c2b5d9bb87c1f53aec1/AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37ac7fe8e9375c2b5d9bb87c1f53aec1/AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37ac7fe8e9375c2b5d9bb87c1f53aec1/AndroidManifest.xml:28:9-32
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37ac7fe8e9375c2b5d9bb87c1f53aec1/AndroidManifest.xml:33:9-35:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37ac7fe8e9375c2b5d9bb87c1f53aec1/AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/37ac7fe8e9375c2b5d9bb87c1f53aec1/AndroidManifest.xml:34:13-50
+uses-feature#android.hardware.camera
+ADDED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:11:5-13:36
+	android:required
+		ADDED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:13:9-33
+	android:name
+		ADDED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:12:9-47
+uses-feature#android.hardware.camera.autofocus
+ADDED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:14:5-16:36
+	android:required
+		ADDED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:16:9-33
+	android:name
+		ADDED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:15:9-57
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/938b4d7d02eafd2d03162ede36113a3a/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/938b4d7d02eafd2d03162ede36113a3a/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/938b4d7d02eafd2d03162ede36113a3a/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/938b4d7d02eafd2d03162ede36113a3a/AndroidManifest.xml:24:13-79
 provider#cl.json.RNShareFileProvider
 ADDED from [:react-native-share] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-share/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
 	android:grantUriPermissions
@@ -342,29 +412,11 @@ ADDED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/
 		ADDED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-37
 	android:name
 		ADDED from [:react-native-image-picker] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-56
-uses-feature#android.hardware.camera
-ADDED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:11:5-13:36
-	android:required
-		ADDED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:13:9-33
-	android:name
-		ADDED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:12:9-47
-uses-feature#android.hardware.camera.autofocus
-ADDED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:14:5-16:36
-	android:required
-		ADDED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:16:9-33
-	android:name
-		ADDED from [:react-native-camera] /home/priyankagupta/Desktop/ReactNative/ReactDemo/SampleProject/node_modules/react-native-camera/android/build/intermediates/library_manifest/generalDebug/AndroidManifest.xml:15:9-57
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/249333e007b38cc0daf80ecb5a26999c/AndroidManifest.xml:23:9-26:75
-	android:exported
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/249333e007b38cc0daf80ecb5a26999c/AndroidManifest.xml:25:13-37
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/249333e007b38cc0daf80ecb5a26999c/AndroidManifest.xml:26:13-72
-	android:name
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/249333e007b38cc0daf80ecb5a26999c/AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:16.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6662a33cc41f4a99f6fc7a811f46db72/AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.maps.android:android-maps-utils:0.5] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/830551ac1ade3753f5c71d5fbfed272a/AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/ed6c8cf6f2dfa44a7cbfdc78079e1297/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/ed6c8cf6f2dfa44a7cbfdc78079e1297/AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:16.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6662a33cc41f4a99f6fc7a811f46db72/AndroidManifest.xml:25:13-66
+		ADDED from [com.google.maps.android:android-maps-utils:0.5] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/830551ac1ade3753f5c71d5fbfed272a/AndroidManifest.xml:10:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:16.1.0] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/6662a33cc41f4a99f6fc7a811f46db72/AndroidManifest.xml:24:13-58
+		ADDED from [com.google.maps.android:android-maps-utils:0.5] /home/priyankagupta/.gradle/caches/transforms-2/files-2.1/830551ac1ade3753f5c71d5fbfed272a/AndroidManifest.xml:9:13-58

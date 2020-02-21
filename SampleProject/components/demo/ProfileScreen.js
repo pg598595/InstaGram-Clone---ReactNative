@@ -95,7 +95,7 @@ class ProfileScreen extends Component {
                 <ScrollView showsHorizontalScrollIndicator={false}>
                     <View style={{ flexDirection: 'row', padding: 12, backgroundColor: 'rgba(219, 219, 219,0)' }}>
                         <View style={{ flexDirection: 'column', alignItems: 'center' }}>
-                            <Image style={styles.profileImage} source={{ uri: this.state.profilePicture }} />
+                            <Image style={styles.profileImage} source={{ uri: this.props.profilePicture }} />
                             <Text style={{ marginTop: 5 }}>{this.state.name}</Text>
                         </View>
                         <View style={{ flexDirection: 'row', flex: 1, marginTop: 15 }}>
@@ -115,7 +115,7 @@ class ProfileScreen extends Component {
 
                     </View>
                     <View style={{ padding: 12, backgroundColor: 'rgba(219, 219, 219,0)' }} >
-                        <TouchableOpacity style={styles.buttonContainer} onPress={this.login}>
+                        <TouchableOpacity style={styles.buttonContainer} onPress={this.goToEditProfile}>
                             <Text style={styles.buttonText}>Edit Profile</Text>
                         </TouchableOpacity>
                     </View>
@@ -128,7 +128,9 @@ class ProfileScreen extends Component {
         </View>
     }
 
-   
+   goToEditProfile=()=>{
+    this.props.navigation.navigate('EditProfile',{userName:this.state.name})
+   }
 
 
 }
@@ -142,7 +144,7 @@ const mapDispatchToProps = (dispatch) => {
 const mapStateToProps = (state) => {
     console.log("Called Profile Screen");
     
-    return { recipeFeed: state.dataReducer.recipeFeed, token: state.userReducer.token }
+    return { recipeFeed: state.dataReducer.recipeFeed, token: state.userReducer.token,profilePicture:state.userReducer.userProfilePic }
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(ProfileScreen)
