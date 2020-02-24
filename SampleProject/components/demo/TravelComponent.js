@@ -29,53 +29,30 @@ export default class TravelComponent extends Component {
         >
             <MapView.Polyline
                 strokeWidth={5}
-                strokeColor='black'
+                strokeColor='red'
                 coordinates={
                     [
                         {
-                            latitude: 23.025734,
-                            longitude: 72.503349
+                            latitude: 23.0258661,
+                            longitude: 72.5033598
                         },
                         {
-                            latitude: 23.025802,
-                            longitude: 72.502587
+                            latitude: 23.027271,
+                            longitude: 72.507509
+                        },
+                        {
+                            latitude: 23.027363,
+                            longitude: 72.511846
                         },
                         {
                             latitude: 23.027712,
-                            longitude: 72.502839
+                            longitude: 72.522146
                         },
                         {
-                            latitude: 23.027387,
-                            longitude: 72.507136
+                            latitude: 23.022814,
+                            longitude: 72.537015
                         },
-                        {
-                            latitude: 23.027830,
-                            longitude: 72.507410
-                        },
-                        {
-                            latitude: 23.029854,
-                            longitude: 72.508022
-                        },
-                        {
-                            latitude: 23.032185,
-                            longitude: 72.508741
-                        },
-                        {
-                            latitude: 23.035097,
-                            longitude: 72.510017
-                        },
-                        {
-                            latitude: 23.037230,
-                            longitude: 72.511026
-                        },
-                        {
-                            latitude: 23.038662,
-                            longitude: 72.511863
-                        },
-                        {
-                            latitude: 23.038148,
-                            longitude: 72.513880
-                        }
+                       
                     ]
                 }
             >
@@ -84,12 +61,25 @@ export default class TravelComponent extends Component {
 
             <Marker
                 coordinate={{
-                    latitude: 23.025836,
-                    longitude: 72.503349,
+                    latitude: 23.022814,
+                    longitude: 72.537015,
                 }}
-                title='Solution Analysts'
-                description='ઉકેલ વિશ્લેષકો'
+                
+                title='Destination'
+                description='Your destination is here'
                 identifier='1'
+            >
+
+            </Marker>
+            <Marker
+                coordinate={{
+                    latitude: 23.027363,
+                    longitude: 72.511846,
+                }}
+                pinColor = {'indigo'}
+                title='Move ahead'
+                description='Your destination is half a way to goo'
+                identifier='2'
             >
 
             </Marker>
@@ -97,6 +87,6 @@ export default class TravelComponent extends Component {
     }
 
     onMapMarkerPressed = (marker) => {
-        
+
     }
 }

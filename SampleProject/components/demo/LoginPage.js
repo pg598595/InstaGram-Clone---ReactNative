@@ -91,7 +91,7 @@ class LoginPage extends Component {
                         this.setState({isLoading: false})
                          //this.goToHomePage
                          this.storeData(responseJSON)
-                        this.props.setToken(responseJSON.token,'http://35.160.197.175:3006/uploads/2425b3c2-6365-4d2e-b55d-3213b11f8892.png')
+                        this.props.setToken(responseJSON.token,'https://i.ya-webdesign.com/images/profile-avatar-png-6.png')
 
                        // this.props.setProfilePic('http://35.160.197.175:3006/uploads/2425b3c2-6365-4d2e-b55d-3213b11f8892.png')
                         var str = 'Successfully logged in as ';
