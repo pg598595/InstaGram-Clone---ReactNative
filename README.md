@@ -23,9 +23,9 @@ Platform Support: Android & IOS.<br>
 
 <img align="middle" src="https://user-images.githubusercontent.com/25722093/75424151-19a4fa00-5966-11ea-8d4f-e36c07129eac.png" width=270 height=500>
 
-<img align="left" src="https://user-images.githubusercontent.com/25722093/75424168-21649e80-5966-11ea-9d79-3232da4a1e26.png" width=270 height=500>
+<img align="left" src="https://user-images.githubusercontent.com/25722093/75424140-16117300-5966-11ea-82e8-a0289191b777.png" width=270 height=500>
 
-<img align="middle" src="https://user-images.githubusercontent.com/25722093/75424168-21649e80-5966-11ea-9d79-3232da4a1e26.png" width=270 height=500>
+<img align="middle" src="https://user-images.githubusercontent.com/25722093/75424134-13af1900-5966-11ea-99dd-3b10cd063b36.png" width=270 height=500>
 
 
 
