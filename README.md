@@ -32,7 +32,15 @@ Platform Support: Android & IOS.<br>
 
 <img align="right" src="https://user-images.githubusercontent.com/25722093/75424113-0e51ce80-5966-11ea-9806-31b24b4ae59c.png" width=270 height=500>
 
-<img align="middle" src="https://user-images.githubusercontent.com/25722093/75424134-13af1900-5966-11ea-99dd-3b10cd063b36.png" width=270 height=500>
+<img align="middle" src="https://user-images.githubusercontent.com/25722093/75433120-7825a480-5975-11ea-9463-186216408f7f.png" width=270 height=500>
+
+
+
+<img align="left" src="https://user-images.githubusercontent.com/25722093/75433123-7a87fe80-5975-11ea-8857-e212101dc954.png" width=270 height=500>
+
+<img align="right" src="https://user-images.githubusercontent.com/25722093/75433130-7d82ef00-5975-11ea-953d-3b1c0bb0d66f.png" width=270 height=500>
+
+
 
 
 
