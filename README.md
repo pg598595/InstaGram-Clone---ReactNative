@@ -27,6 +27,9 @@ Platform Support: Android & IOS.<br>
 
 <img align="middle" src="https://user-images.githubusercontent.com/25722093/75424134-13af1900-5966-11ea-99dd-3b10cd063b36.png" width=270 height=500>
 
+<img align="right" src="https://user-images.githubusercontent.com/25722093/75424125-127dec00-5966-11ea-8baf-249bac14ff2f.png" width=270 height=500>
+
+
 
 
 
