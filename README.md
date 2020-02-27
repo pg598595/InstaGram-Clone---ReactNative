@@ -11,8 +11,10 @@ Anyc Storage.<br>
 Listing Recipes.<br>
 Details Screen.<br>
 Search Recipes.<br>
+Comment Screen.<br>
 Mapview.<br>
 Profile Screen.<br>
+Edit Profile Screen.<br>
 Add New Recipe with API.<br>
 Image Upload in API.<br>
 Platform Support: Android & IOS.<br>
