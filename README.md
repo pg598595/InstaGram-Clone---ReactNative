@@ -3,12 +3,15 @@ React App Demo
 <br>
 
 App Name : Foodogram
+<br>
+
 Splash Screen.<br>
 Login with API.<br>
 Anyc Storage.<br>
-Mapview.<br>
 Listing Recipes.<br>
+Details Screen.<br>
 Search Recipes.<br>
+Mapview.<br>
 Profile Screen.<br>
 Add New Recipe with API.<br>
 Image Upload in API.<br>
