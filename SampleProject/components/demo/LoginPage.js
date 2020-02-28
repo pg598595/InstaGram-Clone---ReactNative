@@ -3,7 +3,10 @@ import { KeyboardAvoidingView, Text, TextInput, View, Image, StyleSheet, Touchab
 import AsyncStorage from '@react-native-community/async-storage'
 import * as constant from './Constants';
 import LoadingIndicator from './LoadingIndicatior';
-export default class LoginPage extends Component {
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import {setToken,setProfilePic} from '../actions/userActions'
+class LoginPage extends Component {
     constructor() {
         super()
         this.state = { email: '', password: '',isLoading: false }
@@ -86,8 +89,11 @@ export default class LoginPage extends Component {
                     return response.json().then((responseJSON) => {
                         console.log(responseJSON.token);
                         this.setState({isLoading: false})
-                        // this.goToHomePage
-                        this.storeData(responseJSON)
+                         //this.goToHomePage
+                         this.storeData(responseJSON)
+                        this.props.setToken(responseJSON.token,'https://i.ya-webdesign.com/images/profile-avatar-png-6.png')
+
+                       // this.props.setProfilePic('http://35.160.197.175:3006/uploads/2425b3c2-6365-4d2e-b55d-3213b11f8892.png')
                         var str = 'Successfully logged in as ';
 
                         // Joining the strings together 
@@ -116,25 +122,44 @@ export default class LoginPage extends Component {
             })
     }
 
+    
+
     storeData = async (responseJSON) => {
-        console.log('called store data ' + responseJSON.email);
+        
         try {
             let userId = '';
-            userId = responseJSON.email;
-            console.log('called try block ' + userId);
-
-            await AsyncStorage.setItem('named', userId)
+            userId = responseJSON.firstName+responseJSON.lastName;
+            
+            await AsyncStorage.setItem(constant.NAME, userId)
+            await AsyncStorage.setItem(constant.API_TOKEN, responseJSON.token)
+            
         } catch (e) {
             console.log('called catch block----e --------' + e);
         }
     }
 
     goToHomePage = () => {
-        console.log("Opening PostDemo page")
-        this.props.navigation.navigate('PostDemo')
+        console.log("Opening MainScreen page")
+        this.props.navigation.navigate('MainScreen')
 
     }
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setToken:(token,uri)=>{
+            dispatch(setToken(token,uri))
+        }
+        
+    }
+}
+const mapStateToProps = (state) => {
+    return { profilePicture: state.userReducer.userProfilePic }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginPage)
+
+
 
 const styles = StyleSheet.create({
     subtitle: {

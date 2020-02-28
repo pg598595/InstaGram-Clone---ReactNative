@@ -1,15 +1,31 @@
 import React, { Component } from 'react'
 import { Text, View, TouchableOpacity, Image, StyleSheet, KeyboardAvoidingView } from 'react-native'
 import LoginPage from './LoginPage';
+import AsyncStorage from '@react-native-community/async-storage'
+import * as constant from './Constants';
 
 
 
 export default class SplashScreen extends Component {
+    constructor() {
+        super()
+        this.state = { name: '' }
+
+    }
     componentDidMount() {
+        this.retrieveData()
         setTimeout(() => {
             const {navigate} = this.props.navigation;
             this.props.navigation.navigate('LoginPage')
-        }, 2000)
+            // if(this.state.name === ''){
+            //     const {navigate} = this.props.navigation;
+            //     this.props.navigation.navigate('LoginPage')
+            // }else{
+            //     const {navigate} = this.props.navigation;
+            //     this.props.navigation.navigate('MainScreen')
+            // }
+           
+        }, 3000)
     }
     render() {
         return (
@@ -19,12 +35,25 @@ export default class SplashScreen extends Component {
                 </View>
                 <View style={styles.intro}>
                     <Text style={styles.subtitleFrom}>from</Text>
+                    {/* <Image style={styles.subtitleFb} source={require('../../images/facebookText.png')}></Image> */}
                     <Text style={styles.subtitleFb}>FACEBOOK</Text>
-                    
                 </View>
             </View>
         )
     }
+    retrieveData = async () => {
+        try {
+          const value = await AsyncStorage.getItem(constant.NAME);
+          if (value !== null) {
+            // We have data!!
+            console.log(value);
+            this.setState({name:value})
+          }
+        } catch (error) {
+          // Error retrieving data
+          console.log(error);
+        }
+      };
 }
 
 //export default SplashScreen
@@ -44,13 +73,15 @@ const styles = StyleSheet.create({
         width: 70
     },
     subtitleFrom: {
-        color: '#C1C1C1',
+        color: '#8E8E8E',
         textAlign: 'center',
     },
     subtitleFb: {
         textAlign:'center',
         fontWeight:'bold',
-        fontSize:15
+        fontSize:15,
+        letterSpacing:2
+        
     },
     intro: {
         flex: 0.1,

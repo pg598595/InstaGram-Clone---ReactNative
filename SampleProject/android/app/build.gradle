@@ -130,6 +130,7 @@ android {
     defaultConfig {
         applicationId "com.sampleproject"
         minSdkVersion rootProject.ext.minSdkVersion
+        missingDimensionStrategy 'react-native-camera', 'general'
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
@@ -179,9 +180,17 @@ android {
 }
 
 dependencies {
+    implementation project(':@react-native-community_geolocation')
+     implementation(project(':react-native-maps')){
+exclude group: 'com.google.android.gms', module: 'play-services-base'
+exclude group: 'com.google.android.gms', module: 'play-services-maps'
+}
+ provided "com.facebook.react:react-native:+" // From node_modules
+    implementation 'com.google.android.gms:play-services-base:+'
+    implementation 'com.google.android.gms:play-services-maps:+'
+    implementation project(':react-native-share')
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "com.facebook.react:react-native:+"  // From node_modules
-
+    implementation project(':react-native-image-picker')
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";
         debugImplementation files(hermesPath + "hermes-debug.aar")
