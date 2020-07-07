@@ -1,5 +1,5 @@
-# ReactDemo
-React App Demo
+# ReactNative App
+ReactNative App Demo
 <br>
 
 App Name : Foodogram
